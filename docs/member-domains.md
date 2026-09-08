@@ -49,6 +49,8 @@ All domain mappings are maintained in:
 export const MEMBER_DOMAINS: Record<string, MemberSlug> = {
   'yarasabyte.anupambaral.com.np': 'anupam',
   'yarasabyte.anmolchettri.com': 'anmol',
+  'yarshabyte.beeplap.com.np': 'beeplap',
+  'yarasabyte.beeplap.com.np': 'beeplap',
   // Add additional member domains here once officially registered
 };
 ```

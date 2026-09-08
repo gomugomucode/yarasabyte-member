@@ -91,7 +91,7 @@ export const beeplapProfile: MemberProfile = {
   contact: {
     email: 'beeplap@yarsabyte.com',
     yarsaEmail: 'beeplap@yarsabyte.com',
-    website: 'https://yarshabyte.vercel.app',
+    website: 'https://beeplap.com.np',
     location: 'Butwal, Nepal',
     timezone: 'Asia/Kathmandu (UTC+05:45)',
     availability: 'Open for system architecture reviews, infrastructure consulting, and engineering partnerships',
@@ -101,7 +101,7 @@ export const beeplapProfile: MemberProfile = {
     { platform: 'github', url: 'https://github.com', label: 'GitHub' },
     { platform: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
     { platform: 'email', url: 'mailto:beeplap@yarsabyte.com', label: 'Email' },
-    { platform: 'website', url: 'https://yarshabyte.vercel.app', label: 'Website' }
+    { platform: 'website', url: 'https://beeplap.com.np', label: 'Website' }
   ],
   metaTitle: 'Beeplap Gharti Magar — CTO at YarsaByte',
   metaDescription:
