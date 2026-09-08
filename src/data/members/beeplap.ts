@@ -70,8 +70,8 @@ export const beeplapProfile: MemberProfile = {
       description: 'Designed the high-availability cloud architecture, automated database replication, and secure API gateways for industrial order management.',
       impact: 'Delivered 99.99% uptime with sub-100ms response times across distributed warehouse nodes.',
       tags: ['System Architecture', 'Core Engineering', 'Infrastructure'],
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
-      link: 'https://yarshabyte.vercel.app/',
+      image: '/work/greenstarsuppliers.webp',
+      link: 'https://www.greenstarsuppliers.com.np/',
       featured: true
     },
     {
@@ -83,8 +83,8 @@ export const beeplapProfile: MemberProfile = {
       description: 'Architected edge caching layers, database indexing strategies, and automated continuous deployment workflows for the commercial directory.',
       impact: 'Handled high concurrent traffic spikes during launch week with zero performance degradation.',
       tags: ['Cloud Infrastructure', 'Edge Compute', 'Database Scalability'],
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
-      link: 'https://yarshabyte.vercel.app/',
+      image: '/work/avenuebutwal.webp',
+      link: 'https://www.avenuebutwal.edu.np',
       featured: true
     }
   ],

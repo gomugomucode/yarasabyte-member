@@ -70,8 +70,8 @@ export const anmolProfile: MemberProfile = {
       description: 'Orchestrated the comprehensive digital rollout, merchant onboarding campaign, and public launch for Butwal’s premier commercial mall.',
       impact: 'Generated 150,000+ regional digital impressions and high footfall velocity in week one of launch.',
       tags: ['Brand Identity', 'GTM Campaign', 'Customer Acquisition'],
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
-      link: 'https://yarshabyte.vercel.app/',
+      image: '/work/avenuebutwal.webp',
+      link: 'https://www.avenuebutwal.edu.np',
       featured: true
     },
     {
@@ -83,7 +83,7 @@ export const anmolProfile: MemberProfile = {
       description: 'Directed the brand positioning and online presence showcasing YarsaByte as Nepal’s benchmark creative tech company.',
       impact: 'Established YarsaByte’s distinct editorial aesthetic and drove strong client inbound interest.',
       tags: ['Brand Strategy', 'Visual Identity', 'Market Positioning'],
-      image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
+      image: '/work/studio-production.webp',
       link: 'https://yarshabyte.vercel.app/',
       featured: true
     }

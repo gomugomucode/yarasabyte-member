@@ -63,8 +63,8 @@ export const anupamProfile: MemberProfile = {
       description:
         'End-to-end web platform and product presentation for industrial automation and suppliers, combining operational workflows with refined digital branding.',
       tags: ['Product Direction', 'App Development', 'Video & Media'],
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
-      link: 'https://yarshabyte.vercel.app/',
+      image: '/work/greenstarsuppliers.webp',
+      link: 'https://www.greenstarsuppliers.com.np/',
       featured: true
     },
     {
@@ -77,8 +77,8 @@ export const anupamProfile: MemberProfile = {
       description:
         'Comprehensive digital portal and directory for Butwal’s flagship commercial and leisure destination, tailored for visitors and commercial tenants.',
       tags: ['Product Strategy', 'Frontend Engineering', 'User Experience'],
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
-      link: 'https://yarshabyte.vercel.app/',
+      image: '/work/avenuebutwal.webp',
+      link: 'https://www.avenuebutwal.edu.np',
       featured: true
     },
     {
@@ -91,7 +91,7 @@ export const anupamProfile: MemberProfile = {
       description:
         'Visual storytelling and multimedia presentations capturing YarsaByte’s design philosophy, client case studies, and digital capabilities.',
       tags: ['Video Editing', 'Motion Content', 'Visual Storytelling'],
-      image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
+      image: '/work/studio-production.webp',
       link: 'https://yarshabyte.vercel.app/',
       featured: true
     }

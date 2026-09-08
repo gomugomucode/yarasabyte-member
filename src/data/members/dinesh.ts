@@ -71,8 +71,8 @@ export const dineshProfile: MemberProfile = {
       description: 'Structured tenant operational agreements, digital compliance frameworks, and billing logistics for Butwal’s commercial hub.',
       impact: 'Secured 100% compliance across 40+ commercial vendor contracts with zero operational friction.',
       tags: ['Operations', 'Legal Framework', 'Vendor Agreements'],
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
-      link: 'https://yarshabyte.vercel.app/',
+      image: '/work/avenuebutwal.webp',
+      link: 'https://www.avenuebutwal.edu.np',
       featured: true
     },
     {
@@ -84,8 +84,8 @@ export const dineshProfile: MemberProfile = {
       description: 'Designed internal logistics guidelines, inventory accounting rules, and vendor contract workflows.',
       impact: 'Accelerated accounting reconciliation cycles from 14 days to under 48 hours.',
       tags: ['Internal Logistics', 'Financial Workflow', 'Operational Auditing'],
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
-      link: 'https://yarshabyte.vercel.app/',
+      image: '/work/greenstarsuppliers.webp',
+      link: 'https://www.greenstarsuppliers.com.np/',
       featured: true
     }
   ],

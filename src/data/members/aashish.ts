@@ -70,8 +70,8 @@ export const aashishProfile: MemberProfile = {
       description: 'Negotiated multi-tier strategic partnership and spearheaded commercial rollout for Butwal’s flagship commercial ecosystem.',
       impact: 'Onboarded 40+ premier regional tenants within 30 days of commercial rollout.',
       tags: ['Commercial Strategy', 'Ecosystem Growth', 'Strategic Partnership'],
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
-      link: 'https://yarshabyte.vercel.app/',
+      image: '/work/avenuebutwal.webp',
+      link: 'https://www.avenuebutwal.edu.np',
       featured: true
     },
     {
@@ -83,8 +83,8 @@ export const aashishProfile: MemberProfile = {
       description: 'Structured enterprise engagement and business model alignment for industrial automation systems.',
       impact: 'Strengthened industrial client relationships and established long-term SaaS service contracts.',
       tags: ['Enterprise Dealmaking', 'B2B Strategy', 'SaaS Growth'],
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
-      link: 'https://yarshabyte.vercel.app/',
+      image: '/work/greenstarsuppliers.webp',
+      link: 'https://www.greenstarsuppliers.com.np/',
       featured: true
     }
   ],
