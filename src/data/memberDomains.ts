@@ -17,10 +17,8 @@ export const MEMBER_DOMAINS: Readonly<Record<string, MemberSlug>> = Object.freez
   'yarasabyte.anupambaral.com.np': 'anupam',
   'yarasabyte.anmolchettri.com': 'anmol',
   'yarshabyte.beeplap.com.np': 'beeplap',
-  'yarasabyte.beeplap.com.np': 'beeplap',
-  // Add the remaining domains when their actual domains are known:
-  // 'yarasabyte.aashishpanthi.com': 'aashish',
-  // 'yarasabyte.dineshgautam.com': 'dinesh',
+  'yarshabyte.chapagainaashish.com.np': 'aashish',
+  'yarshabyte.dineshgautam.com': 'dinesh',
 });
 
 /**

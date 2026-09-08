@@ -35,7 +35,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
         <div className={styles.heroGrid}>
           {/* Left Column: Name, Role Hierarchy & Statement */}
           <div className={styles.contentCol}>
-            <h1 className={styles.heroName}>
+            <h1 className={styles.heroName} suppressHydrationWarning>
               {profile.name}
             </h1>
 
