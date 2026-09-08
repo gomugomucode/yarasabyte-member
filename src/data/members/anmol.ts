@@ -102,5 +102,8 @@ export const anmolProfile: MemberProfile = {
     { platform: 'x', url: 'https://x.com', label: 'X (Twitter)' },
     { platform: 'instagram', url: 'https://instagram.com', label: 'Instagram' },
     { platform: 'email', url: 'mailto:anmol@yarsabyte.com', label: 'Email' }
-  ]
+  ],
+  metaTitle: 'Anmol Chettri — CMO at YarsaByte',
+  metaDescription:
+    'Anmol Chettri is the Chief Marketing Officer at YarsaByte, leading brand identity, customer acquisition funnels, and go-to-market execution.'
 };

@@ -110,5 +110,8 @@ export const anupamProfile: MemberProfile = {
     { platform: 'github', url: 'https://github.com', label: 'GitHub' },
     { platform: 'email', url: 'mailto:anupam@yarsabyte.com', label: 'Email' },
     { platform: 'website', url: 'https://yarshabyte.vercel.app', label: 'Website' }
-  ]
+  ],
+  metaTitle: 'Anupam Baral — CPO at YarsaByte',
+  metaDescription:
+    'Anupam Baral is the Chief Product Officer at YarsaByte, working across product direction, application development and video production.'
 };

@@ -65,3 +65,6 @@ export function getTeamRoster(): TeamTeammate[] {
     };
   });
 }
+
+export * from './memberDomains';
+export * from '@/lib/member-domain';

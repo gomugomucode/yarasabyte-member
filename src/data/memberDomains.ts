@@ -1,0 +1,48 @@
+export const VALID_MEMBER_SLUGS = [
+  'aashish',
+  'anupam',
+  'anmol',
+  'beeplap',
+  'dinesh',
+] as const;
+
+export type MemberSlug = (typeof VALID_MEMBER_SLUGS)[number];
+
+/**
+ * Centralized mapping of custom subdomains/domains to member slugs.
+ * Only add verified production domains here.
+ * Do NOT invent domains for members whose real domains are not known yet.
+ */
+export const MEMBER_DOMAINS: Record<string, MemberSlug> = {
+  'yarasabyte.anupambaral.com.np': 'anupam',
+  'yarasabyte.anmolchettri.com': 'anmol',
+  // Add the remaining domains when their actual domains are known:
+  // 'yarasabyte.aashishpanthi.com': 'aashish',
+  // 'yarasabyte.beeplap.com': 'beeplap',
+  // 'yarasabyte.dineshgautam.com': 'dinesh',
+};
+
+/**
+ * The canonical primary domain of the YarsaByte collective website.
+ */
+export const MAIN_SITE_URL = 'https://yarshabyte.vercel.app';
+
+/**
+ * Returns the configured custom domain for a member slug, if registered.
+ */
+export function getDomainForMember(slug: string): string | undefined {
+  const normalizedSlug = slug.toLowerCase().trim();
+  for (const [domain, memberSlug] of Object.entries(MEMBER_DOMAINS)) {
+    if (memberSlug.toLowerCase() === normalizedSlug) {
+      return domain;
+    }
+  }
+  return undefined;
+}
+
+/**
+ * Checks if a given string is a valid member slug.
+ */
+export function isValidMemberSlug(slug: string): slug is MemberSlug {
+  return VALID_MEMBER_SLUGS.includes(slug as MemberSlug);
+}

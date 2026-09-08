@@ -1,5 +1,11 @@
 import { Metadata } from 'next';
-import { getMemberBySlug, DEFAULT_MEMBER_SLUG, getTeamRoster } from '@/data';
+import {
+  getMemberBySlug,
+  DEFAULT_MEMBER_SLUG,
+  getTeamRoster,
+  getMemberCanonicalUrl,
+  MAIN_SITE_URL,
+} from '@/data';
 import { MemberPageTemplate } from '@/components/templates/MemberPageTemplate';
 import { notFound } from 'next/navigation';
 
@@ -11,28 +17,36 @@ export async function generateMetadata(): Promise<Metadata> {
     };
   }
 
-  const title = 'Anupam Baral — CPO at YarsaByte';
+  const roleDisplay = profile.shortRole
+    ? `${profile.shortRole} at ${profile.company || 'YarsaByte'}`
+    : profile.role;
+
+  const title = profile.metaTitle || `${profile.name} — ${roleDisplay}`;
   const description =
-    'Anupam Baral is the Chief Product Officer at YarsaByte, working across product direction, application development and video production.';
+    profile.metaDescription ||
+    profile.tagline ||
+    `${profile.name} is ${profile.role} at YarsaByte. ${profile.positioningStatement}`;
+
+  const canonicalUrl = getMemberCanonicalUrl(profile.slug);
 
   return {
     title,
     description,
     alternates: {
-      canonical: 'https://yarshabyte.vercel.app/team/anupam',
+      canonical: canonicalUrl,
     },
     openGraph: {
       title,
       description,
       type: 'profile',
-      url: 'https://yarshabyte.vercel.app/team/anupam',
-      siteName: 'YarsaByte',
+      url: canonicalUrl,
+      siteName: profile.company || 'YarsaByte',
       images: [
         {
           url: profile.avatar,
           width: 1200,
           height: 1500,
-          alt: `${profile.name} — CPO at YarsaByte`,
+          alt: `${profile.name} — ${profile.role}`,
         },
       ],
     },
@@ -53,17 +67,23 @@ export default function HomePage() {
 
   const team = getTeamRoster();
 
+  const jobTitle = profile.role.includes('—')
+    ? profile.role.split('—')[1].trim()
+    : profile.role;
+
+  const memberUrl = getMemberCanonicalUrl(profile.slug);
+
   // Structured Data Schema.org: Person & YarsaByte Organization
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: profile.name,
-    jobTitle: 'Chief Product Officer',
+    jobTitle,
     worksFor: {
       '@type': 'Organization',
-      name: 'YarsaByte',
-      url: 'https://yarshabyte.vercel.app',
-      logo: 'https://yarshabyte.vercel.app/ico-bg.png',
+      name: profile.company || 'YarsaByte',
+      url: MAIN_SITE_URL,
+      logo: `${MAIN_SITE_URL}/brand/ico-bg.png`,
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Butwal',
@@ -77,7 +97,7 @@ export default function HomePage() {
     },
     image: profile.avatar,
     email: profile.contact.email,
-    url: 'https://yarshabyte.vercel.app/team/anupam',
+    url: memberUrl,
     sameAs: profile.socials.map((s) => s.url).filter((u) => !u.startsWith('mailto:')),
   };
 

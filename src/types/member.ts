@@ -91,4 +91,6 @@ export interface MemberProfile {
   projects: ProjectContribution[];
   contact: MemberContact;
   socials: SocialLink[];
+  metaTitle?: string;
+  metaDescription?: string;
 }

@@ -1,6 +1,12 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getMemberBySlug, getAllSlugs, getTeamRoster } from '@/data';
+import {
+  getMemberBySlug,
+  getAllSlugs,
+  getTeamRoster,
+  getMemberCanonicalUrl,
+  MAIN_SITE_URL,
+} from '@/data';
 import { MemberPageTemplate } from '@/components/templates/MemberPageTemplate';
 
 interface PageProps {
@@ -22,16 +28,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  let title = `${profile.name} — ${profile.role} | YarsaByte`;
-  let description = `${profile.name} is ${profile.role} at YarsaByte. ${profile.positioningStatement}`;
+  const roleDisplay = profile.shortRole
+    ? `${profile.shortRole} at ${profile.company || 'YarsaByte'}`
+    : profile.role;
 
-  if (profile.slug === 'anupam') {
-    title = 'Anupam Baral — CPO at YarsaByte';
-    description =
-      'Anupam Baral is the Chief Product Officer at YarsaByte, working across product direction, application development and video production.';
-  }
+  const title = profile.metaTitle || `${profile.name} — ${roleDisplay}`;
+  const description =
+    profile.metaDescription ||
+    profile.tagline ||
+    `${profile.name} is ${profile.role} at YarsaByte. ${profile.positioningStatement}`;
 
-  const canonicalUrl = `https://yarshabyte.vercel.app/team/${profile.slug}`;
+  const canonicalUrl = getMemberCanonicalUrl(profile.slug);
 
   return {
     title,
@@ -44,7 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       type: 'profile',
       url: canonicalUrl,
-      siteName: 'YarsaByte',
+      siteName: profile.company || 'YarsaByte',
       images: [
         {
           url: profile.avatar,
@@ -73,17 +80,24 @@ export default async function MemberPage({ params }: PageProps) {
 
   const team = getTeamRoster();
 
+  // Dynamic job title extracted cleanly from role (e.g. "CPO — Chief Product Officer" -> "Chief Product Officer")
+  const jobTitle = profile.role.includes('—')
+    ? profile.role.split('—')[1].trim()
+    : profile.role;
+
+  const memberUrl = getMemberCanonicalUrl(profile.slug);
+
   // Structured Data Schema.org: Person & YarsaByte Organization
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: profile.name,
-    jobTitle: profile.slug === 'anupam' ? 'Chief Product Officer' : profile.role,
+    jobTitle,
     worksFor: {
       '@type': 'Organization',
-      name: 'YarsaByte',
-      url: 'https://yarshabyte.vercel.app',
-      logo: 'https://yarshabyte.vercel.app/ico-bg.png',
+      name: profile.company || 'YarsaByte',
+      url: MAIN_SITE_URL,
+      logo: `${MAIN_SITE_URL}/brand/ico-bg.png`,
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Butwal',
@@ -97,7 +111,7 @@ export default async function MemberPage({ params }: PageProps) {
     },
     image: profile.avatar,
     email: profile.contact.email,
-    url: `https://yarshabyte.vercel.app/team/${profile.slug}`,
+    url: memberUrl,
     sameAs: profile.socials.map((s) => s.url).filter((u) => !u.startsWith('mailto:')),
   };
 
