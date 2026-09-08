@@ -17,10 +17,10 @@ export function WorkSection({ profile }: WorkSectionProps) {
 
         <div className={styles.sectionHeader}>
           <h2 className="editorial-heading-lg">
-            Selected YarsaByte Deliverables
+            YarsaByte Work &amp; Contributions
           </h2>
           <p className="editorial-lead">
-            Platforms, client engagements, and studio systems I have helped engineer and deploy at YarsaByte.
+            Selected products, platforms, and creative media I have contributed to through YarsaByte.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export function WorkSection({ profile }: WorkSectionProps) {
 
               <div className={styles.cardContent}>
                 <div className={styles.cardMetaRow}>
-                  <span className={styles.clientTag}>{project.client || 'YarsaByte Partnership'}</span>
+                  <span className={styles.clientTag}>{project.client || 'YarsaByte Project'}</span>
                   <span className={styles.yearTag}>{project.year}</span>
                 </div>
 
@@ -49,21 +49,23 @@ export function WorkSection({ profile }: WorkSectionProps) {
                   {project.title}
                 </h3>
 
-                <div className={styles.roleBadge}>
-                  <span className={styles.roleLabel}>MY CONTRIBUTION:</span>
-                  <span className={styles.roleValue}>{project.role}</span>
+                <div className={styles.rolesGroup}>
+                  <div className={styles.roleBadge}>
+                    <span className={styles.roleLabel}>MY ROLE:</span>
+                    <span className={styles.roleValue}>{project.role}</span>
+                  </div>
+
+                  {project.contribution && (
+                    <div className={styles.contributionBox}>
+                      <span className={styles.contributionLabel}>CONTRIBUTION:</span>
+                      <p className={styles.contributionText}>{project.contribution}</p>
+                    </div>
+                  )}
                 </div>
 
                 <p className={styles.projectDesc}>
                   {project.description}
                 </p>
-
-                {project.impact && (
-                  <div className={styles.impactBox}>
-                    <span className={styles.impactLabel}>IMPACT:</span>
-                    <span className={styles.impactText}>{project.impact}</span>
-                  </div>
-                )}
 
                 <div className={styles.cardFooter}>
                   <div className={styles.tagsRow}>

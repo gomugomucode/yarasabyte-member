@@ -1,31 +1,6 @@
 .heroSection {
-  padding-top: 2.5rem;
+  padding-top: 3.5rem;
   padding-bottom: 5.5rem;
-}
-
-.eyebrowRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2.5rem;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 1.25rem;
-}
-
-.pulseDot {
-  width: 6px;
-  height: 6px;
-  background-color: var(--accent);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--accent);
-}
-
-.locationText {
-  font-family: var(--font-tech);
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  color: var(--fg-muted);
-  text-transform: uppercase;
 }
 
 .heroGrid {
@@ -47,16 +22,6 @@
   flex-direction: column;
 }
 
-.roleTag {
-  font-family: var(--font-tech);
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.25rem;
-}
-
 .heroName {
   font-family: var(--font-display);
   font-size: clamp(2.8rem, 6.5vw, 5.5rem);
@@ -65,15 +30,69 @@
   line-height: 0.94;
   color: var(--fg);
   text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.roleHierarchy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
   margin-bottom: 1.75rem;
 }
 
+.rolePrimaryRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.roleShort {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+.roleDivider {
+  color: var(--fg-faint);
+  font-weight: 300;
+}
+
+.roleFull {
+  font-family: var(--font-tech);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+.companyTag {
+  font-family: var(--font-tech);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--fg);
+}
+
+.additionalRolesTag {
+  font-family: var(--font-tech);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-top: 0.2rem;
+}
+
 .positioningStatement {
-  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
-  line-height: 1.6;
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  line-height: 1.65;
   color: var(--fg-muted);
   max-width: 580px;
   margin-bottom: 2.5rem;
+  font-style: italic;
 }
 
 .ctaGroup {
@@ -81,7 +100,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.75rem;
 }
 
 .socialsBar {
@@ -107,8 +126,8 @@
 }
 
 .socialIconBtn {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: var(--surface);
   border: 1px solid var(--border);

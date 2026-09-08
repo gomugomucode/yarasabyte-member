@@ -1,10 +1,9 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowUp, ArrowUpRight } from 'lucide-react';
-import { MemberProfile } from '@/types/member';
+import { ArrowUp, ArrowUpRight, Github, Globe, Linkedin, Mail } from 'lucide-react';
+import { MemberProfile, SocialLink } from '@/types/member';
 import styles from './Footer.module.css';
 
 interface FooterProps {
@@ -16,66 +15,62 @@ export function Footer({ profile }: FooterProps) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const navLinks = [
+    { label: 'Overview', href: '#overview' },
+    { label: 'Role', href: '#role' },
+    { label: 'Work', href: '#work' },
+    { label: 'Team', href: '#team' },
+    { label: 'Contact', href: '#contact' },
+  ];
+
+  const renderSocialIcon = (platform: SocialLink['platform']) => {
+    switch (platform) {
+      case 'github':
+        return <Github size={15} />;
+      case 'linkedin':
+        return <Linkedin size={15} />;
+      case 'email':
+        return <Mail size={15} />;
+      case 'website':
+        return <Globe size={15} />;
+      default:
+        return <ArrowUpRight size={15} />;
+    }
+  };
+
   return (
     <footer className={styles.footer}>
       <div className="container-editorial">
         <div className={styles.mainGrid}>
-          {/* Brand & Member Info */}
-          <div className={styles.brandCol}>
+          {/* Brand & Member Identity Column */}
+          <div className={styles.identityCol}>
             <div className={styles.brandHeader}>
               <div className={styles.logoBox}>
                 <Image
                   src="/brand/ico-bg.png"
                   alt="YarsaByte Logo"
-                  width={44}
-                  height={44}
+                  width={46}
+                  height={46}
                   className={styles.logoImg}
                 />
               </div>
               <span className={styles.brandTitle}>YARSABYTE</span>
             </div>
 
-            <p className={styles.memberBioBrief}>
-              <strong>{profile.name}</strong> is {profile.role.toLowerCase()} at YarsaByte,
-              a creative technology collective based in Butwal, Nepal.
-            </p>
-
-            <a
-              href="https://yarshabyte.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.yarsaByteLink}
-            >
-              <span>Visit YarsaByte Agency Site</span>
-              <ArrowUpRight size={16} />
-            </a>
-          </div>
-
-          {/* Location, Timezone & Google Maps */}
-          <div className={styles.locationMapCol}>
-            <h4 className={styles.colTitle}>LOCATION &amp; STUDIO BASE</h4>
-            
-            <div className={styles.metaInfoRow}>
-              <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>HEADQUARTERS</span>
-                <span className={styles.metaValue}>{profile.contact.location}</span>
-              </div>
-              <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>TIMEZONE</span>
-                <span className={styles.metaValue}>{profile.contact.timezone}</span>
-              </div>
-              <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>DIRECT INQUIRIES</span>
-                <a href={`mailto:${profile.contact.yarsaEmail}`} className={styles.emailLink}>
-                  {profile.contact.yarsaEmail}
-                </a>
-              </div>
+            <div className={styles.memberMetaBlock}>
+              <h3 className={styles.memberName}>{profile.name}</h3>
+              <p className={styles.memberRoles}>
+                {profile.shortRole || 'CPO'} · {profile.additionalRoles || 'App Developer · Video Editor'}
+              </p>
+              <p className={styles.memberLocation}>
+                {profile.company || 'YarsaByte'} — {profile.location}
+              </p>
             </div>
 
-            {/* Google Maps Embed */}
+            {/* Google Maps Location Preview */}
             <div className={styles.mapContainer}>
               <iframe
-                title={`Google Map of ${profile.contact.location}`}
+                title={`Google Map of ${profile.location}`}
                 src="https://maps.google.com/maps?q=Butwal%2C%20Nepal&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 className={styles.mapIframe}
                 loading="lazy"
@@ -92,14 +87,47 @@ export function Footer({ profile }: FooterProps) {
               </a>
             </div>
           </div>
+
+          {/* Links Column */}
+          <div className={styles.linksCol}>
+            <h4 className={styles.colTitle}>LINKS</h4>
+            <ul className={styles.linkList}>
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Social Links Column */}
+          <div className={styles.socialCol}>
+            <h4 className={styles.colTitle}>SOCIAL</h4>
+            <ul className={styles.linkList}>
+              {profile.socials.map((soc) => (
+                <li key={soc.platform}>
+                  <a
+                    href={soc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.socialLinkItem}
+                  >
+                    <span className={styles.miniIcon}>{renderSocialIcon(soc.platform)}</span>
+                    <span>{soc.label}</span>
+                    <ArrowUpRight size={13} className={styles.miniArrow} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
           <div className={styles.copyright}>
-            <span>&copy; {new Date().getFullYear()} YarsaByte Creative Technology. All rights reserved.</span>
+            <span>&copy; {new Date().getFullYear()} YarsaByte</span>
             <span className={styles.dot}>•</span>
-            <span>Profile: {profile.name} ({profile.slug})</span>
+            <span>Member profile — {profile.name}</span>
           </div>
 
           <button

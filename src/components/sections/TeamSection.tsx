@@ -19,10 +19,10 @@ export function TeamSection({ currentSlug, team }: TeamSectionProps) {
 
         <div className={styles.sectionHeader}>
           <h2 className="editorial-heading-lg">
-            The YarsaByte Collective
+            YarsaByte is built together.
           </h2>
           <p className="editorial-lead">
-            An interdisciplinary studio of engineers, interface craftsmen, and product thinkers operating out of Butwal, Nepal.
+            I work alongside an interdisciplinary collective of engineers, interface craftsmen, and systems thinkers at YarsaByte.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export function TeamSection({ currentSlug, team }: TeamSectionProps) {
                   />
                   {isCurrent && (
                     <span className={styles.currentBadge}>
-                      Active Profile
+                      Current Profile
                     </span>
                   )}
                 </div>
@@ -69,14 +69,14 @@ export function TeamSection({ currentSlug, team }: TeamSectionProps) {
 
                   <div className={styles.cardActionRow}>
                     {isCurrent ? (
-                      <span className={styles.viewingNotice}>Currently Viewing</span>
+                      <span className={styles.viewingNotice}>Current Profile</span>
                     ) : (
                       <Link
                         href={`/team/${member.slug}`}
                         className={styles.viewProfileBtn}
                         aria-label={`View ${member.name}'s profile`}
                       >
-                        <span>View Profile</span>
+                        <span>View profile</span>
                         <ArrowUpRight size={15} />
                       </Link>
                     )}

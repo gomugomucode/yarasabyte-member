@@ -18,20 +18,33 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!profile) {
     return {
-      title: 'Member Not Found',
+      title: 'Member Not Found | YarsaByte',
     };
   }
 
-  const title = `${profile.name} — ${profile.role}`;
-  const description = `${profile.name} is ${profile.role} at YarsaByte. ${profile.positioningStatement}`;
+  let title = `${profile.name} — ${profile.role} | YarsaByte`;
+  let description = `${profile.name} is ${profile.role} at YarsaByte. ${profile.positioningStatement}`;
+
+  if (profile.slug === 'anupam') {
+    title = 'Anupam Baral — CPO at YarsaByte';
+    description =
+      'Anupam Baral is the Chief Product Officer at YarsaByte, working across product direction, application development and video production.';
+  }
+
+  const canonicalUrl = `https://yarshabyte.vercel.app/team/${profile.slug}`;
 
   return {
     title,
     description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
-      title: `${title} | YarsaByte`,
+      title,
       description,
       type: 'profile',
+      url: canonicalUrl,
+      siteName: 'YarsaByte',
       images: [
         {
           url: profile.avatar,
@@ -43,7 +56,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} | YarsaByte`,
+      title,
       description,
       images: [profile.avatar],
     },
@@ -60,16 +73,22 @@ export default async function MemberPage({ params }: PageProps) {
 
   const team = getTeamRoster();
 
-  // Structured Data Schema.org for SEO
+  // Structured Data Schema.org: Person & YarsaByte Organization
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: profile.name,
-    jobTitle: profile.role,
+    jobTitle: profile.slug === 'anupam' ? 'Chief Product Officer' : profile.role,
     worksFor: {
       '@type': 'Organization',
       name: 'YarsaByte',
       url: 'https://yarshabyte.vercel.app',
+      logo: 'https://yarshabyte.vercel.app/ico-bg.png',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Butwal',
+        addressCountry: 'NP',
+      },
     },
     address: {
       '@type': 'PostalAddress',
@@ -78,6 +97,7 @@ export default async function MemberPage({ params }: PageProps) {
     },
     image: profile.avatar,
     email: profile.contact.email,
+    url: `https://yarshabyte.vercel.app/team/${profile.slug}`,
     sameAs: profile.socials.map((s) => s.url).filter((u) => !u.startsWith('mailto:')),
   };
 

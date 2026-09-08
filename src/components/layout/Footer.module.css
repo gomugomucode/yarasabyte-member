@@ -15,17 +15,24 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 640px) {
   .mainGrid {
-    grid-template-columns: 1.1fr 1.1fr;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 2fr 1fr 1.2fr;
     gap: 4.5rem;
   }
 }
 
-.brandCol {
+.identityCol {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .brandHeader {
@@ -35,9 +42,9 @@
 }
 
 .logoBox {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
+  width: 46px;
+  height: 46px;
+  border-radius: 11px;
   overflow: hidden;
   background-color: var(--accent);
   display: flex;
@@ -53,101 +60,48 @@
 
 .brandTitle {
   font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: 1.6rem;
   letter-spacing: 0.08em;
   color: #ffffff;
 }
 
-.memberBioBrief {
-  font-size: 0.95rem;
-  color: rgba(245, 239, 231, 0.7);
-  line-height: 1.65;
-  max-width: 380px;
+.memberMetaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.memberBioBrief strong {
+.memberName {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 700;
   color: #ffffff;
 }
 
-.yarsaByteLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+.memberRoles {
   font-family: var(--font-tech);
   font-size: 0.82rem;
-  letter-spacing: 0.06em;
   color: var(--accent);
-  text-transform: uppercase;
   font-weight: 600;
-  transition: var(--transition-fast);
-  margin-top: 0.5rem;
+  letter-spacing: 0.04em;
 }
 
-.yarsaByteLink:hover {
-  color: #ffffff;
-  transform: translateX(4px);
-}
-
-.colTitle {
-  font-family: var(--font-tech);
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  color: var(--accent);
-  margin-bottom: 1.25rem;
-  font-weight: 700;
-}
-
-.locationMapCol {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.metaInfoRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.metaBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.metaLabel {
-  font-family: var(--font-tech);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  color: rgba(245, 239, 231, 0.45);
-}
-
-.metaValue {
+.memberLocation {
   font-size: 0.88rem;
-  color: rgba(245, 239, 231, 0.85);
-}
-
-.emailLink {
-  font-size: 0.88rem;
-  color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.emailLink:hover {
-  color: #ffffff;
+  color: rgba(245, 239, 231, 0.65);
 }
 
 .mapContainer {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
-  margin-top: 0.5rem;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  max-width: 420px;
 }
 
 .mapIframe {
   width: 100%;
-  height: 170px;
+  height: 140px;
   border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.14);
   filter: contrast(95%) brightness(90%) invert(90%) hue-rotate(180deg);
@@ -157,9 +111,9 @@
 .mapPinLink {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   font-family: var(--font-tech);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 0.06em;
   color: var(--accent);
   text-transform: uppercase;
@@ -170,6 +124,64 @@
 .mapPinLink:hover {
   color: #ffffff;
   transform: translateX(3px);
+}
+
+/* Links & Social Columns */
+.colTitle {
+  font-family: var(--font-tech);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.linkList a {
+  font-size: 0.92rem;
+  color: rgba(245, 239, 231, 0.75);
+  transition: var(--transition-fast);
+}
+
+.linkList a:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+.socialLinkItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  color: rgba(245, 239, 231, 0.75);
+  transition: var(--transition-fast);
+}
+
+.miniIcon {
+  display: flex;
+  align-items: center;
+  color: var(--accent);
+}
+
+.miniArrow {
+  opacity: 0.4;
+  transition: var(--transition-fast);
+}
+
+.socialLinkItem:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.socialLinkItem:hover .miniArrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
 }
 
 /* Bottom Bar */
@@ -191,7 +203,7 @@
 .copyright {
   font-family: var(--font-tech);
   font-size: 0.78rem;
-  color: rgba(245, 239, 231, 0.45);
+  color: rgba(245, 239, 231, 0.5);
   display: flex;
   align-items: center;
   flex-wrap: wrap;

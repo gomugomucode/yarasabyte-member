@@ -115,7 +115,14 @@
   font-weight: 700;
   color: var(--fg);
   line-height: 1.25;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.rolesGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .roleBadge {
@@ -126,7 +133,7 @@
   border: 1px solid var(--border);
   padding: 0.35rem 0.75rem;
   border-radius: var(--radius-sm);
-  margin-bottom: 1.25rem;
+  width: fit-content;
 }
 
 .roleLabel {
@@ -138,41 +145,41 @@
 }
 
 .roleValue {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--fg);
+}
+
+.contributionBox {
+  background-color: var(--surface-alt);
+  border-left: 2px solid var(--accent);
+  padding: 0.75rem 1rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contributionLabel {
+  font-family: var(--font-tech);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.contributionText {
+  font-size: 0.88rem;
+  color: var(--fg);
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .projectDesc {
   font-size: 0.95rem;
   color: var(--fg-muted);
   line-height: 1.65;
-  margin-bottom: 1.25rem;
-}
-
-.impactBox {
-  padding: 0.85rem 1rem;
-  background-color: rgba(184, 106, 44, 0.08);
-  border-left: 2px solid var(--accent);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  margin-bottom: 1.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.impactLabel {
-  font-family: var(--font-tech);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.impactText {
-  font-size: 0.88rem;
-  color: var(--fg);
-  font-weight: 500;
+  margin-bottom: 1.5rem;
 }
 
 .cardFooter {

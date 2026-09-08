@@ -11,28 +11,34 @@ export async function generateMetadata(): Promise<Metadata> {
     };
   }
 
-  const title = `${profile.name} — ${profile.role}`;
-  const description = `${profile.name} is ${profile.role} at YarsaByte. ${profile.positioningStatement}`;
+  const title = 'Anupam Baral — CPO at YarsaByte';
+  const description =
+    'Anupam Baral is the Chief Product Officer at YarsaByte, working across product direction, application development and video production.';
 
   return {
-    title: `${title} | YarsaByte`,
+    title,
     description,
+    alternates: {
+      canonical: 'https://yarshabyte.vercel.app/team/anupam',
+    },
     openGraph: {
-      title: `${title} | YarsaByte`,
+      title,
       description,
       type: 'profile',
+      url: 'https://yarshabyte.vercel.app/team/anupam',
+      siteName: 'YarsaByte',
       images: [
         {
           url: profile.avatar,
           width: 1200,
           height: 1500,
-          alt: `${profile.name} — ${profile.role}`,
+          alt: `${profile.name} — CPO at YarsaByte`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} | YarsaByte`,
+      title,
       description,
       images: [profile.avatar],
     },
@@ -47,15 +53,22 @@ export default function HomePage() {
 
   const team = getTeamRoster();
 
+  // Structured Data Schema.org: Person & YarsaByte Organization
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: profile.name,
-    jobTitle: profile.role,
+    jobTitle: 'Chief Product Officer',
     worksFor: {
       '@type': 'Organization',
       name: 'YarsaByte',
       url: 'https://yarshabyte.vercel.app',
+      logo: 'https://yarshabyte.vercel.app/ico-bg.png',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Butwal',
+        addressCountry: 'NP',
+      },
     },
     address: {
       '@type': 'PostalAddress',
@@ -64,6 +77,7 @@ export default function HomePage() {
     },
     image: profile.avatar,
     email: profile.contact.email,
+    url: 'https://yarshabyte.vercel.app/team/anupam',
     sameAs: profile.socials.map((s) => s.url).filter((u) => !u.startsWith('mailto:')),
   };
 

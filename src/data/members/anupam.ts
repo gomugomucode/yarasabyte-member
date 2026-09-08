@@ -3,130 +3,107 @@ import { MemberProfile } from '@/types/member';
 export const anupamProfile: MemberProfile = {
   slug: 'anupam',
   name: 'Anupam Baral',
-  role: 'Lead Software Engineer & Systems Architect',
-  subRole: 'Core Team @ YarsaByte',
+  role: 'CPO — Chief Product Officer',
+  shortRole: 'CPO',
+  headlineRole: 'CHIEF PRODUCT OFFICER',
+  company: 'YarsaByte',
+  additionalRoles: 'App Developer · Video Editor',
+  subRole: 'App Developer · Video Editor @ YarsaByte',
   location: 'Butwal, Nepal',
   joinedYear: '2023',
   avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85',
-  tagline: 'Crafting resilient distributed backends, refined interfaces, and scalable engineering foundations at YarsaByte.',
-  positioningStatement: 'I lead technical architecture and end-to-end engineering at YarsaByte, bridging creative vision with rock-solid distributed systems and tactile digital experiences.',
-  bioHeading: 'Engineering software with intentionality, high precision, and long-term durability.',
+  tagline: 'Shaping products, building applications and creating digital experiences at YarsaByte.',
+  positioningStatement:
+    'I work across product direction, technology and creative production at YarsaByte. As CPO, I focus on shaping products, defining product direction, understanding user needs and helping turn ideas into useful digital experiences. Alongside product leadership, I contribute to application development and video production.',
+  bioHeading: 'Product, technology and creative work — from idea to execution.',
   bioParagraphs: [
-    'Based in Butwal, Nepal, I work at the intersection of systems architecture, frontend craft, and developer experience. At YarsaByte, I spearhead the foundational engineering of client platforms, ensuring every digital product we deliver is lightning-fast, fault-tolerant, and memorable.',
-    'Over the past several years, I have architected and deployed high-throughput web applications, headless commerce systems, and automated operations pipelines. My philosophy centers on simplicity over accidental complexity: building systems that are straightforward to reason about, effortless to maintain, and a delight for end-users to interact with.',
-    'Beyond day-to-day coding, I cultivate engineering standards across our team—championing rigorous code reviews, automated CI/CD pipelines, accessible web standards, and continuous learning within Nepal’s growing technology ecosystem.'
+    'I am Anupam Baral, CPO at YarsaByte. I work on product thinking, planning and direction while also contributing directly to application development and video production.',
+    'I enjoy working across the boundary between product, technology and creativity—bridging user needs with robust application engineering and compelling visual narratives.',
+    'At YarsaByte, our focus is making things that matter: building thoughtfully engineered digital experiences and partnering with regional and global clients to bring bold concepts into reality.'
   ],
-  philosophyQuote: {
-    text: 'Great software feels inevitable—quietly robust underneath, effortless and expressive on the surface.',
-    author: 'Anupam Baral'
-  },
   metadata: [
-    { label: 'AFFILIATION', value: 'YarsaByte Creative Technology' },
-    { label: 'LOCATION', value: 'Butwal, Lumbini, Nepal' },
-    { label: 'DISCIPLINE', value: 'Architecture & Full-Stack Systems' },
-    { label: 'TENURE', value: 'Since 2023' },
-    { label: 'AVAILABILITY', value: 'Consultations & Core Partnerships' }
+    { label: 'BASED IN', value: 'Butwal, Nepal' },
+    { label: 'ROLE', value: 'CPO @ YarsaByte' },
+    { label: 'ALSO', value: 'App Developer · Video Editor' },
+    { label: 'FOCUS', value: 'Product · Technology · Creative' }
   ],
+  roleStatement: 'As CPO, I help turn ideas into products that people can actually use.',
   responsibilities: [
     {
-      title: 'Systems & Technical Architecture',
-      summary: 'Designing resilient cloud infrastructure, API topologies, and data contracts that scale gracefully.',
+      title: 'PRODUCT LEADERSHIP',
+      summary: 'Guiding vision, user experience, and roadmap execution for YarsaByte products.',
       items: [
-        'Defining architectural patterns across Next.js, Node.js, and cloud native microservices.',
-        'Authoring technical blueprints, API schemas, and database entity models for flagship projects.',
-        'Auditing application performance, serverless edge compute latency, and database query costs.'
+        'Product direction',
+        'Product planning',
+        'Feature prioritization',
+        'User experience thinking',
+        'Roadmap planning',
+        'Team collaboration'
       ]
     },
     {
-      title: 'Client Engineering & Delivery',
-      summary: 'Leading technical execution on YarsaByte client partnerships from inception to production launch.',
+      title: 'APP DEVELOPMENT',
+      summary: 'Writing code and implementing performant applications across the stack.',
       items: [
-        'Delivering mission-critical web platforms for clients including Avenue Butwal and GreenStar.',
-        'Ensuring 100% adherence to modern accessibility (WCAG AA), Core Web Vitals, and SEO guidelines.',
-        'Coordinating technical releases, staging environments, and zero-downtime deployment pipelines.'
+        'Application development',
+        'Frontend implementation',
+        'Backend integration',
+        'API development',
+        'Product prototyping',
+        'Technical problem solving'
       ]
     },
     {
-      title: 'Engineering Culture & Standards',
-      summary: 'Establishing high-leverage workflows and mentoring team engineers across the YarsaByte collective.',
+      title: 'VIDEO & CREATIVE',
+      summary: 'Crafting compelling visual narratives, product showcases, and media assets.',
       items: [
-        'Curating YarsaByte engineering guidelines, TypeScript typings, and CI linting configurations.',
-        'Mentoring junior and mid-level engineers in systems debugging and clean component composition.',
-        'Leading internal engineering workshops on distributed resilience, caching, and state management.'
+        'Video editing',
+        'Product videos',
+        'Promotional content',
+        'Visual storytelling',
+        'Content production'
       ]
-    }
-  ],
-  competencies: [
-    {
-      category: 'Architecture & Backend',
-      skills: ['TypeScript', 'Node.js', 'PostgreSQL', 'Redis', 'GraphQL', 'REST APIs', 'Docker', 'Distributed Systems']
-    },
-    {
-      category: 'Frontend & UI Craft',
-      skills: ['Next.js (App Router)', 'React 19', 'Design Systems', 'Vanilla CSS / CSS Modules', 'Micro-interactions', 'Web Performance']
-    },
-    {
-      category: 'DevOps & Cloud',
-      skills: ['Vercel Edge Platform', 'AWS / Cloudflare', 'CI/CD Automation', 'Docker', 'Monitoring & Observability']
-    },
-    {
-      category: 'Practices & Standards',
-      skills: ['Domain-Driven Design', 'Zero-Downtime Deployment', 'API Contract Testing', 'Semantic HTML', 'WCAG 2.1 AA']
-    }
-  ],
-  milestones: [
-    {
-      year: '2024',
-      title: 'Spearheaded Avenue Butwal Digital Experience',
-      description: 'Engineered the multi-tenant digital hub for Butwal’s flagship shopping and leisure complex with sub-second page loads.'
-    },
-    {
-      year: '2023',
-      title: 'Joined YarsaByte Core Engineering',
-      description: 'Established the internal component library and architectural standards powering client projects.'
-    },
-    {
-      year: '2023',
-      title: 'GreenStar Automation System Deployment',
-      description: 'Architected real-time inventory tracking and automated procurement management for industrial suppliers.'
     }
   ],
   projects: [
     {
-      id: 'avenue-butwal',
-      title: 'Avenue Butwal Platform',
-      client: 'Avenue Butwal',
-      year: '2024',
-      role: 'Lead Systems Architect & Full-Stack Lead',
-      description: 'Comprehensive digital portal, tenant directory, and real-time event booking ecosystem for Butwal’s premier commercial and leisure destination.',
-      impact: 'Reduced page load time by 64% and supported 50,000+ monthly visits during launch festivities.',
-      tags: ['Next.js', 'TypeScript', 'Tailored CSS', 'PostgreSQL', 'Cloudflare'],
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
-      link: 'https://yarshabyte.vercel.app/',
-      featured: true
-    },
-    {
       id: 'greenstar-automation',
-      title: 'GreenStar Suppliers & Automation',
-      client: 'GreenStar Industrial',
+      title: 'GreenStar Automation',
+      client: 'GreenStar Suppliers',
       year: '2023',
-      role: 'Backend Architect & API Designer',
-      description: 'Enterprise ERP integration and real-time inventory synchronization engine for industrial components and automation equipment.',
-      impact: 'Automated 1,200+ monthly order dispatches with zero order-state inconsistencies.',
-      tags: ['Node.js', 'Redis', 'PostgreSQL', 'RESTful API', 'Docker'],
+      role: 'Product · Development · Creative',
+      contribution: 'Website development, product presentation and visual content.',
+      description:
+        'End-to-end web platform and product presentation for industrial automation and suppliers, combining operational workflows with refined digital branding.',
+      tags: ['Product Direction', 'App Development', 'Video & Media'],
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
       link: 'https://yarshabyte.vercel.app/',
       featured: true
     },
     {
-      id: 'yarsabyte-design-system',
-      title: 'YarsaByte Design & Motion System',
+      id: 'avenue-butwal',
+      title: 'Avenue Butwal',
+      client: 'Avenue Butwal',
+      year: '2024',
+      role: 'Product Strategy · Development',
+      contribution: 'Platform architecture, tenant experience planning and frontend development.',
+      description:
+        'Comprehensive digital portal and directory for Butwal’s flagship commercial and leisure destination, tailored for visitors and commercial tenants.',
+      tags: ['Product Strategy', 'Frontend Engineering', 'User Experience'],
+      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
+      link: 'https://yarshabyte.vercel.app/',
+      featured: true
+    },
+    {
+      id: 'yarsabyte-creative-production',
+      title: 'YarsaByte Studio Production',
       client: 'YarsaByte Internal',
       year: '2024',
-      role: 'Component Architect',
-      description: 'The internal component framework and token infrastructure ensuring visual cohesion, fluid motion, and strict accessibility across all studio builds.',
-      impact: 'Accelerated client project scaffolding time by 3.5x while keeping bundle sizes below 80KB.',
-      tags: ['Design System', 'Accessibility', 'CSS Architecture', 'TypeScript'],
+      role: 'Video Editor & Creative Producer',
+      contribution: 'Promotional video editing, release trailers, and interactive multimedia content.',
+      description:
+        'Visual storytelling and multimedia presentations capturing YarsaByte’s design philosophy, client case studies, and digital capabilities.',
+      tags: ['Video Editing', 'Motion Content', 'Visual Storytelling'],
       image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
       link: 'https://yarshabyte.vercel.app/',
       featured: true
@@ -135,15 +112,16 @@ export const anupamProfile: MemberProfile = {
   contact: {
     email: 'anupambaral@gmail.com',
     yarsaEmail: 'anupam@yarsabyte.com',
-    location: 'Butwal, Lumbini Province, Nepal',
+    website: 'https://yarshabyte.vercel.app',
+    location: 'Butwal, Nepal',
     timezone: 'Asia/Kathmandu (UTC+05:45)',
-    availability: 'Open for high-impact technical advisory & YarsaByte client initiatives',
+    availability: 'Open for product partnerships & creative technology collaborations',
     responseExpectation: 'Usually responds within 24 hours on business days'
   },
   socials: [
-    { platform: 'github', url: 'https://github.com', label: 'GitHub' },
     { platform: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
-    { platform: 'x', url: 'https://x.com', label: 'X (Twitter)' },
-    { platform: 'email', url: 'mailto:anupam@yarsabyte.com', label: 'Email' }
+    { platform: 'github', url: 'https://github.com', label: 'GitHub' },
+    { platform: 'email', url: 'mailto:anupam@yarsabyte.com', label: 'Email' },
+    { platform: 'website', url: 'https://yarshabyte.vercel.app', label: 'Website' }
   ]
 };

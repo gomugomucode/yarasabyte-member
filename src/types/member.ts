@@ -11,7 +11,7 @@ export interface MetadataItem {
 
 export interface ResponsibilityCategory {
   title: string;
-  summary: string;
+  summary?: string;
   items: string[];
 }
 
@@ -32,6 +32,7 @@ export interface ProjectContribution {
   client?: string;
   year: string;
   role: string;
+  contribution?: string;
   description: string;
   impact?: string;
   tags: string[];
@@ -51,20 +52,25 @@ export interface TeamTeammate {
 
 export interface MemberContact {
   email: string;
-  yarsaEmail: string;
+  yarsaEmail?: string;
+  website?: string;
   location: string;
-  timezone: string;
-  availability: string;
-  responseExpectation: string;
+  timezone?: string;
+  availability?: string;
+  responseExpectation?: string;
 }
 
 export interface MemberProfile {
   slug: string;
   name: string;
-  role: string;
-  subRole: string;
-  location: string;
-  joinedYear: string;
+  role: string; // e.g. "CPO — Chief Product Officer"
+  shortRole?: string; // e.g. "CPO"
+  headlineRole?: string; // e.g. "CHIEF PRODUCT OFFICER"
+  company?: string; // "YarsaByte"
+  additionalRoles?: string; // "App Developer · Video Editor"
+  subRole: string; // "App Developer · Video Editor @ YarsaByte"
+  location: string; // "Butwal, Nepal"
+  joinedYear?: string;
   avatar: string;
   tagline: string;
   positioningStatement: string;
@@ -75,8 +81,9 @@ export interface MemberProfile {
     author?: string;
   };
   metadata: MetadataItem[];
+  roleStatement?: string;
   responsibilities: ResponsibilityCategory[];
-  competencies: SkillCategory[];
+  competencies?: SkillCategory[];
   milestones?: MilestoneItem[];
   projects: ProjectContribution[];
   contact: MemberContact;

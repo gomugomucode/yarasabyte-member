@@ -27,12 +27,18 @@ export function getAllSlugs(): string[] {
 }
 
 export function getTeamRoster(): TeamTeammate[] {
-  return Object.values(membersMap).map((m) => ({
-    slug: m.slug,
-    name: m.name,
-    role: m.role,
-    avatar: m.avatar,
-    focus: m.subRole,
-    location: m.location,
-  }));
+  return Object.values(membersMap).map((m) => {
+    let focus = m.subRole;
+    if (m.slug === 'anupam') {
+      focus = 'Product · Technology · Creative';
+    }
+    return {
+      slug: m.slug,
+      name: m.name,
+      role: m.shortRole || m.role,
+      avatar: m.avatar,
+      focus,
+      location: m.location,
+    };
+  });
 }

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { ArrowUpRight, Github, Globe, Linkedin, Mail, Twitter } from 'lucide-react';
 import { MemberProfile, SocialLink } from '@/types/member';
 import styles from './HeroSection.module.css';
 
@@ -21,6 +21,8 @@ export function HeroSection({ profile }: HeroSectionProps) {
         return <Twitter size={18} />;
       case 'email':
         return <Mail size={18} />;
+      case 'website':
+        return <Globe size={18} />;
       default:
         return <ArrowUpRight size={18} />;
     }
@@ -29,46 +31,52 @@ export function HeroSection({ profile }: HeroSectionProps) {
   return (
     <section id="overview" className={`section-editorial ${styles.heroSection}`}>
       <div className="container-editorial">
-        {/* Top Eyebrow Tag */}
-        <div className={styles.eyebrowRow}>
-          <div className="badge-pill accent">
-            <span className={styles.pulseDot} aria-hidden="true" />
-            <span>YARSABYTE COLLECTIVE</span>
-          </div>
-          <span className={styles.locationText}>{profile.location}</span>
-        </div>
-
         {/* Hero Main Grid */}
         <div className={styles.heroGrid}>
-          {/* Left Column: Name, Role & Statement */}
+          {/* Left Column: Name, Role Hierarchy & Statement */}
           <div className={styles.contentCol}>
-            <div className={styles.roleTag}>
-              <span>{profile.role}</span>
-            </div>
-
             <h1 className={styles.heroName}>
               {profile.name}
             </h1>
 
+            {/* Role Hierarchy: CPO / CHIEF PRODUCT OFFICER @ YARSABYTE */}
+            <div className={styles.roleHierarchy}>
+              <div className={styles.rolePrimaryRow}>
+                <span className={styles.roleShort}>{profile.shortRole || 'CPO'}</span>
+                <span className={styles.roleDivider}>—</span>
+                <span className={styles.roleFull}>{profile.headlineRole || 'CHIEF PRODUCT OFFICER'}</span>
+              </div>
+              <div className={styles.companyTag}>
+                @ {profile.company?.toUpperCase() || 'YARSABYTE'}
+              </div>
+              {profile.additionalRoles && (
+                <div className={styles.additionalRolesTag}>
+                  {profile.additionalRoles.toUpperCase()}
+                </div>
+              )}
+            </div>
+
+            {/* Concise Positioning Statement */}
             <p className={styles.positioningStatement}>
-              {profile.positioningStatement}
+              &ldquo;{profile.tagline || 'Shaping products, building applications and creating digital experiences at YarsaByte.'}&rdquo;
             </p>
 
             {/* CTAs */}
             <div className={styles.ctaGroup}>
               <a href="#contact" className="btn-editorial-primary">
-                <span>Start a Conversation</span>
-                <ArrowDownRight size={18} />
+                <span>Get In Touch</span>
+                <ArrowUpRight size={17} />
               </a>
 
               <a href="#work" className="btn-editorial-secondary">
-                <span>View Contributions</span>
+                <span>Explore My Work</span>
+                <ArrowUpRight size={17} />
               </a>
             </div>
 
-            {/* Socials & Meta Bar */}
+            {/* Socials Bar */}
             <div className={styles.socialsBar}>
-              <span className={styles.socialLabel}>DIRECT CHANNELS</span>
+              <span className={styles.socialLabel}>CONNECT</span>
               <div className={styles.iconList}>
                 {profile.socials.map((soc) => (
                   <a
@@ -106,15 +114,15 @@ export function HeroSection({ profile }: HeroSectionProps) {
               <div className={styles.floatingMetaCard}>
                 <div className={styles.metaRow}>
                   <span className={styles.metaKey}>ORGANIZATION</span>
-                  <span className={styles.metaVal}>YarsaByte</span>
+                  <span className={styles.metaVal}>{profile.company || 'YarsaByte'}</span>
                 </div>
                 <div className={styles.metaRow}>
-                  <span className={styles.metaKey}>ROLE</span>
-                  <span className={styles.metaVal}>{profile.subRole}</span>
+                  <span className={styles.metaKey}>PRIMARY ROLE</span>
+                  <span className={styles.metaVal}>{profile.shortRole || 'CPO'}</span>
                 </div>
                 <div className={styles.metaRow}>
-                  <span className={styles.metaKey}>SINCE</span>
-                  <span className={styles.metaVal}>{profile.joinedYear}</span>
+                  <span className={styles.metaKey}>LOCATION</span>
+                  <span className={styles.metaVal}>{profile.location}</span>
                 </div>
               </div>
             </div>
