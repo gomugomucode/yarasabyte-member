@@ -1,8 +1,11 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { TeamTeammate } from '@/types/member';
+import { getMemberUrl } from '@/data';
 import styles from './TeamMemberCard.module.css';
 
 export interface TeamMemberCardProps {
@@ -12,6 +15,12 @@ export interface TeamMemberCardProps {
 
 export function TeamMemberCard({ member, isCurrent = false }: TeamMemberCardProps) {
   const isAnupam = member.slug.toLowerCase() === 'anupam';
+  const [profileUrl, setProfileUrl] = useState(() => getMemberUrl(member.slug));
+
+  useEffect(() => {
+    // If running on localhost in browser, resolve to <slug>.localhost:<port>
+    setProfileUrl(getMemberUrl(member.slug));
+  }, [member.slug]);
 
   return (
     <div
@@ -62,7 +71,7 @@ export function TeamMemberCard({ member, isCurrent = false }: TeamMemberCardProp
             <span className={styles.viewingNotice}>Current Profile</span>
           ) : (
             <Link
-              href={`/team/${member.slug}`}
+              href={profileUrl}
               className={styles.viewProfileBtn}
               aria-label={`View ${member.name}'s profile`}
             >
