@@ -1,0 +1,253 @@
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+}
+
+@media (min-width: 960px) {
+  .contactGrid {
+    grid-template-columns: 1fr 1.15fr;
+    gap: 5rem;
+  }
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.channelsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.channelItem {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.15rem 1.35rem;
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+}
+
+.channelItem:hover {
+  border-color: var(--border-strong);
+  background-color: var(--surface-warm);
+}
+
+.channelIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.channelDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.channelLabel {
+  font-family: var(--font-tech);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: var(--fg-faint);
+  font-weight: 700;
+}
+
+.channelLink {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--fg);
+  word-break: break-all;
+}
+
+.channelLink:hover {
+  color: var(--accent);
+}
+
+.channelText {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.statusBox {
+  background-color: var(--surface-warm);
+  border: 1px solid rgba(184, 106, 44, 0.25);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.statusHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.pulseActiveDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46, 125, 50, 0.6);
+}
+
+.statusHeading {
+  font-family: var(--font-tech);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--fg-muted);
+}
+
+.statusText {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.expectationNote {
+  font-family: var(--font-tech);
+  font-size: 0.75rem;
+  color: var(--fg-faint);
+}
+
+/* Right Column - Form */
+.formCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.formCard {
+  background-color: var(--surface-warm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 12px 32px rgba(30, 26, 24, 0.05);
+}
+
+@media (min-width: 640px) {
+  .formCard {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.formTitle {
+  font-family: var(--font-body);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 0.35rem;
+}
+
+.formSubtitle {
+  font-size: 0.92rem;
+  color: var(--fg-muted);
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-family: var(--font-tech);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.req {
+  color: var(--accent);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--fg);
+  transition: var(--transition-fast);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-subtle);
+}
+
+.inputError {
+  border-color: #d32f2f !important;
+}
+
+.fieldError {
+  font-family: var(--font-tech);
+  font-size: 0.75rem;
+  color: #d32f2f;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.successNotice {
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.successIcon {
+  color: #2e7d32;
+}
+
+.successTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1b5e20;
+  margin-bottom: 0.35rem;
+}
+
+.successText {
+  font-size: 0.92rem;
+  color: #2e7d32;
+  line-height: 1.5;
+}

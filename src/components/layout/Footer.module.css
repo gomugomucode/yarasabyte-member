@@ -1,0 +1,235 @@
+.footer {
+  background-color: #241e1b;
+  color: #f5efe7;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 640px) {
+  .mainGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 2.2fr 1fr 1fr 1.4fr;
+  }
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.brandHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.logoBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brandTitle {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.memberBioBrief {
+  font-size: 0.95rem;
+  color: rgba(245, 239, 231, 0.7);
+  line-height: 1.65;
+  max-width: 380px;
+}
+
+.memberBioBrief strong {
+  color: #ffffff;
+}
+
+.yarsaByteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-tech);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: var(--transition-fast);
+  margin-top: 0.5rem;
+}
+
+.yarsaByteLink:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.colTitle {
+  font-family: var(--font-tech);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.linkList a {
+  font-size: 0.92rem;
+  color: rgba(245, 239, 231, 0.75);
+  transition: var(--transition-fast);
+}
+
+.linkList a:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+.socialLinkItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.miniArrow {
+  opacity: 0.5;
+  transition: var(--transition-fast);
+}
+
+.socialLinkItem:hover .miniArrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+.metaCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.metaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.metaLabel {
+  font-family: var(--font-tech);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: rgba(245, 239, 231, 0.45);
+}
+
+.metaValue {
+  font-size: 0.88rem;
+  color: rgba(245, 239, 231, 0.85);
+}
+
+.emailLink {
+  font-size: 0.88rem;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.emailLink:hover {
+  color: #ffffff;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .bottomBar {
+    flex-direction: row;
+  }
+}
+
+.copyright {
+  font-family: var(--font-tech);
+  font-size: 0.78rem;
+  color: rgba(245, 239, 231, 0.45);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.dot {
+  color: rgba(245, 239, 231, 0.3);
+}
+
+.backToTopBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-tech);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(245, 239, 231, 0.8);
+  transition: var(--transition-fast);
+}
+
+.backToTopBtn:hover {
+  color: #ffffff;
+}
+
+.topIconCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.backToTopBtn:hover .topIconCircle {
+  background-color: var(--accent);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
