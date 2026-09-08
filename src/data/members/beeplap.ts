@@ -102,5 +102,8 @@ export const beeplapProfile: MemberProfile = {
     { platform: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
     { platform: 'email', url: 'mailto:beeplap@yarsabyte.com', label: 'Email' },
     { platform: 'website', url: 'https://yarshabyte.vercel.app', label: 'Website' }
-  ]
+  ],
+  metaTitle: 'Beeplap Gharti Magar — CTO at YarsaByte',
+  metaDescription:
+    'Beeplap Gharti Magar is Chief Technology Officer at YarsaByte, directing distributed systems engineering, technical architecture, and cloud infrastructure.'
 };

@@ -102,5 +102,8 @@ export const aashishProfile: MemberProfile = {
     { platform: 'x', url: 'https://x.com', label: 'X (Twitter)' },
     { platform: 'email', url: 'mailto:aashish@yarsabyte.com', label: 'Email' },
     { platform: 'website', url: 'https://yarshabyte.vercel.app', label: 'Website' }
-  ]
+  ],
+  metaTitle: 'Aashish Chapagain — CEO at YarsaByte',
+  metaDescription:
+    'Aashish Chapagain is Chief Executive Officer at YarsaByte, steering executive strategy, enterprise partnerships, and long-term venture direction.'
 };

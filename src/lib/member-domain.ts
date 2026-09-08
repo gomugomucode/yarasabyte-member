@@ -46,9 +46,12 @@ export function getMemberSlugFromHost(host: string | null | undefined): MemberSl
   const cleanHost = normalizeHostname(host);
   if (!cleanHost) return undefined;
 
-  // 1. Check explicit production domain mappings
-  if (cleanHost in MEMBER_DOMAINS) {
-    return MEMBER_DOMAINS[cleanHost];
+  // 1. Check explicit production domain mappings (safe against prototype pollution)
+  if (Object.prototype.hasOwnProperty.call(MEMBER_DOMAINS, cleanHost)) {
+    const slug = MEMBER_DOMAINS[cleanHost];
+    if (slug && isValidMemberSlug(slug)) {
+      return slug;
+    }
   }
 
   // 2. Check local development subdomains (<slug>.localhost)

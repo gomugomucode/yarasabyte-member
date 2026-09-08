@@ -70,6 +70,15 @@
   gap: 0.5rem;
 }
 
+.nameLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nameLink:hover .memberName {
+  color: var(--accent);
+}
+
 .memberName {
   font-family: var(--font-body);
   font-size: 1.05rem;

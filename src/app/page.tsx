@@ -3,50 +3,34 @@ import {
   getMemberBySlug,
   DEFAULT_MEMBER_SLUG,
   getTeamRoster,
-  getMemberCanonicalUrl,
   MAIN_SITE_URL,
 } from '@/data';
 import { MemberPageTemplate } from '@/components/templates/MemberPageTemplate';
 import { notFound } from 'next/navigation';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const profile = getMemberBySlug(DEFAULT_MEMBER_SLUG);
-  if (!profile) {
-    return {
-      title: 'YarsaByte Team',
-    };
-  }
-
-  const roleDisplay = profile.shortRole
-    ? `${profile.shortRole} at ${profile.company || 'YarsaByte'}`
-    : profile.role;
-
-  const title = profile.metaTitle || `${profile.name} — ${roleDisplay}`;
+  const title = 'YarsaByte — Creative Technology Collective';
   const description =
-    profile.metaDescription ||
-    profile.tagline ||
-    `${profile.name} is ${profile.role} at YarsaByte. ${profile.positioningStatement}`;
-
-  const canonicalUrl = getMemberCanonicalUrl(profile.slug);
+    'YarsaByte is a creative technology collective based in Butwal, Nepal, crafting resilient distributed software systems, refined digital experiences, and enterprise platforms.';
 
   return {
     title,
     description,
     alternates: {
-      canonical: canonicalUrl,
+      canonical: MAIN_SITE_URL,
     },
     openGraph: {
       title,
       description,
-      type: 'profile',
-      url: canonicalUrl,
-      siteName: profile.company || 'YarsaByte',
+      type: 'website',
+      url: MAIN_SITE_URL,
+      siteName: 'YarsaByte',
       images: [
         {
-          url: profile.avatar,
-          width: 1200,
-          height: 1500,
-          alt: `${profile.name} — ${profile.role}`,
+          url: '/brand/ico-bg.png',
+          width: 800,
+          height: 800,
+          alt: 'YarsaByte Logo',
         },
       ],
     },
@@ -54,7 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: [profile.avatar],
+      images: ['/brand/ico-bg.png'],
     },
   };
 }
@@ -67,45 +51,32 @@ export default function HomePage() {
 
   const team = getTeamRoster();
 
-  const jobTitle = profile.role.includes('—')
-    ? profile.role.split('—')[1].trim()
-    : profile.role;
-
-  const memberUrl = getMemberCanonicalUrl(profile.slug);
-
-  // Structured Data Schema.org: Person & YarsaByte Organization
-  const jsonLd = {
+  // Structured Data Schema.org: Organization for YarsaByte Corporate Homepage
+  const organizationJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: profile.name,
-    jobTitle,
-    worksFor: {
-      '@type': 'Organization',
-      name: profile.company || 'YarsaByte',
-      url: MAIN_SITE_URL,
-      logo: `${MAIN_SITE_URL}/brand/ico-bg.png`,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Butwal',
-        addressCountry: 'NP',
-      },
-    },
+    '@type': 'Organization',
+    name: 'YarsaByte',
+    url: MAIN_SITE_URL,
+    logo: `${MAIN_SITE_URL}/brand/ico-bg.png`,
+    description:
+      'YarsaByte is a creative technology collective based in Butwal, Nepal, crafting resilient distributed software systems, refined digital experiences, and enterprise platforms.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Butwal',
       addressCountry: 'NP',
     },
-    image: profile.avatar,
-    email: profile.contact.email,
-    url: memberUrl,
-    sameAs: profile.socials.map((s) => s.url).filter((u) => !u.startsWith('mailto:')),
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'General Inquiries',
+      email: 'contact@yarsabyte.com',
+    },
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
       <MemberPageTemplate profile={profile} team={team} />
     </>

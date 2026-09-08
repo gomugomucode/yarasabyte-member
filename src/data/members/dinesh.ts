@@ -103,5 +103,8 @@ export const dineshProfile: MemberProfile = {
     { platform: 'x', url: 'https://x.com', label: 'X (Twitter)' },
     { platform: 'email', url: 'mailto:dinesh@yarsabyte.com', label: 'Email' },
     { platform: 'website', url: 'https://yarshabyte.vercel.app', label: 'Website' }
-  ]
+  ],
+  metaTitle: 'Dinesh Lamichanne — COO at YarsaByte',
+  metaDescription:
+    'Dinesh Lamichanne is Chief Operating Officer at YarsaByte, leading operational governance, legal frameworks, finance, and organizational execution.'
 };

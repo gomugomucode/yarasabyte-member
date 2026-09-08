@@ -42,7 +42,13 @@ export function TeamMemberCard({ member, isCurrent = false }: TeamMemberCardProp
 
       <div className={styles.memberInfo}>
         <div className={styles.nameRow}>
-          <h3 className={styles.memberName}>{member.name}</h3>
+          {isCurrent ? (
+            <h3 className={styles.memberName}>{member.name}</h3>
+          ) : (
+            <Link href={profileUrl} className={styles.nameLink}>
+              <h3 className={styles.memberName}>{member.name}</h3>
+            </Link>
+          )}
           {!isCurrent && (
             <span className={styles.cardArrow} aria-hidden="true">
               <ArrowUpRight size={17} />

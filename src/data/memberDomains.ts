@@ -13,14 +13,14 @@ export type MemberSlug = (typeof VALID_MEMBER_SLUGS)[number];
  * Only add verified production domains here.
  * Do NOT invent domains for members whose real domains are not known yet.
  */
-export const MEMBER_DOMAINS: Record<string, MemberSlug> = {
+export const MEMBER_DOMAINS: Readonly<Record<string, MemberSlug>> = Object.freeze({
   'yarasabyte.anupambaral.com.np': 'anupam',
   'yarasabyte.anmolchettri.com': 'anmol',
   // Add the remaining domains when their actual domains are known:
   // 'yarasabyte.aashishpanthi.com': 'aashish',
   // 'yarasabyte.beeplap.com': 'beeplap',
   // 'yarasabyte.dineshgautam.com': 'dinesh',
-};
+});
 
 /**
  * The canonical primary domain of the YarsaByte collective website.
