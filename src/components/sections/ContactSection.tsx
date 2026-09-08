@@ -1,9 +1,18 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { SectionLabel } from '@/components/ui/SectionLabel';
-import { MemberProfile } from '@/types/member';
-import { CheckCircle, Clock, Globe, Mail, MapPin, Send } from 'lucide-react';
+import { MemberProfile, SocialLink } from '@/types/member';
+import {
+  ArrowUpRight,
+  Clock,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  MessageSquare,
+  Twitter,
+} from 'lucide-react';
 import styles from './ContactSection.module.css';
 
 interface ContactSectionProps {
@@ -11,49 +20,19 @@ interface ContactSectionProps {
 }
 
 export function ContactSection({ profile }: ContactSectionProps) {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: 'Project Inquiry',
-    message: '',
-  });
-
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  const validate = () => {
-    const errs: Record<string, string> = {};
-    if (!formData.name.trim()) errs.name = 'Please provide your name';
-    if (!formData.email.trim()) {
-      errs.email = 'Please provide your email';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      errs.email = 'Please provide a valid email address';
+  const renderSocialIcon = (platform: SocialLink['platform']) => {
+    switch (platform) {
+      case 'github':
+        return <Github size={20} />;
+      case 'linkedin':
+        return <Linkedin size={20} />;
+      case 'x':
+        return <Twitter size={20} />;
+      case 'email':
+        return <Mail size={20} />;
+      default:
+        return <ArrowUpRight size={20} />;
     }
-    if (!formData.message.trim()) errs.message = 'Please write a brief message';
-    return errs;
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
-
-    setErrors({});
-    setStatus('submitting');
-
-    // Simulate sending with realistic feedback
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        subject: 'Project Inquiry',
-        message: '',
-      });
-    }, 900);
   };
 
   return (
@@ -61,201 +40,126 @@ export function ContactSection({ profile }: ContactSectionProps) {
       <div className="container-editorial">
         <SectionLabel number="05" title="LET'S TALK" />
 
-        <div className={styles.contactGrid}>
-          {/* Left Column: Direct Info & Availability */}
-          <div className={styles.infoCol}>
-            <h2 className="editorial-heading-lg">
-              Start a Conversation
-            </h2>
-            <p className="editorial-lead">
-              Reach out directly to discuss technical advisory, studio collaborations, or platform architecture with YarsaByte.
-            </p>
+        <div className={styles.sectionHeader}>
+          <h2 className="editorial-heading-lg">
+            Start a Conversation
+          </h2>
+          <p className="editorial-lead">
+            Reach out directly to discuss technical advisory, studio collaborations, or platform architecture with {profile.name} and YarsaByte.
+          </p>
+        </div>
 
-            {/* Direct Channel Cards */}
-            <div className={styles.channelsList}>
-              <div className={styles.channelItem}>
-                <div className={styles.channelIcon}>
-                  <Mail size={18} />
-                </div>
-                <div className={styles.channelDetails}>
-                  <span className={styles.channelLabel}>STUDIO INQUIRIES</span>
-                  <a href={`mailto:${profile.contact.yarsaEmail}`} className={styles.channelLink}>
-                    {profile.contact.yarsaEmail}
-                  </a>
-                </div>
-              </div>
-
-              <div className={styles.channelItem}>
-                <div className={styles.channelIcon}>
-                  <Mail size={18} />
-                </div>
-                <div className={styles.channelDetails}>
-                  <span className={styles.channelLabel}>DIRECT PERSONAL EMAIL</span>
-                  <a href={`mailto:${profile.contact.email}`} className={styles.channelLink}>
-                    {profile.contact.email}
-                  </a>
-                </div>
-              </div>
-
-              <div className={styles.channelItem}>
-                <div className={styles.channelIcon}>
-                  <MapPin size={18} />
-                </div>
-                <div className={styles.channelDetails}>
-                  <span className={styles.channelLabel}>BASED IN</span>
-                  <span className={styles.channelText}>{profile.contact.location}</span>
-                </div>
-              </div>
-
-              <div className={styles.channelItem}>
-                <div className={styles.channelIcon}>
-                  <Clock size={18} />
-                </div>
-                <div className={styles.channelDetails}>
-                  <span className={styles.channelLabel}>TIMEZONE</span>
-                  <span className={styles.channelText}>{profile.contact.timezone}</span>
-                </div>
-              </div>
+        {/* Contact Details Grid */}
+        <div className={styles.detailsGrid}>
+          {/* 1. Direct Emails Card */}
+          <div className={styles.detailCard}>
+            <div className={styles.cardIconWrapper}>
+              <Mail size={22} />
             </div>
+            <div className={styles.cardBody}>
+              <span className={styles.cardCategory}>EMAIL CHANNELS</span>
+              <h3 className={styles.cardTitle}>Direct Correspondence</h3>
+              
+              <div className={styles.channelRow}>
+                <div className={styles.channelItem}>
+                  <span className={styles.channelSubLabel}>STUDIO INQUIRIES</span>
+                  <a href={`mailto:${profile.contact.yarsaEmail}`} className={styles.channelValueLink}>
+                    <span>{profile.contact.yarsaEmail}</span>
+                    <ArrowUpRight size={14} />
+                  </a>
+                </div>
 
-            {/* Availability Status Card */}
-            <div className={styles.statusBox}>
-              <div className={styles.statusHeader}>
-                <span className={styles.pulseActiveDot} />
-                <span className={styles.statusHeading}>CURRENT AVAILABILITY</span>
+                <div className={styles.channelItem}>
+                  <span className={styles.channelSubLabel}>PERSONAL DIRECT</span>
+                  <a href={`mailto:${profile.contact.email}`} className={styles.channelValueLink}>
+                    <span>{profile.contact.email}</span>
+                    <ArrowUpRight size={14} />
+                  </a>
+                </div>
               </div>
-              <p className={styles.statusText}>{profile.contact.availability}</p>
-              <span className={styles.expectationNote}>
-                {profile.contact.responseExpectation}
-              </span>
             </div>
           </div>
 
-          {/* Right Column: Accessible Contact Form */}
-          <div className={styles.formCol}>
-            <div className={styles.formCard}>
-              <h3 className={styles.formTitle}>Send a Message</h3>
-              <p className={styles.formSubtitle}>
-                Direct message to {profile.name} via YarsaByte communications.
-              </p>
+          {/* 2. Location & Timezone Card */}
+          <div className={styles.detailCard}>
+            <div className={styles.cardIconWrapper}>
+              <MapPin size={22} />
+            </div>
+            <div className={styles.cardBody}>
+              <span className={styles.cardCategory}>LOCATION &amp; TIME</span>
+              <h3 className={styles.cardTitle}>Studio Headquarters</h3>
 
-              {status === 'success' ? (
-                <div className={styles.successNotice} role="alert">
-                  <CheckCircle size={28} className={styles.successIcon} />
-                  <div>
-                    <h4 className={styles.successTitle}>Message Dispatched</h4>
-                    <p className={styles.successText}>
-                      Thank you! Your note has been received. {profile.name} or the YarsaByte team will get back to you shortly.
-                    </p>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => setStatus('idle')}
-                    className="btn-editorial-secondary"
-                    style={{ marginTop: '1rem', width: '100%', justifyContent: 'center' }}
-                  >
-                    Send Another Note
-                  </button>
+              <div className={styles.channelRow}>
+                <div className={styles.channelItem}>
+                  <span className={styles.channelSubLabel}>BASED IN</span>
+                  <p className={styles.channelValueText}>{profile.contact.location}</p>
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} noValidate className={styles.form}>
-                  <div className={styles.fieldGroup}>
-                    <label htmlFor="contact-name" className={styles.label}>
-                      YOUR NAME <span className={styles.req}>*</span>
-                    </label>
-                    <input
-                      id="contact-name"
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="e.g. Maya Shrestha"
-                      aria-invalid={!!errors.name}
-                      aria-describedby={errors.name ? 'name-error' : undefined}
-                      className={`${styles.input} ${errors.name ? styles.inputError : ''}`}
-                    />
-                    {errors.name && (
-                      <span id="name-error" className={styles.fieldError}>
-                        {errors.name}
-                      </span>
-                    )}
-                  </div>
 
-                  <div className={styles.fieldGroup}>
-                    <label htmlFor="contact-email" className={styles.label}>
-                      EMAIL ADDRESS <span className={styles.req}>*</span>
-                    </label>
-                    <input
-                      id="contact-email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="e.g. maya@enterprise.com"
-                      aria-invalid={!!errors.email}
-                      aria-describedby={errors.email ? 'email-error' : undefined}
-                      className={`${styles.input} ${errors.email ? styles.inputError : ''}`}
-                    />
-                    {errors.email && (
-                      <span id="email-error" className={styles.fieldError}>
-                        {errors.email}
-                      </span>
-                    )}
-                  </div>
+                <div className={styles.channelItem}>
+                  <span className={styles.channelSubLabel}>TIMEZONE</span>
+                  <p className={styles.channelValueText}>
+                    <Clock size={14} style={{ display: 'inline', marginRight: '5px' }} />
+                    {profile.contact.timezone}
+                  </p>
+                </div>
+              </div>
 
-                  <div className={styles.fieldGroup}>
-                    <label htmlFor="contact-subject" className={styles.label}>
-                      INQUIRY SUBJECT
-                    </label>
-                    <select
-                      id="contact-subject"
-                      value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className={styles.select}
-                    >
-                      <option value="Project Inquiry">New Project Collaboration</option>
-                      <option value="Technical Advisory">Architecture &amp; Technical Advisory</option>
-                      <option value="Speaking or Mentorship">Workshop / Mentorship</option>
-                      <option value="General Conversation">General Coffee &amp; Say Hello</option>
-                    </select>
-                  </div>
+              <a
+                href="https://maps.google.com/?q=Butwal%2C+Nepal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.mapActionLink}
+              >
+                <span>Locate on Google Maps</span>
+                <ArrowUpRight size={14} />
+              </a>
+            </div>
+          </div>
 
-                  <div className={styles.fieldGroup}>
-                    <label htmlFor="contact-message" className={styles.label}>
-                      MESSAGE <span className={styles.req}>*</span>
-                    </label>
-                    <textarea
-                      id="contact-message"
-                      rows={5}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder={`Tell ${profile.name} about your idea, scope, or timeline...`}
-                      aria-invalid={!!errors.message}
-                      aria-describedby={errors.message ? 'message-error' : undefined}
-                      className={`${styles.textarea} ${errors.message ? styles.inputError : ''}`}
-                    />
-                    {errors.message && (
-                      <span id="message-error" className={styles.fieldError}>
-                        {errors.message}
-                      </span>
-                    )}
-                  </div>
+          {/* 3. Availability & Response Times Card */}
+          <div className={styles.detailCard}>
+            <div className={styles.cardIconWrapper}>
+              <MessageSquare size={22} />
+            </div>
+            <div className={styles.cardBody}>
+              <span className={styles.cardCategory}>AVAILABILITY</span>
+              <h3 className={styles.cardTitle}>Current Engagement</h3>
 
-                  <button
-                    type="submit"
-                    disabled={status === 'submitting'}
-                    className="btn-editorial-primary"
-                    style={{ width: '100%', justifyContent: 'center' }}
+              <div className={styles.statusIndicatorBox}>
+                <span className={styles.statusDot} />
+                <span className={styles.statusText}>{profile.contact.availability}</span>
+              </div>
+
+              <p className={styles.expectationNote}>
+                {profile.contact.responseExpectation}
+              </p>
+            </div>
+          </div>
+
+          {/* 4. Social Channels & Network */}
+          <div className={styles.detailCard}>
+            <div className={styles.cardIconWrapper}>
+              <ArrowUpRight size={22} />
+            </div>
+            <div className={styles.cardBody}>
+              <span className={styles.cardCategory}>NETWORK</span>
+              <h3 className={styles.cardTitle}>Direct Profiles</h3>
+
+              <div className={styles.socialChips}>
+                {profile.socials.map((soc) => (
+                  <a
+                    key={soc.platform}
+                    href={soc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.socialChip}
                   >
-                    {status === 'submitting' ? (
-                      <span>Dispatching Message...</span>
-                    ) : (
-                      <>
-                        <span>Send Message</span>
-                        <Send size={16} />
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
+                    <span className={styles.chipIcon}>{renderSocialIcon(soc.platform)}</span>
+                    <span className={styles.chipLabel}>{soc.label}</span>
+                    <ArrowUpRight size={14} className={styles.chipArrow} />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -94,7 +94,6 @@
 .competenciesBlock {
   padding-top: 3.5rem;
   border-top: 1px solid var(--border);
-  margin-bottom: 5rem;
 }
 
 .subBlockHeader {
@@ -167,61 +166,4 @@
 .skillTag:hover {
   border-color: var(--accent);
   color: var(--accent);
-}
-
-/* Milestones Timeline */
-.milestonesBlock {
-  padding-top: 3.5rem;
-  border-top: 1px solid var(--border);
-}
-
-.timelineList {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-  max-width: 800px;
-}
-
-.timelineItem {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding-left: 1.5rem;
-  border-left: 2px solid var(--accent);
-  position: relative;
-}
-
-@media (min-width: 640px) {
-  .timelineItem {
-    flex-direction: row;
-    align-items: baseline;
-    gap: 2.5rem;
-  }
-}
-
-.timeYear {
-  font-family: var(--font-tech);
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--accent);
-  letter-spacing: 0.06em;
-  min-width: 80px;
-}
-
-.timelineContent {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.timelineTitle {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--fg);
-}
-
-.timelineDesc {
-  font-size: 0.95rem;
-  color: var(--fg-muted);
-  line-height: 1.6;
 }

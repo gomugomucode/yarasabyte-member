@@ -72,27 +72,6 @@ export function RoleSection({ profile }: RoleSectionProps) {
           </div>
         </div>
 
-        {/* 3. Milestones Timeline if available */}
-        {profile.milestones && profile.milestones.length > 0 && (
-          <div className={styles.milestonesBlock}>
-            <div className={styles.subBlockHeader}>
-              <span className="editorial-num-label">MILESTONES &amp; TIMELINE</span>
-              <h3 className="editorial-heading-md">Studio Trajectory</h3>
-            </div>
-
-            <div className={styles.timelineList}>
-              {profile.milestones.map((m, idx) => (
-                <div key={idx} className={styles.timelineItem}>
-                  <div className={styles.timeYear}>{m.year}</div>
-                  <div className={styles.timelineContent}>
-                    <h4 className={styles.timelineTitle}>{m.title}</h4>
-                    <p className={styles.timelineDesc}>{m.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
