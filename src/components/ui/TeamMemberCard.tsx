@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { TeamTeammate } from '@/types/member';
-import { getMemberUrl } from '@/data';
+import { getMemberUrl } from '@/lib/member-domain';
 import styles from './TeamMemberCard.module.css';
 
 export interface TeamMemberCardProps {
