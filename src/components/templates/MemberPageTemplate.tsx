@@ -21,7 +21,7 @@ export function MemberPageTemplate({ profile, team }: MemberPageTemplateProps) {
       <Header memberName={profile.name} />
       <main id="content">
         <HeroSection profile={profile} />
-        <IntroSection profile={profile} />
+        {/* <IntroSection profile={profile} /> */}
         <RoleSection profile={profile} />
         <WorkSection profile={profile} />
         <TeamSection currentSlug={profile.slug} team={team} />

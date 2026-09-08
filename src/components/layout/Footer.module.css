@@ -15,15 +15,10 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 900px) {
   .mainGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .mainGrid {
-    grid-template-columns: 2.2fr 1fr 1fr 1.4fr;
+    grid-template-columns: 1.1fr 1.1fr;
+    gap: 4.5rem;
   }
 }
 
@@ -98,48 +93,20 @@
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   color: var(--accent);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   font-weight: 700;
 }
 
-.linkList {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-
-.linkList a {
-  font-size: 0.92rem;
-  color: rgba(245, 239, 231, 0.75);
-  transition: var(--transition-fast);
-}
-
-.linkList a:hover {
-  color: #ffffff;
-  padding-left: 4px;
-}
-
-.socialLinkItem {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-.miniArrow {
-  opacity: 0.5;
-  transition: var(--transition-fast);
-}
-
-.socialLinkItem:hover .miniArrow {
-  opacity: 1;
-  transform: translate(2px, -2px);
-}
-
-.metaCol {
+.locationMapCol {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+.metaInfoRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .metaBlock {
@@ -169,6 +136,40 @@
 
 .emailLink:hover {
   color: #ffffff;
+}
+
+.mapContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.mapIframe {
+  width: 100%;
+  height: 170px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  filter: contrast(95%) brightness(90%) invert(90%) hue-rotate(180deg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mapPinLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-tech);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.mapPinLink:hover {
+  color: #ffffff;
+  transform: translateX(3px);
 }
 
 /* Bottom Bar */
