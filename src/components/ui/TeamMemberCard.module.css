@@ -1,0 +1,179 @@
+.memberCard {
+  background-color: var(--surface-warm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+  height: 100%;
+}
+
+.memberCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: 0 12px 30px rgba(30, 26, 24, 0.08);
+}
+
+.activeMemberCard {
+  border-color: var(--accent);
+  background-color: #faf5ee;
+  box-shadow: 0 4px 18px rgba(184, 106, 44, 0.12);
+}
+
+.avatarWrapper {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--surface);
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.memberCard:hover .avatarImg {
+  transform: scale(1.05);
+}
+
+.currentBadge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: var(--accent);
+  color: #ffffff;
+  font-family: var(--font-tech);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.memberInfo {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+.nameRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.memberName {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--fg);
+  line-height: 1.25;
+}
+
+.cardArrow {
+  color: var(--accent);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.memberCard:hover .cardArrow {
+  transform: translate(2px, -2px);
+}
+
+.memberRole {
+  font-family: var(--font-tech);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+.secondaryCapabilities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  background-color: rgba(184, 106, 44, 0.06);
+  border: 1px dashed rgba(184, 106, 44, 0.25);
+  padding: 0.35rem 0.55rem;
+  border-radius: 4px;
+}
+
+.secondaryLabel {
+  font-family: var(--font-tech);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+}
+
+.secondaryText {
+  font-family: var(--font-tech);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--fg);
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.focusTag {
+  font-family: var(--font-tech);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--fg-muted);
+  line-height: 1.3;
+}
+
+.locTag {
+  font-family: var(--font-tech);
+  font-size: 0.68rem;
+  color: var(--fg-faint);
+}
+
+.cardActionRow {
+  padding-top: 0.75rem;
+}
+
+.viewingNotice {
+  display: inline-block;
+  font-family: var(--font-tech);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+.viewProfileBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-tech);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg);
+  transition: var(--transition-fast);
+}
+
+.viewProfileBtn:hover {
+  color: var(--accent);
+  transform: translateX(2px);
+}

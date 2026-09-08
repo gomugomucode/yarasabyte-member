@@ -45,6 +45,8 @@ export interface TeamTeammate {
   slug: string;
   name: string;
   role: string;
+  shortRole?: string;
+  additionalRoles?: string;
   avatar: string;
   focus: string;
   location: string;
@@ -82,6 +84,7 @@ export interface MemberProfile {
   };
   metadata: MetadataItem[];
   roleStatement?: string;
+  roleDescription?: string;
   responsibilities: ResponsibilityCategory[];
   competencies?: SkillCategory[];
   milestones?: MilestoneItem[];

@@ -42,9 +42,13 @@ export function HeroSection({ profile }: HeroSectionProps) {
             {/* Role Hierarchy: CPO / CHIEF PRODUCT OFFICER @ YARSABYTE */}
             <div className={styles.roleHierarchy}>
               <div className={styles.rolePrimaryRow}>
-                <span className={styles.roleShort}>{profile.shortRole || 'CPO'}</span>
-                <span className={styles.roleDivider}>—</span>
-                <span className={styles.roleFull}>{profile.headlineRole || 'CHIEF PRODUCT OFFICER'}</span>
+                {profile.shortRole && (
+                  <>
+                    <span className={styles.roleShort}>{profile.shortRole}</span>
+                    <span className={styles.roleDivider}>—</span>
+                  </>
+                )}
+                <span className={styles.roleFull}>{profile.headlineRole || profile.role.replace(/^.*?—\s*/, '').toUpperCase()}</span>
               </div>
               <div className={styles.companyTag}>
                 @ {profile.company?.toUpperCase() || 'YARSABYTE'}

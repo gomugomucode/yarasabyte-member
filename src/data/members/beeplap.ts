@@ -2,114 +2,88 @@ import { MemberProfile } from '@/types/member';
 
 export const beeplapProfile: MemberProfile = {
   slug: 'beeplap',
-  name: 'Beeplap Sharma',
-  role: 'Systems & Infrastructure Engineer',
-  subRole: 'Core Team @ YarsaByte',
+  name: 'Beeplap Gharti Magar',
+  role: 'CTO — Chief Technology Officer',
+  shortRole: 'CTO',
+  headlineRole: 'CHIEF TECHNOLOGY OFFICER',
+  company: 'YarsaByte',
+  subRole: 'CTO @ YarsaByte',
   location: 'Butwal, Nepal',
   joinedYear: '2023',
   avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1200&q=85',
-  tagline: 'Safeguarding uptime, optimizing network topology, and building robust cloud foundations.',
-  positioningStatement: 'At YarsaByte, I ensure our software infrastructure is resilient, automated, and fortified with enterprise-grade reliability and speed.',
-  bioHeading: 'Automating systems and cloud networks with absolute resilience.',
+  tagline: 'Architecting robust systems, defining core technology stacks, and engineering resilient infrastructure.',
+  positioningStatement:
+    'As CTO of YarsaByte, I lead our technology stack choices, system architecture, core engineering standards, and cloud infrastructure, ensuring our software platforms are secure, performant, and built to scale.',
+  bioHeading: 'Architecting resilient technology foundations and core engineering excellence.',
   bioParagraphs: [
-    'Based in Butwal, Nepal, I specialize in cloud infrastructure, container orchestration, edge computing, and system observability. I believe software is only as good as the reliability of the platform it runs on.',
-    'At YarsaByte, I manage production environments, containerized deployments, DNS configurations, and security policies for our client web products and internal engineering systems.',
-    'My focus is continuous automation: eliminating manual deployment friction, optimizing serverless caching hierarchies, and hardening systems against downtime and unauthorized access.'
+    'Based in Butwal, Nepal, I serve as Chief Technology Officer at YarsaByte. My focus is architecting dependable, high-performance software systems and guiding our core engineering decisions from the database layer to edge compute.',
+    'At YarsaByte, I set our technology stack standards, champion sound architectural principles, and supervise our cloud infrastructure and deployment pipelines. I believe technical elegance lies in simplicity, predictability, and relentless engineering rigor.',
+    'Together with our product and executive team, I ensure that every digital solution we deliver achieves optimal latency, uncompromising security, and seamless horizontal scalability.'
   ],
   philosophyQuote: {
-    text: 'Resilience is not achieved by avoiding failure; it is engineered by anticipating it and recovering in milliseconds.',
-    author: 'Beeplap Sharma'
+    text: 'Architecture is not about making systems complex; it is about keeping systems straightforward as they grow.',
+    author: 'Beeplap Gharti Magar'
   },
   metadata: [
     { label: 'AFFILIATION', value: 'YarsaByte Creative Technology' },
-    { label: 'LOCATION', value: 'Butwal, Lumbini, Nepal' },
-    { label: 'DISCIPLINE', value: 'Cloud Infrastructure & DevOps' },
-    { label: 'TENURE', value: 'Since 2023' },
-    { label: 'AVAILABILITY', value: 'Cloud Architecture & Security Audits' }
+    { label: 'LOCATION', value: 'Butwal, Nepal' },
+    { label: 'ROLE', value: 'CTO @ YarsaByte' },
+    { label: 'FOCUS', value: 'Architecture · Core Eng · Infra' },
+    { label: 'AVAILABILITY', value: 'Technical Architecture & Deep Tech Consultations' }
   ],
+  roleStatement: 'As CTO, I ensure our software foundation is resilient, scalable, and technically rigorous.',
+  roleDescription:
+    'I direct our technology stack strategy, system architecture, core engineering discipline, and global cloud infrastructure.',
   responsibilities: [
     {
-      title: 'Cloud Platforms & CI/CD Pipelines',
-      summary: 'Architecting zero-downtime deployment pipelines and multi-region edge caching layers.',
+      title: 'PRIMARY RESPONSIBILITIES',
+      summary: 'Technology leadership, systems architecture, core engineering, and cloud infrastructure.',
       items: [
-        'Configuring automated GitHub Actions workflows with rigorous linting, build, and security testing.',
-        'Managing cloud resources across Vercel Edge, AWS, and Cloudflare CDN infrastructure.',
-        'Setting up preview staging environments for real-time client verification.'
-      ]
-    },
-    {
-      title: 'Database Reliability & Disaster Recovery',
-      summary: 'Ensuring database integrity, transaction consistency, and automated point-in-time backups.',
-      items: [
-        'Maintaining PostgreSQL replication, automated failovers, and encrypted backup snapshots.',
-        'Benchmarking query execution times and implementing Redis caching strategies.',
-        'Conducting routine disaster recovery simulations and database restoration drills.'
-      ]
-    },
-    {
-      title: 'Observability & Security Hardening',
-      summary: 'Implementing end-to-end telemetry, uptime monitoring, and proactive alert systems.',
-      items: [
-        'Monitoring core vitals, server response times, and anomaly detection via telemetry dashboards.',
-        'Implementing strict CORS policies, SSL/TLS certifications, and DDoS mitigation rules.',
-        'Auditing third-party dependency vulnerabilities and applying security patches.'
+        'Technology Stack',
+        'System Architecture',
+        'Core Engineering',
+        'Infrastructure'
       ]
     }
   ],
   competencies: [
     {
-      category: 'Cloud & Infrastructure',
-      skills: ['AWS (ECS, S3, RDS)', 'Cloudflare (Workers, DNS, CDN)', 'Vercel Edge', 'Docker', 'Linux Administration']
+      category: 'Architecture & Systems',
+      skills: ['System Architecture', 'Distributed Systems', 'Microservices & Monoliths', 'Database Modeling', 'API Design']
     },
     {
-      category: 'DevOps & Tooling',
-      skills: ['GitHub Actions CI/CD', 'Terraform Basics', 'Bash Scripting', 'Nginx Configuration', 'Git Workflow']
+      category: 'Core Engineering',
+      skills: ['TypeScript / Node.js', 'Go / Python', 'Next.js & React', 'PostgreSQL / Redis', 'Performance Profiling']
     },
     {
-      category: 'Databases & Storage',
-      skills: ['PostgreSQL Administration', 'Redis Caching', 'S3 Object Storage', 'Data Migration Pipelines']
-    },
-    {
-      category: 'Security & Monitoring',
-      skills: ['SSL/TLS Hardening', 'Uptime Kuma / Prometheus', 'Log Management', 'OWASP Standards']
-    }
-  ],
-  milestones: [
-    {
-      year: '2024',
-      title: '99.98% Uptime Milestone for Client Fleet',
-      description: 'Maintained rock-solid reliability across all YarsaByte production client deployments throughout the year.'
-    },
-    {
-      year: '2023',
-      title: 'Edge Infrastructure Overhaul',
-      description: 'Migrated global asset distribution to edge CDN networks, cutting international latency by over 50%.'
+      category: 'Infrastructure & DevOps',
+      skills: ['Cloud Infrastructure (AWS/GCP)', 'Container Orchestration', 'CI/CD Pipelines', 'Edge Caching & CDN', 'Security Hardening']
     }
   ],
   projects: [
     {
-      id: 'avenue-butwal',
-      title: 'Avenue Butwal High-Availability Cloud',
-      client: 'Avenue Butwal',
-      year: '2024',
-      role: 'Infrastructure & DevOps Engineer',
-      description: 'Edge CDN routing, automated image transformations, and SSL hardening for Avenue Butwal’s digital property.',
-      impact: 'Maintained zero downtime during heavy festival traffic spikes exceeding 15,000 concurrent page requests.',
-      tags: ['Cloudflare Edge', 'Docker', 'PostgreSQL', 'CDN Optimization'],
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
+      id: 'greenstar-automation',
+      title: 'GreenStar Procurement & Cloud Engine',
+      client: 'GreenStar Industrial',
+      year: '2023',
+      role: 'Lead Systems Architect',
+      description: 'Designed the high-availability cloud architecture, automated database replication, and secure API gateways for industrial order management.',
+      impact: 'Delivered 99.99% uptime with sub-100ms response times across distributed warehouse nodes.',
+      tags: ['System Architecture', 'Core Engineering', 'Infrastructure'],
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
       link: 'https://yarshabyte.vercel.app/',
       featured: true
     },
     {
-      id: 'greenstar-automation',
-      title: 'GreenStar Server & Security Hardening',
-      client: 'GreenStar Industrial',
-      year: '2023',
-      role: 'DevOps & Systems Lead',
-      description: 'Encrypted database setup, VPN tunneling, and automated nightly snapshots for proprietary industrial supplier data.',
-      impact: 'Secured critical supplier operations with automated disaster recovery under 15 minutes.',
-      tags: ['Security Auditing', 'PostgreSQL', 'Automated Backups', 'Linux'],
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
+      id: 'avenue-butwal',
+      title: 'Avenue Butwal High-Availability Cloud Platform',
+      client: 'Avenue Butwal',
+      year: '2024',
+      role: 'Chief Architect & Infrastructure Lead',
+      description: 'Architected edge caching layers, database indexing strategies, and automated continuous deployment workflows for the commercial directory.',
+      impact: 'Handled high concurrent traffic spikes during launch week with zero performance degradation.',
+      tags: ['Cloud Infrastructure', 'Edge Compute', 'Database Scalability'],
+      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
       link: 'https://yarshabyte.vercel.app/',
       featured: true
     }
@@ -117,15 +91,16 @@ export const beeplapProfile: MemberProfile = {
   contact: {
     email: 'beeplap@yarsabyte.com',
     yarsaEmail: 'beeplap@yarsabyte.com',
-    location: 'Butwal, Lumbini Province, Nepal',
+    website: 'https://yarshabyte.vercel.app',
+    location: 'Butwal, Nepal',
     timezone: 'Asia/Kathmandu (UTC+05:45)',
-    availability: 'Available for cloud migration consulting and infrastructure reviews',
+    availability: 'Open for system architecture reviews, infrastructure consulting, and engineering partnerships',
     responseExpectation: 'Replies within 24 hours'
   },
   socials: [
     { platform: 'github', url: 'https://github.com', label: 'GitHub' },
     { platform: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
-    { platform: 'x', url: 'https://x.com', label: 'X (Twitter)' },
-    { platform: 'email', url: 'mailto:beeplap@yarsabyte.com', label: 'Email' }
+    { platform: 'email', url: 'mailto:beeplap@yarsabyte.com', label: 'Email' },
+    { platform: 'website', url: 'https://yarshabyte.vercel.app', label: 'Website' }
   ]
 };

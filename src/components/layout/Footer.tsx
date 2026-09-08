@@ -60,7 +60,8 @@ export function Footer({ profile }: FooterProps) {
             <div className={styles.memberMetaBlock}>
               <h3 className={styles.memberName}>{profile.name}</h3>
               <p className={styles.memberRoles}>
-                {profile.shortRole || 'CPO'} · {profile.additionalRoles || 'App Developer · Video Editor'}
+                {profile.shortRole ? `${profile.shortRole} — ${profile.role.replace(/^.*?—\s*/, '')}` : profile.role}
+                {profile.additionalRoles ? ` · ${profile.additionalRoles}` : ''}
               </p>
               <p className={styles.memberLocation}>
                 {profile.company || 'YarsaByte'} — {profile.location}

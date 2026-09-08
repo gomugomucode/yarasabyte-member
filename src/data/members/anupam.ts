@@ -28,40 +28,27 @@ export const anupamProfile: MemberProfile = {
     { label: 'FOCUS', value: 'Product · Technology · Creative' }
   ],
   roleStatement: 'As CPO, I help turn ideas into products that people can actually use.',
+  roleDescription:
+    'I lead product thinking, roadmap execution, and experience design at YarsaByte while contributing directly to application development and creative video production.',
   responsibilities: [
     {
-      title: 'PRODUCT LEADERSHIP',
-      summary: 'Guiding vision, user experience, and roadmap execution for YarsaByte products.',
+      title: 'PRIMARY RESPONSIBILITIES',
+      summary: 'Product direction, user experience, and roadmap execution for YarsaByte products.',
       items: [
         'Product direction',
-        'Product planning',
-        'Feature prioritization',
-        'User experience thinking',
-        'Roadmap planning',
-        'Team collaboration'
+        'User Experience',
+        'Product Roadmap',
+        'Feature Planning',
+        'Product Design'
       ]
     },
     {
-      title: 'APP DEVELOPMENT',
-      summary: 'Writing code and implementing performant applications across the stack.',
+      title: 'ADDITIONAL CONTRIBUTION',
+      summary: 'Direct hands-on contribution across application engineering and creative media production.',
       items: [
-        'Application development',
-        'Frontend implementation',
-        'Backend integration',
-        'API development',
-        'Product prototyping',
-        'Technical problem solving'
-      ]
-    },
-    {
-      title: 'VIDEO & CREATIVE',
-      summary: 'Crafting compelling visual narratives, product showcases, and media assets.',
-      items: [
-        'Video editing',
-        'Product videos',
-        'Promotional content',
-        'Visual storytelling',
-        'Content production'
+        'App Development',
+        'Video Editing',
+        'Creative Production'
       ]
     }
   ],

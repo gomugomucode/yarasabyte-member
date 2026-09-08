@@ -19,7 +19,7 @@ export function RoleSection({ profile }: RoleSectionProps) {
             {profile.roleStatement || 'As CPO, I help turn ideas into products that people can actually use.'}
           </h2>
           <p className="editorial-lead">
-            I lead product thinking, roadmap execution, and experience design at YarsaByte while contributing directly to application engineering and creative video production.
+            {profile.roleDescription || profile.positioningStatement}
           </p>
         </div>
 
