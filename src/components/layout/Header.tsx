@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { ArrowUpRight, Menu, MessageSquare, X } from 'lucide-react';
 import styles from './Header.module.css';
 
 interface HeaderProps {
@@ -107,11 +107,9 @@ export function Header({ memberName }: HeaderProps) {
               href="#contact"
               className={styles.talkBtn}
               aria-label="Let's talk"
+              title="Let's Talk"
             >
-              <span>Let&apos;s Talk</span>
-              <span className={styles.arrowCircle}>
-                <ArrowUpRight size={16} />
-              </span>
+              <MessageSquare size={18} />
             </a>
 
             {/* Mobile Hamburger Button */}
@@ -136,14 +134,19 @@ export function Header({ memberName }: HeaderProps) {
       >
         <div className={styles.drawerHeader}>
           <div className={styles.drawerBrand}>
-            <Image
-              src="/brand/yarsabyte-mark.svg"
-              alt="YarsaByte"
-              width={32}
-              height={32}
-              className={styles.logoImg}
-            />
-            <span className={styles.drawerBrandText}>YARSABYTE / {memberName.toUpperCase()}</span>
+            <div className={styles.drawerLogoWrapper}>
+              <Image
+                src="/brand/yarsabyte-mark.svg"
+                alt="YarsaByte"
+                width={28}
+                height={28}
+                className={styles.drawerLogoImg}
+              />
+            </div>
+            <div className={styles.drawerBrandTextGroup}>
+              <span className={styles.drawerBrandWordmark}>YARSABYTE</span>
+              <span className={styles.drawerMemberBreadcrumb}>/ {memberName.toUpperCase()}</span>
+            </div>
           </div>
           <button
             ref={closeBtnRef}
@@ -155,21 +158,24 @@ export function Header({ memberName }: HeaderProps) {
             }}
             aria-label="Close menu"
           >
-            <X size={24} />
+            <X size={20} />
           </button>
         </div>
 
-        <nav className={styles.drawerNav}>
+        <nav className={styles.drawerNav} aria-label="Mobile Navigation">
           <ul className={styles.drawerList}>
             {navLinks.map((link, idx) => (
-              <li key={link.href} style={{ animationDelay: `${idx * 60}ms` }}>
+              <li key={link.href}>
                 <a
                   href={link.href}
                   className={styles.drawerLink}
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <span className={styles.drawerIndex}>0{idx + 1}</span>
-                  <span className={styles.drawerLabel}>{link.label}</span>
+                  <div className={styles.drawerLinkContent}>
+                    <span className={styles.drawerIndex}>0{idx + 1}</span>
+                    <span className={styles.drawerLabel}>{link.label}</span>
+                  </div>
+                  <ArrowUpRight size={18} className={styles.drawerArrow} />
                 </a>
               </li>
             ))}
@@ -183,11 +189,11 @@ export function Header({ memberName }: HeaderProps) {
           </div>
           <a
             href="#contact"
-            className="btn-editorial-primary"
+            className={styles.drawerCtaBtn}
             onClick={() => setMobileMenuOpen(false)}
-            style={{ width: '100%', justifyContent: 'center' }}
           >
-            Get in touch with {memberName}
+            <span>Get in touch with {memberName}</span>
+            <ArrowUpRight size={16} />
           </a>
         </div>
       </div>
