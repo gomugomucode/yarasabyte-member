@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { ArrowUp, ArrowUpRight, Github, Globe, Linkedin, Mail } from 'lucide-react';
+import { ArrowUp, ArrowUpRight, Github, Globe, Instagram, Linkedin, Mail, Twitter } from 'lucide-react';
 import { MemberProfile, SocialLink } from '@/types/member';
 import styles from './Footer.module.css';
 
@@ -29,6 +29,10 @@ export function Footer({ profile }: FooterProps) {
         return <Github size={15} />;
       case 'linkedin':
         return <Linkedin size={15} />;
+      case 'x':
+        return <Twitter size={15} />;
+      case 'instagram':
+        return <Instagram size={15} />;
       case 'email':
         return <Mail size={15} />;
       case 'website':

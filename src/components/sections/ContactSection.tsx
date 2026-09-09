@@ -8,10 +8,12 @@ import {
   CheckCircle,
   Github,
   Globe,
+  Instagram,
   Linkedin,
   Mail,
   MapPin,
   Send,
+  Twitter,
 } from 'lucide-react';
 import styles from './ContactSection.module.css';
 
@@ -70,6 +72,10 @@ export function ContactSection({ profile }: ContactSectionProps) {
         return <Github size={18} />;
       case 'linkedin':
         return <Linkedin size={18} />;
+      case 'x':
+        return <Twitter size={18} />;
+      case 'instagram':
+        return <Instagram size={18} />;
       case 'email':
         return <Mail size={18} />;
       case 'website':

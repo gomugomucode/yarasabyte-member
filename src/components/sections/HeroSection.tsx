@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { ArrowUpRight, Github, Globe, Linkedin, Mail, Twitter } from 'lucide-react';
+import { ArrowUpRight, Github, Globe, Instagram, Linkedin, Mail, Twitter } from 'lucide-react';
 import { MemberProfile, SocialLink } from '@/types/member';
 import styles from './HeroSection.module.css';
 
@@ -19,6 +19,8 @@ export function HeroSection({ profile }: HeroSectionProps) {
         return <Linkedin size={18} />;
       case 'x':
         return <Twitter size={18} />;
+      case 'instagram':
+        return <Instagram size={18} />;
       case 'email':
         return <Mail size={18} />;
       case 'website':

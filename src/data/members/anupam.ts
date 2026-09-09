@@ -97,19 +97,21 @@ export const anupamProfile: MemberProfile = {
     }
   ],
   contact: {
-    email: 'anupambaral@gmail.com',
-    yarsaEmail: 'anupam@yarsabyte.com',
-    website: 'https://yarshabyte.vercel.app',
+    email: 'contact@anupambaral.com.np',
+    yarsaEmail: 'contact@anupambaral.com.np',
+    website: 'https://yarasabyte.anupambaral.com.np',
     location: 'Butwal, Nepal',
     timezone: 'Asia/Kathmandu (UTC+05:45)',
     availability: 'Open for product partnerships & creative technology collaborations',
     responseExpectation: 'Usually responds within 24 hours on business days'
   },
   socials: [
-    { platform: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
-    { platform: 'github', url: 'https://github.com', label: 'GitHub' },
-    { platform: 'email', url: 'mailto:anupam@yarsabyte.com', label: 'Email' },
-    { platform: 'website', url: 'https://yarshabyte.vercel.app', label: 'Website' }
+    { platform: 'github', url: 'https://github.com/gomugomucode', label: 'GitHub' },
+    { platform: 'linkedin', url: 'https://linkedin.com/in/gomugomucode', label: 'LinkedIn' },
+    { platform: 'x', url: 'https://x.com/gomugomucode', label: 'X (Twitter)' },
+    { platform: 'instagram', url: 'https://instagram.com/gomugomucode', label: 'Instagram' },
+    { platform: 'email', url: 'mailto:contact@anupambaral.com.np', label: 'Email' },
+    { platform: 'website', url: 'https://yarasabyte.anupambaral.com.np', label: 'Website' }
   ],
   metaTitle: 'Anupam Baral — CPO at YarsaByte',
   metaDescription:
