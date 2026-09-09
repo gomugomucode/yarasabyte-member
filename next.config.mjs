@@ -54,9 +54,7 @@ const nextConfig = {
       },
     ];
   },
-  experimental: {
-    devtoolSegmentExplorer: false,
-  },
+  transpilePackages: ['lucide-react'],
 };
 
 export default nextConfig;
