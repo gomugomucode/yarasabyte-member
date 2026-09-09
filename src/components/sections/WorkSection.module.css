@@ -71,8 +71,7 @@
   font-family: var(--font-tech);
   font-size: 0.85rem;
   font-weight: 700;
-  background-color: rgba(30, 26, 24, 0.75);
-  backdrop-filter: blur(8px);
+  background-color: rgba(30, 26, 24, 0.85);
   color: #ffffff;
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-sm);

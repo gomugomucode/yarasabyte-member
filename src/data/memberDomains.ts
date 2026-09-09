@@ -27,16 +27,21 @@ export const MEMBER_DOMAINS: Readonly<Record<string, MemberSlug>> = Object.freez
 export const MAIN_SITE_URL = 'https://yarshabyte.vercel.app';
 
 /**
+ * Pre-computed O(1) reverse lookup map for member domains.
+ */
+const SLUG_TO_DOMAIN: Readonly<Partial<Record<MemberSlug, string>>> = Object.freeze(
+  Object.fromEntries(
+    Object.entries(MEMBER_DOMAINS).map(([domain, slug]) => [slug, domain])
+  )
+);
+
+/**
  * Returns the configured custom domain for a member slug, if registered.
+ * Executes in O(1) time with zero array allocations.
  */
 export function getDomainForMember(slug: string): string | undefined {
-  const normalizedSlug = slug.toLowerCase().trim();
-  for (const [domain, memberSlug] of Object.entries(MEMBER_DOMAINS)) {
-    if (memberSlug.toLowerCase() === normalizedSlug) {
-      return domain;
-    }
-  }
-  return undefined;
+  const normalizedSlug = slug.toLowerCase().trim() as MemberSlug;
+  return SLUG_TO_DOMAIN[normalizedSlug];
 }
 
 /**

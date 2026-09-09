@@ -30,6 +30,8 @@ export function TeamMemberCard({ member, isCurrent = false }: TeamMemberCardProp
           alt={`${member.name} — ${member.role}`}
           width={400}
           height={400}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
+          loading="lazy"
           className={styles.avatarImg}
         />
         {isCurrent && (

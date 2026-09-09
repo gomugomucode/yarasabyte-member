@@ -17,6 +17,16 @@ const rateLimitMap = new Map<string, number[]>();
 
 function isRateLimited(ip: string): boolean {
   const now = Date.now();
+
+  // Periodic pruning of the rate limit map to prevent memory retention
+  if (rateLimitMap.size > 500) {
+    for (const [key, times] of rateLimitMap.entries()) {
+      if (times.length === 0 || now - times[times.length - 1] > RATE_LIMIT_WINDOW_MS) {
+        rateLimitMap.delete(key);
+      }
+    }
+  }
+
   const timestamps = rateLimitMap.get(ip) || [];
 
   // Prune timestamps older than window
@@ -147,6 +157,7 @@ export async function POST(request: NextRequest) {
           body: JSON.stringify({
             content: `New inquiry for **${recipient}** from **${cleanName}** (<${cleanEmail}>):\n**Subject:** ${cleanSubject}\n**Message:**\n${cleanMessage}`,
           }),
+          signal: AbortSignal.timeout(4000),
         });
 
         if (webhookResponse.ok) {

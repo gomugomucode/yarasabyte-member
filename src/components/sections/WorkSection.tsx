@@ -33,6 +33,8 @@ export function WorkSection({ profile }: WorkSectionProps) {
                   alt={project.title}
                   width={800}
                   height={500}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                  loading="lazy"
                   className={styles.projectImg}
                 />
                 <div className={styles.mediaOverlay} />

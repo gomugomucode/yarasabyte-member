@@ -109,6 +109,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
                   width={700}
                   height={875}
                   priority
+                  sizes="(max-width: 959px) 100vw, (max-width: 1200px) 45vw, 550px"
                   className={styles.portraitImg}
                 />
                 <div className={styles.portraitOverlay} />

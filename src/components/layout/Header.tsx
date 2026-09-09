@@ -10,6 +10,14 @@ interface HeaderProps {
   memberName: string;
 }
 
+const NAV_LINKS = [
+  { label: 'Overview', href: '#overview' },
+  { label: 'Role', href: '#role' },
+  { label: 'Work', href: '#work' },
+  { label: 'Team', href: '#team' },
+  { label: 'Contact', href: '#contact' },
+] as const;
+
 export function Header({ memberName }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,11 +25,20 @@ export function Header({ memberName }: HeaderProps) {
   const closeBtnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    let ticking = false;
+    let lastScrolled = window.scrollY > 30;
+
     const handleScroll = () => {
-      if (window.scrollY > 30) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrolled = window.scrollY > 30;
+          if (currentScrolled !== lastScrolled) {
+            lastScrolled = currentScrolled;
+            setIsScrolled(currentScrolled);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -53,14 +70,6 @@ export function Header({ memberName }: HeaderProps) {
     };
   }, [mobileMenuOpen]);
 
-  const navLinks = [
-    { label: 'Overview', href: '#overview' },
-    { label: 'Role', href: '#role' },
-    { label: 'Work', href: '#work' },
-    { label: 'Team', href: '#team' },
-    { label: 'Contact', href: '#contact' },
-  ];
-
   return (
     <>
       <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
@@ -91,7 +100,7 @@ export function Header({ memberName }: HeaderProps) {
           {/* Desktop Navigation */}
           <nav className={styles.desktopNav} aria-label="Main Navigation">
             <ul className={styles.navList}>
-              {navLinks.map((link) => (
+              {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <a href={link.href} className={styles.navLink}>
                     {link.label}
@@ -164,7 +173,7 @@ export function Header({ memberName }: HeaderProps) {
 
         <nav className={styles.drawerNav} aria-label="Mobile Navigation">
           <ul className={styles.drawerList}>
-            {navLinks.map((link, idx) => (
+            {NAV_LINKS.map((link, idx) => (
               <li key={link.href}>
                 <a
                   href={link.href}
