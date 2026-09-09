@@ -15,7 +15,7 @@ export function RoleSection({ profile }: RoleSectionProps) {
         <SectionLabel number="02" title="MY ROLE AT YARSABYTE" />
 
         <div className={styles.sectionHeader}>
-          <h2 className="editorial-heading-lg">
+          <h2 className="editorial-heading-lg" suppressHydrationWarning>
             {profile.roleStatement || 'As CPO, I help turn ideas into products that people can actually use.'}
           </h2>
           <p className="editorial-lead">
@@ -29,7 +29,7 @@ export function RoleSection({ profile }: RoleSectionProps) {
             <div key={idx} className={styles.respCard}>
               <div className={styles.cardHeader}>
                 <span className={styles.cardIndex}>0{idx + 1}</span>
-                <h3 className={styles.cardTitle}>{resp.title}</h3>
+                <h3 className={styles.cardTitle} suppressHydrationWarning>{resp.title}</h3>
               </div>
 
               <p className={styles.cardSummary}>{resp.summary}</p>
@@ -51,7 +51,7 @@ export function RoleSection({ profile }: RoleSectionProps) {
           <div className={styles.competenciesBlock}>
             <div className={styles.subBlockHeader}>
               <span className="editorial-num-label">DISCIPLINES &amp; COMPETENCIES</span>
-              <h3 className="editorial-heading-md">Technical Capabilities</h3>
+              <h3 className="editorial-heading-md" suppressHydrationWarning>Technical Capabilities</h3>
               <p className={styles.subLead}>
                 Categorized proficiencies honed through production client launches and system deployments.
               </p>
@@ -60,7 +60,7 @@ export function RoleSection({ profile }: RoleSectionProps) {
             <div className={styles.competencyGrid}>
               {profile.competencies.map((cat, idx) => (
                 <div key={idx} className={styles.competencyCard}>
-                  <h4 className={styles.categoryTitle}>{cat.category}</h4>
+                  <h4 className={styles.categoryTitle} suppressHydrationWarning>{cat.category}</h4>
                   <div className={styles.tagWrap}>
                     {cat.skills.map((skill, sIdx) => (
                       <span key={sIdx} className={styles.skillTag}>

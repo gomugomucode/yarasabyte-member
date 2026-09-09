@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { TeamTeammate } from '@/types/member';
-import { getMemberUrl } from '@/lib/member-domain';
+import { getMemberUrl, getMemberCanonicalUrl } from '@/lib/member-domain';
 import styles from './TeamMemberCard.module.css';
 
 export interface TeamMemberCardProps {
@@ -15,10 +15,11 @@ export interface TeamMemberCardProps {
 
 export function TeamMemberCard({ member, isCurrent = false }: TeamMemberCardProps) {
   const isAnupam = member.slug.toLowerCase() === 'anupam';
-  const [profileUrl, setProfileUrl] = useState(() => getMemberUrl(member.slug));
+  // Always initialize with canonical URL so SSR HTML and initial client render match exactly
+  const [profileUrl, setProfileUrl] = useState(() => getMemberCanonicalUrl(member.slug));
 
   useEffect(() => {
-    // If running on localhost in browser, resolve to <slug>.localhost:<port>
+    // If running on localhost in browser, resolve to <slug>.localhost:<port> after client mount
     setProfileUrl(getMemberUrl(member.slug));
   }, [member.slug]);
 
@@ -43,10 +44,10 @@ export function TeamMemberCard({ member, isCurrent = false }: TeamMemberCardProp
       <div className={styles.memberInfo}>
         <div className={styles.nameRow}>
           {isCurrent ? (
-            <h3 className={styles.memberName}>{member.name}</h3>
+            <h3 className={styles.memberName} suppressHydrationWarning>{member.name}</h3>
           ) : (
-            <Link href={profileUrl} className={styles.nameLink}>
-              <h3 className={styles.memberName}>{member.name}</h3>
+            <Link href={profileUrl} className={styles.nameLink} suppressHydrationWarning>
+              <h3 className={styles.memberName} suppressHydrationWarning>{member.name}</h3>
             </Link>
           )}
           {!isCurrent && (
@@ -80,6 +81,7 @@ export function TeamMemberCard({ member, isCurrent = false }: TeamMemberCardProp
               href={profileUrl}
               className={styles.viewProfileBtn}
               aria-label={`View ${member.name}'s profile`}
+              suppressHydrationWarning
             >
               <span>View profile</span>
               <ArrowUpRight size={15} />

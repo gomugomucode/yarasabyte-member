@@ -87,7 +87,7 @@ export function ContactSection({ profile }: ContactSectionProps) {
         <div className={styles.contactGrid}>
           {/* LEFT COLUMN: Direct Details */}
           <div className={styles.infoCol}>
-            <h2 className="editorial-heading-lg">
+            <h2 className="editorial-heading-lg" suppressHydrationWarning>
               Have an idea worth building?
             </h2>
             <p className="editorial-lead">
@@ -174,7 +174,7 @@ export function ContactSection({ profile }: ContactSectionProps) {
           {/* RIGHT COLUMN: Contact Form */}
           <div className={styles.formCol}>
             <div className={styles.formCard}>
-              <h3 className={styles.formTitle}>Direct Message</h3>
+              <h3 className={styles.formTitle} suppressHydrationWarning>Direct Message</h3>
               <p className={styles.formSubtitle}>
                 Send a note directly to {profile.name} at YarsaByte.
               </p>
@@ -183,7 +183,7 @@ export function ContactSection({ profile }: ContactSectionProps) {
                 <div className={styles.successNotice} role="alert">
                   <CheckCircle size={32} className={styles.successIcon} />
                   <div>
-                    <h4 className={styles.successTitle}>Message Dispatched</h4>
+                    <h4 className={styles.successTitle} suppressHydrationWarning>Message Dispatched</h4>
                     <p className={styles.successText}>
                       Thank you! Your inquiry has been received. {profile.name} will respond shortly.
                     </p>

@@ -16,7 +16,7 @@ export function WorkSection({ profile }: WorkSectionProps) {
         <SectionLabel number="03" title="WORK / CONTRIBUTIONS" />
 
         <div className={styles.sectionHeader}>
-          <h2 className="editorial-heading-lg">
+          <h2 className="editorial-heading-lg" suppressHydrationWarning>
             YarsaByte Work &amp; Contributions
           </h2>
           <p className="editorial-lead">
@@ -45,7 +45,7 @@ export function WorkSection({ profile }: WorkSectionProps) {
                   <span className={styles.yearTag}>{project.year}</span>
                 </div>
 
-                <h3 className={styles.projectTitle}>
+                <h3 className={styles.projectTitle} suppressHydrationWarning>
                   {project.title}
                 </h3>
 

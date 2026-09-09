@@ -16,7 +16,7 @@ export function TeamSection({ currentSlug, team }: TeamSectionProps) {
         <SectionLabel number="04" title="THE TEAM" />
 
         <div className={styles.sectionHeader}>
-          <h2 className="editorial-heading-lg">
+          <h2 className="editorial-heading-lg" suppressHydrationWarning>
             YarsaByte Leadership &amp; Core Team
           </h2>
           <p className="editorial-lead">

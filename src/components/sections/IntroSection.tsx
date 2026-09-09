@@ -16,13 +16,13 @@ export function IntroSection({ profile }: IntroSectionProps) {
         <div className={styles.introGrid}>
           {/* Left Column: Heading & Metadata Cards */}
           <div className={styles.leftCol}>
-            <h2 className={styles.heading}>
+            <h2 className={styles.heading} suppressHydrationWarning>
               {profile.bioHeading}
             </h2>
 
             {/* Metadata Badges Card */}
             <div className={styles.metadataCard}>
-              <h3 className={styles.metaCardTitle}>AFFILIATION PROFILE</h3>
+              <h3 className={styles.metaCardTitle} suppressHydrationWarning>AFFILIATION PROFILE</h3>
               <div className={styles.metaList}>
                 {profile.metadata.map((item, idx) => (
                   <div key={idx} className={styles.metaItem}>
