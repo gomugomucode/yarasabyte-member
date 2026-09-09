@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import { ArrowUp, ArrowUpRight, Github, Globe, Instagram, Linkedin, Mail, Twitter } from 'lucide-react';
@@ -11,10 +9,6 @@ interface FooterProps {
 }
 
 export function Footer({ profile }: FooterProps) {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   const navLinks = [
     { label: 'Overview', href: '#overview' },
     { label: 'Role', href: '#role' },
@@ -51,7 +45,7 @@ export function Footer({ profile }: FooterProps) {
             <div className={styles.brandHeader}>
               <div className={styles.logoBox}>
                 <Image
-                  src="/brand/ico-bg.png"
+                  src="/brand/yarsabyte-mark.svg"
                   alt="YarsaByte Logo"
                   width={46}
                   height={46}
@@ -135,9 +129,8 @@ export function Footer({ profile }: FooterProps) {
             <span>Member profile — {profile.name}</span>
           </div>
 
-          <button
-            type="button"
-            onClick={scrollToTop}
+          <a
+            href="#overview"
             className={styles.backToTopBtn}
             aria-label="Back to top"
           >
@@ -145,7 +138,7 @@ export function Footer({ profile }: FooterProps) {
             <span className={styles.topIconCircle}>
               <ArrowUp size={16} />
             </span>
-          </button>
+          </a>
         </div>
       </div>
     </footer>

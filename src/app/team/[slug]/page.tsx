@@ -97,7 +97,7 @@ export default async function MemberPage({ params }: PageProps) {
       '@type': 'Organization',
       name: profile.company || 'YarsaByte',
       url: MAIN_SITE_URL,
-      logo: `${MAIN_SITE_URL}/brand/ico-bg.png`,
+      logo: `${MAIN_SITE_URL}/brand/apple-touch-icon.png`,
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Butwal',

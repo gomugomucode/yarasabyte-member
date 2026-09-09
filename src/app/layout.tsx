@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/brand/ico-bg.png', type: 'image/png' },
+      { url: '/brand/yarsabyte-mark.svg', type: 'image/svg+xml' },
     ],
     shortcut: '/favicon.ico',
-    apple: '/brand/ico-bg.png',
+    apple: '/brand/apple-touch-icon.png',
   },
   openGraph: {
     type: 'website',
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
       'Crafting resilient distributed systems, interactive platforms, and enduring digital products in Butwal, Nepal.',
     images: [
       {
-        url: '/brand/ico-bg.png',
-        width: 800,
-        height: 800,
+        url: '/brand/og-image.png',
+        width: 1200,
+        height: 630,
         alt: 'YarsaByte Logo',
       },
     ],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: 'YarsaByte — Creative Technology Collective',
     description:
       'Crafting resilient distributed systems and digital experiences in Butwal, Nepal.',
-    images: ['/brand/ico-bg.png'],
+    images: ['/brand/og-image.png'],
   },
 };
 
@@ -57,13 +57,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){if(typeof window==='undefined')return;try{var p=(typeof Window!=='undefined'&&Window.prototype)?Window.prototype:null;var r=window.requestIdleCallback||(p&&p.requestIdleCallback);if(r){var safeR=function(cb,opts){return r.call(window,cb,opts);};window.requestIdleCallback=safeR;if(p)p.requestIdleCallback=safeR;}var c=window.cancelIdleCallback||(p&&p.cancelIdleCallback);if(c){var safeC=function(id){return c.call(window,id);};window.cancelIdleCallback=safeC;if(p)p.cancelIdleCallback=safeC;}}catch(e){}})();`,
-          }}
-        />
-      </head>
       <body suppressHydrationWarning>{children}</body>
     </html>
   );

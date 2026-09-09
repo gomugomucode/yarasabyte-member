@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { MemberProfile, SocialLink } from '@/types/member';
 import {
+  AlertCircle,
   ArrowUpRight,
   CheckCircle,
   Github,
@@ -29,7 +30,11 @@ export function ContactSection({ profile }: ContactSectionProps) {
     message: '',
   });
 
+  const [hpWebsite, setHpWebsite] = useState('');
+  const [formLoadedAt] = useState(() => Date.now());
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [submissionStatus, setSubmissionStatus] = useState<'accepted' | 'delivered' | null>(null);
+  const [serverError, setServerError] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validate = () => {
@@ -40,11 +45,15 @@ export function ContactSection({ profile }: ContactSectionProps) {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       errs.email = 'Please provide a valid email address';
     }
-    if (!formData.message.trim()) errs.message = 'Please provide a brief message';
+    if (!formData.message.trim()) {
+      errs.message = 'Please provide a brief message';
+    } else if (formData.message.trim().length < 5) {
+      errs.message = 'Message must be at least 5 characters long';
+    }
     return errs;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
@@ -53,17 +62,47 @@ export function ContactSection({ profile }: ContactSectionProps) {
     }
 
     setErrors({});
+    setServerError(null);
     setStatus('submitting');
 
-    setTimeout(() => {
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          recipientSlug: profile.slug,
+          hp_website: hpWebsite,
+          formLoadedAt,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setStatus('error');
+        setServerError(data.error || 'Failed to dispatch message. Please try again.');
+        if (data.details) {
+          setErrors(data.details);
+        }
+        return;
+      }
+
       setStatus('success');
+      setSubmissionStatus(data.status === 'delivered' ? 'delivered' : 'accepted');
       setFormData({
         name: '',
         email: '',
         subject: 'Product Collaboration',
         message: '',
       });
-    }, 850);
+    } catch {
+      setStatus('error');
+      setServerError('Network error. Please check your internet connection and try again.');
+    }
   };
 
   const renderSocialIcon = (platform: SocialLink['platform']) => {
@@ -189,14 +228,21 @@ export function ContactSection({ profile }: ContactSectionProps) {
                 <div className={styles.successNotice} role="alert">
                   <CheckCircle size={32} className={styles.successIcon} />
                   <div>
-                    <h4 className={styles.successTitle} suppressHydrationWarning>Message Dispatched</h4>
+                    <h4 className={styles.successTitle} suppressHydrationWarning>
+                      {submissionStatus === 'delivered' ? 'Message Delivered' : 'Inquiry Received'}
+                    </h4>
                     <p className={styles.successText}>
-                      Thank you! Your inquiry has been received. {profile.name} will respond shortly.
+                      {submissionStatus === 'delivered'
+                        ? `Thank you! Your message has been delivered directly to ${profile.name}.`
+                        : `Thank you! Your inquiry has been received by our server and queued for ${profile.name}.`}
                     </p>
                   </div>
                   <button
                     type="button"
-                    onClick={() => setStatus('idle')}
+                    onClick={() => {
+                      setStatus('idle');
+                      setServerError(null);
+                    }}
                     className="btn-editorial-secondary"
                     style={{ marginTop: '1rem', width: '100%', justifyContent: 'center' }}
                   >
@@ -205,6 +251,26 @@ export function ContactSection({ profile }: ContactSectionProps) {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} noValidate className={styles.form}>
+                  {serverError && (
+                    <div className={styles.serverErrorNotice} role="alert">
+                      <AlertCircle size={18} />
+                      <span>{serverError}</span>
+                    </div>
+                  )}
+
+                  {/* Honeypot field for bot protection (hidden from humans) */}
+                  <div style={{ display: 'none' }} aria-hidden="true">
+                    <label htmlFor="hp-website">Leave this field blank</label>
+                    <input
+                      id="hp-website"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={hpWebsite}
+                      onChange={(e) => setHpWebsite(e.target.value)}
+                    />
+                  </div>
+
                   <div className={styles.fieldGroup}>
                     <label htmlFor="contact-name" className={styles.label}>
                       NAME <span className={styles.req}>*</span>

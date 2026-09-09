@@ -17,6 +17,11 @@ export function normalizeHostname(host: string | null | undefined): string {
   if (!host) return '';
   let cleanHost = host.trim().toLowerCase();
 
+  // If x-forwarded-host contains multiple proxy hops (e.g. "client.com, proxy.com"), take the first
+  if (cleanHost.includes(',')) {
+    cleanHost = cleanHost.split(',')[0].trim();
+  }
+
   // Strip port if present (handle IPv4/host:port)
   if (cleanHost.includes(':')) {
     cleanHost = cleanHost.split(':')[0];
@@ -25,6 +30,11 @@ export function normalizeHostname(host: string | null | undefined): string {
   // Strip trailing dot if present
   if (cleanHost.endsWith('.')) {
     cleanHost = cleanHost.slice(0, -1);
+  }
+
+  // Reject hostnames with invalid characters (only lowercase alphanumeric, dots, and hyphens allowed)
+  if (!/^[a-z0-9.-]+$/.test(cleanHost)) {
+    return '';
   }
 
   return cleanHost;

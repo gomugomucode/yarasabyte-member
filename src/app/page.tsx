@@ -27,9 +27,9 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'YarsaByte',
       images: [
         {
-          url: '/brand/ico-bg.png',
-          width: 800,
-          height: 800,
+          url: '/brand/og-image.png',
+          width: 1200,
+          height: 630,
           alt: 'YarsaByte Logo',
         },
       ],
@@ -38,7 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: ['/brand/ico-bg.png'],
+      images: ['/brand/og-image.png'],
     },
   };
 }
@@ -57,7 +57,7 @@ export default function HomePage() {
     '@type': 'Organization',
     name: 'YarsaByte',
     url: MAIN_SITE_URL,
-    logo: `${MAIN_SITE_URL}/brand/ico-bg.png`,
+    logo: `${MAIN_SITE_URL}/brand/apple-touch-icon.png`,
     description:
       'YarsaByte is a creative technology collective based in Butwal, Nepal, crafting resilient distributed software systems, refined digital experiences, and enterprise platforms.',
     address: {

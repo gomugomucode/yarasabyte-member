@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
@@ -13,6 +13,8 @@ interface HeaderProps {
 export function Header({ memberName }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const toggleBtnRef = useRef<HTMLButtonElement>(null);
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,15 +29,27 @@ export function Header({ memberName }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Lock scroll when mobile menu is open
+  // Lock scroll, handle Escape key, and manage focus for mobile menu
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+        toggleBtnRef.current?.focus();
+      }
+    };
+
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      // Shift focus to the close button inside the drawer
+      setTimeout(() => closeBtnRef.current?.focus(), 50);
     } else {
       document.body.style.overflow = '';
     }
+
+    window.addEventListener('keydown', handleKeyDown);
     return () => {
       document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, [mobileMenuOpen]);
 
@@ -56,12 +70,11 @@ export function Header({ memberName }: HeaderProps) {
             <Link href="/" className={styles.brandLink} aria-label="YarsaByte Home">
               <div className={styles.logoWrapper}>
                 <Image
-                  src="/brand/ico-bg.png"
+                  src="/brand/yarsabyte-mark.svg"
                   alt="YarsaByte"
                   width={38}
                   height={38}
                   className={styles.logoImg}
-                  priority
                 />
               </div>
               <span className={styles.brandWordmark}>YARSABYTE</span>
@@ -103,6 +116,7 @@ export function Header({ memberName }: HeaderProps) {
 
             {/* Mobile Hamburger Button */}
             <button
+              ref={toggleBtnRef}
               type="button"
               className={styles.mobileToggleBtn}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -123,7 +137,7 @@ export function Header({ memberName }: HeaderProps) {
         <div className={styles.drawerHeader}>
           <div className={styles.drawerBrand}>
             <Image
-              src="/brand/ico-bg.png"
+              src="/brand/yarsabyte-mark.svg"
               alt="YarsaByte"
               width={32}
               height={32}
@@ -132,9 +146,13 @@ export function Header({ memberName }: HeaderProps) {
             <span className={styles.drawerBrandText}>YARSABYTE / {memberName.toUpperCase()}</span>
           </div>
           <button
+            ref={closeBtnRef}
             type="button"
             className={styles.drawerCloseBtn}
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={() => {
+              setMobileMenuOpen(false);
+              toggleBtnRef.current?.focus();
+            }}
             aria-label="Close menu"
           >
             <X size={24} />

@@ -22,7 +22,7 @@ export default function NotFound() {
       >
         <div style={{ marginBottom: '1.5rem' }}>
           <Image
-            src="/brand/ico-bg.png"
+            src="/brand/yarsabyte-mark.svg"
             alt="YarsaByte Logo"
             width={52}
             height={52}

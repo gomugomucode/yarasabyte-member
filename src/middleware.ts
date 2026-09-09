@@ -3,8 +3,8 @@ import { getMemberSlugFromHost } from '@/lib/member-domain';
 
 export function middleware(request: NextRequest) {
   // Extract host from standard headers (x-forwarded-host takes precedence on proxies like Vercel)
-  const host = request.headers.get('x-forwarded-host') || request.headers.get('host');
-  const memberSlug = getMemberSlugFromHost(host);
+  const rawHost = request.headers.get('x-forwarded-host') || request.headers.get('host');
+  const memberSlug = getMemberSlugFromHost(rawHost);
 
   // If host does not map to a recognized member, proceed normally (main site or safe fallback)
   if (!memberSlug) {
@@ -28,8 +28,8 @@ export function middleware(request: NextRequest) {
     // Pass member domain headers for downstream server components if needed
     const requestHeaders = new Headers(request.headers);
     requestHeaders.set('x-member-slug', memberSlug);
-    if (host) {
-      requestHeaders.set('x-member-host', host);
+    if (rawHost) {
+      requestHeaders.set('x-member-host', rawHost.split(',')[0].trim());
     }
 
     return NextResponse.rewrite(url, {

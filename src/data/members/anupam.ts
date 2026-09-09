@@ -111,7 +111,7 @@ export const anupamProfile: MemberProfile = {
     { platform: 'x', url: 'https://x.com/gomugomucode', label: 'X (Twitter)' },
     { platform: 'instagram', url: 'https://instagram.com/gomugomucode', label: 'Instagram' },
     { platform: 'email', url: 'mailto:contact@anupambaral.com.np', label: 'Email' },
-    { platform: 'website', url: 'https://yarasabyte.anupambaral.com.np', label: 'Website' }
+    { platform: 'website', url: 'https://anupambaral.com.np', label: 'Website' }
   ],
   metaTitle: 'Anupam Baral — CPO at YarsaByte',
   metaDescription:

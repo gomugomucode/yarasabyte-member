@@ -19,10 +19,10 @@
   --fg-faint: rgba(30, 26, 24, 0.42);
   --fg-inverted: #f5efe7;
   
-  /* Typography */
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Suisse Intl", Helvetica, Arial, sans-serif;
-  --font-display: "TT Tunnels", Impact, "Arial Black", -apple-system, sans-serif;
-  --font-tech: "TT Lakes Neue", "SF Mono", Monaco, Inconsolata, "Roboto Mono", monospace;
+  /* Typography - Intentional editorial system font stack */
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Arial Black", sans-serif;
+  --font-tech: ui-monospace, "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
   
   /* Radii */
   --radius-frame: 1.45rem;

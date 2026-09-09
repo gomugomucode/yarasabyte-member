@@ -11,10 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 3. Members without custom domains at their canonical route (e.g. https://yarshabyte.vercel.app/team/aashish)
   const uniqueUrls = new Map<string, MetadataRoute.Sitemap[number]>();
 
+  // Stable baseline date representing the release snapshot of member profiles
+  const BASE_MODIFIED_DATE = new Date('2025-02-15T00:00:00.000Z');
+
   // Main corporate collective website homepage
   uniqueUrls.set(MAIN_SITE_URL, {
     url: MAIN_SITE_URL,
-    lastModified: new Date(),
+    lastModified: BASE_MODIFIED_DATE,
     changeFrequency: 'monthly',
     priority: 1.0,
   });
@@ -25,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (!uniqueUrls.has(canonicalUrl)) {
       uniqueUrls.set(canonicalUrl, {
         url: canonicalUrl,
-        lastModified: new Date(),
+        lastModified: BASE_MODIFIED_DATE,
         changeFrequency: 'weekly',
         priority: 0.9,
       });
