@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import { ArrowUp, ArrowUpRight, Github, Globe, Instagram, Linkedin, Mail, Twitter } from 'lucide-react';
-import { MemberProfile, SocialLink } from '@/types/member';
+import { ArrowUp, ArrowUpRight } from 'lucide-react';
+import { MemberProfile } from '@/types/member';
 import styles from './Footer.module.css';
 
 interface FooterProps {
@@ -9,33 +9,6 @@ interface FooterProps {
 }
 
 export function Footer({ profile }: FooterProps) {
-  const navLinks = [
-    { label: 'Overview', href: '#overview' },
-    { label: 'Role', href: '#role' },
-    { label: 'Work', href: '#work' },
-    { label: 'Team', href: '#team' },
-    { label: 'Contact', href: '#contact' },
-  ];
-
-  const renderSocialIcon = (platform: SocialLink['platform']) => {
-    switch (platform) {
-      case 'github':
-        return <Github size={15} />;
-      case 'linkedin':
-        return <Linkedin size={15} />;
-      case 'x':
-        return <Twitter size={15} />;
-      case 'instagram':
-        return <Instagram size={15} />;
-      case 'email':
-        return <Mail size={15} />;
-      case 'website':
-        return <Globe size={15} />;
-      default:
-        return <ArrowUpRight size={15} />;
-    }
-  };
-
   return (
     <footer className={styles.footer}>
       <div className="container-editorial">
@@ -65,8 +38,10 @@ export function Footer({ profile }: FooterProps) {
                 {profile.company || 'YarsaByte'} — {profile.location}
               </p>
             </div>
+          </div>
 
-            {/* Google Maps Location Preview */}
+          {/* Map Column */}
+          <div className={styles.mapCol}>
             <div className={styles.mapContainer}>
               <iframe
                 title={`Google Map of ${profile.location}`}
@@ -85,39 +60,6 @@ export function Footer({ profile }: FooterProps) {
                 <ArrowUpRight size={13} />
               </a>
             </div>
-          </div>
-
-          {/* Links Column */}
-          <div className={styles.linksCol}>
-            <h4 className={styles.colTitle} suppressHydrationWarning>LINKS</h4>
-            <ul className={styles.linkList}>
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a href={link.href}>{link.label}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Social Links Column */}
-          <div className={styles.socialCol}>
-            <h4 className={styles.colTitle} suppressHydrationWarning>SOCIAL</h4>
-            <ul className={styles.linkList}>
-              {profile.socials.map((soc) => (
-                <li key={soc.platform}>
-                  <a
-                    href={soc.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.socialLinkItem}
-                  >
-                    <span className={styles.miniIcon}>{renderSocialIcon(soc.platform)}</span>
-                    <span>{soc.label}</span>
-                    <ArrowUpRight size={13} className={styles.miniArrow} />
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 

@@ -10,22 +10,17 @@
 .mainGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3.5rem;
-  padding-bottom: 4rem;
+  gap: 2.5rem;
+  padding-bottom: 3.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .mainGrid {
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .mainGrid {
-    grid-template-columns: 2fr 1fr 1.2fr;
-    gap: 4.5rem;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.5rem;
   }
 }
 
@@ -91,12 +86,23 @@
   color: rgba(245, 239, 231, 0.65);
 }
 
+.mapCol {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (min-width: 768px) {
+  .mapCol {
+    justify-content: flex-end;
+  }
+}
+
 .mapContainer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-top: 0.25rem;
-  max-width: 420px;
+  width: 100%;
+  max-width: 380px;
 }
 
 .mapIframe {
@@ -124,64 +130,6 @@
 .mapPinLink:hover {
   color: #ffffff;
   transform: translateX(3px);
-}
-
-/* Links & Social Columns */
-.colTitle {
-  font-family: var(--font-tech);
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-}
-
-.linkList {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-
-.linkList a {
-  font-size: 0.92rem;
-  color: rgba(245, 239, 231, 0.75);
-  transition: var(--transition-fast);
-}
-
-.linkList a:hover {
-  color: #ffffff;
-  padding-left: 4px;
-}
-
-.socialLinkItem {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.92rem;
-  color: rgba(245, 239, 231, 0.75);
-  transition: var(--transition-fast);
-}
-
-.miniIcon {
-  display: flex;
-  align-items: center;
-  color: var(--accent);
-}
-
-.miniArrow {
-  opacity: 0.4;
-  transition: var(--transition-fast);
-}
-
-.socialLinkItem:hover {
-  color: #ffffff;
-  transform: translateX(3px);
-}
-
-.socialLinkItem:hover .miniArrow {
-  opacity: 1;
-  transform: translate(2px, -2px);
 }
 
 /* Bottom Bar */
