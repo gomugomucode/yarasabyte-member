@@ -58,7 +58,7 @@ export function Footer({ profile }: FooterProps) {
             </div>
 
             <div className={styles.memberMetaBlock}>
-              <h3 className={styles.memberName}>{profile.name}</h3>
+              <h3 className={styles.memberName} suppressHydrationWarning>{profile.name}</h3>
               <p className={styles.memberRoles}>
                 {profile.shortRole ? `${profile.shortRole} — ${profile.role.replace(/^.*?—\s*/, '')}` : profile.role}
                 {profile.additionalRoles ? ` · ${profile.additionalRoles}` : ''}
@@ -91,7 +91,7 @@ export function Footer({ profile }: FooterProps) {
 
           {/* Links Column */}
           <div className={styles.linksCol}>
-            <h4 className={styles.colTitle}>LINKS</h4>
+            <h4 className={styles.colTitle} suppressHydrationWarning>LINKS</h4>
             <ul className={styles.linkList}>
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -103,7 +103,7 @@ export function Footer({ profile }: FooterProps) {
 
           {/* Social Links Column */}
           <div className={styles.socialCol}>
-            <h4 className={styles.colTitle}>SOCIAL</h4>
+            <h4 className={styles.colTitle} suppressHydrationWarning>SOCIAL</h4>
             <ul className={styles.linkList}>
               {profile.socials.map((soc) => (
                 <li key={soc.platform}>
@@ -125,7 +125,7 @@ export function Footer({ profile }: FooterProps) {
 
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
-          <div className={styles.copyright}>
+          <div className={styles.copyright} suppressHydrationWarning>
             <span>&copy; {new Date().getFullYear()} YarsaByte</span>
             <span className={styles.dot}>•</span>
             <span>Member profile — {profile.name}</span>

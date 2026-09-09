@@ -53,6 +53,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){if(typeof window!=='undefined'&&window.requestIdleCallback){try{window.requestIdleCallback=window.requestIdleCallback.bind(window);if(window.cancelIdleCallback){window.cancelIdleCallback=window.cancelIdleCallback.bind(window);}}catch(e){}}})();`,
+          }}
+        />
+      </head>
       <body suppressHydrationWarning>{children}</body>
     </html>
   );
