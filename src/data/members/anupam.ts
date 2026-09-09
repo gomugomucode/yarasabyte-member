@@ -11,7 +11,7 @@ export const anupamProfile: MemberProfile = {
   subRole: 'App Developer · Video Editor @ YarsaByte',
   location: 'Butwal, Nepal',
   joinedYear: '2023',
-  avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85',
+  avatar: '/team/anupam.webp',
   tagline: 'Shaping products, building applications and creating digital experiences at YarsaByte.',
   positioningStatement:
     'I work across product direction, technology and creative production at YarsaByte. As CPO, I focus on shaping products, defining product direction, understanding user needs and helping turn ideas into useful digital experiences. Alongside product leadership, I contribute to application development and video production.',

@@ -10,7 +10,7 @@ export const aashishProfile: MemberProfile = {
   subRole: 'CEO @ YarsaByte',
   location: 'Butwal, Nepal',
   joinedYear: '2023',
-  avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=85',
+  avatar: '/team/aashish.webp',
   tagline: 'Leading YarsaByte’s vision, global partnerships, and long-term growth.',
   positioningStatement:
     'As CEO of YarsaByte, I lead our strategic vision, fundraising initiatives, investor relations, and external partnerships, building Nepal’s benchmark creative technology company.',

@@ -10,7 +10,7 @@ export const beeplapProfile: MemberProfile = {
   subRole: 'CTO @ YarsaByte',
   location: 'Butwal, Nepal',
   joinedYear: '2023',
-  avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1200&q=85',
+  avatar: '/team/beeplap.webp',
   tagline: 'Architecting robust systems, defining core technology stacks, and engineering resilient infrastructure.',
   positioningStatement:
     'As CTO of YarsaByte, I lead our technology stack choices, system architecture, core engineering standards, and cloud infrastructure, ensuring our software platforms are secure, performant, and built to scale.',

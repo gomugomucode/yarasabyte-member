@@ -10,7 +10,7 @@ export const anmolProfile: MemberProfile = {
   subRole: 'CMO @ YarsaByte',
   location: 'Butwal, Nepal',
   joinedYear: '2023',
-  avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=85',
+  avatar: '/team/anmol.webp',
   tagline: 'Amplifying brand resonance, scaling customer acquisition, and orchestrating go-to-market execution.',
   positioningStatement:
     'As CMO of YarsaByte, I lead our brand identity, customer acquisition funnels, growth strategy, and go-to-market execution across regional and international markets.',

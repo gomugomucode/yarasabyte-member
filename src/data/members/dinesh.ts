@@ -10,7 +10,7 @@ export const dineshProfile: MemberProfile = {
   subRole: 'COO @ YarsaByte',
   location: 'Butwal, Nepal',
   joinedYear: '2023',
-  avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=85',
+  avatar: '/team/dinesh.webp',
   tagline: 'Streamlining operations, stewarding financial discipline, and orchestrating internal workflows.',
   positioningStatement:
     'As COO of YarsaByte, I oversee company operations, legal governance, financial strategy, internal logistics, and team workflow, ensuring smooth execution across all company initiatives.',
