@@ -11,8 +11,11 @@ export const metadata: Metadata = {
   description:
     'YarsaByte is a creative technology company based in Butwal, Nepal, crafting resilient distributed software systems, refined digital experiences, and enterprise platforms.',
   icons: {
-    icon: '/brand/ico-bg.png',
-    shortcut: '/brand/ico-bg.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/brand/ico-bg.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
     apple: '/brand/ico-bg.png',
   },
   openGraph: {
@@ -57,7 +60,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){if(typeof window!=='undefined'&&window.requestIdleCallback){try{window.requestIdleCallback=window.requestIdleCallback.bind(window);if(window.cancelIdleCallback){window.cancelIdleCallback=window.cancelIdleCallback.bind(window);}}catch(e){}}})();`,
+            __html: `(function(){if(typeof window==='undefined')return;try{var p=(typeof Window!=='undefined'&&Window.prototype)?Window.prototype:null;var r=window.requestIdleCallback||(p&&p.requestIdleCallback);if(r){var safeR=function(cb,opts){return r.call(window,cb,opts);};window.requestIdleCallback=safeR;if(p)p.requestIdleCallback=safeR;}var c=window.cancelIdleCallback||(p&&p.cancelIdleCallback);if(c){var safeC=function(id){return c.call(window,id);};window.cancelIdleCallback=safeC;if(p)p.cancelIdleCallback=safeC;}}catch(e){}})();`,
           }}
         />
       </head>
