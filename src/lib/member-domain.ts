@@ -48,7 +48,7 @@ export function normalizeHostname(host: string | null | undefined): string {
  * 2. Local development subdomains (e.g. anupam.localhost -> anupam)
  *
  * Returns undefined for:
- * - The primary domain (yarshabyte.vercel.app, localhost, 127.0.0.1)
+ * - The primary domain (yarshabyte.com, localhost, 127.0.0.1)
  * - Unknown subdomains (unknown.localhost)
  * - Unregistered third-party domains
  */
@@ -82,7 +82,7 @@ export function getMemberSlugFromHost(host: string | null | undefined): MemberSl
  * Examples:
  * - anupam -> https://yarshabyte.anupambaral.com.np
  * - anmol -> https://yarshabyte.anmolchettri.com
- * - aashish -> https://yarshabyte.vercel.app/team/aashish
+ * - aashish -> https://yarshabyte.com/team/aashish
  */
 export function getMemberCanonicalUrl(slug: string): string {
   const domain = getDomainForMember(slug);
@@ -104,7 +104,7 @@ export interface MemberUrlOptions {
  * Context-aware:
  * - In local dev (or on localhost), links to http://<slug>.localhost:3000
  * - In production, links to the member's custom domain (e.g. https://yarshabyte.anmolchettri.com)
- * - For members without a custom domain, links to the main team route (https://yarshabyte.vercel.app/team/<slug>)
+ * - For members without a custom domain, links to the main team route (https://yarshabyte.com/team/<slug>)
  */
 export function getMemberUrl(slug: string, options?: MemberUrlOptions): string {
   // Check if explicitly marked as local dev

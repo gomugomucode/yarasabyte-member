@@ -20,13 +20,27 @@ export default function NotFound() {
           textAlign: 'center',
         }}
       >
-        <div style={{ marginBottom: '1.5rem' }}>
+        <div
+          style={{
+            marginBottom: '1.5rem',
+            width: '56px',
+            height: '56px',
+            borderRadius: '14px',
+            background: '#ffffff',
+            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.06)',
+            border: '1px solid rgba(0, 0, 0, 0.08)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '5px',
+          }}
+        >
           <Image
             src="/brand/yarshabyte-mark.svg"
             alt="YarshaByte Logo"
-            width={52}
-            height={52}
-            style={{ borderRadius: '12px' }}
+            width={46}
+            height={46}
+            style={{ objectFit: 'contain' }}
           />
         </div>
 

@@ -24,7 +24,7 @@ export const MEMBER_DOMAINS: Readonly<Record<string, MemberSlug>> = Object.freez
 /**
  * The canonical primary domain of the YarshaByte collective website.
  */
-export const MAIN_SITE_URL = 'https://yarshabyte.vercel.app';
+export const MAIN_SITE_URL = 'https://yarshabyte.com';
 
 /**
  * Pre-computed O(1) reverse lookup map for member domains.

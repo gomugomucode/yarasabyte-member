@@ -5,6 +5,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'yarshabyte.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'yarshabyte.vercel.app',
       },
     ],
@@ -40,7 +44,7 @@ const nextConfig = {
               "default-src 'self'",
               "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' blob: data: https://yarshabyte.vercel.app",
+              "img-src 'self' blob: data: https://yarshabyte.com https://yarshabyte.vercel.app",
               "font-src 'self' data:",
               "frame-src 'self' https://maps.google.com https://www.google.com",
               "connect-src 'self'",

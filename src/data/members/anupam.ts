@@ -92,7 +92,7 @@ export const anupamProfile: MemberProfile = {
         'Visual storytelling and multimedia presentations capturing YarshaByte’s design philosophy, client case studies, and digital capabilities.',
       tags: ['Video Editing', 'Motion Content', 'Visual Storytelling'],
       image: '/work/studio-production.webp',
-      link: 'https://yarshabyte.vercel.app/',
+      link: 'https://yarshabyte.com/',
       featured: true
     }
   ],

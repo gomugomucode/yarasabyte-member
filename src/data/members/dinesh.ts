@@ -92,7 +92,7 @@ export const dineshProfile: MemberProfile = {
   contact: {
     email: 'dinesh@yarshabyte.com',
     yarshaEmail: 'dinesh@yarshabyte.com',
-    website: 'https://yarshabyte.vercel.app',
+    website: 'https://yarshabyte.com',
     location: 'Butwal, Nepal',
     timezone: 'Asia/Kathmandu (UTC+05:45)',
     availability: 'Available for operational inquiries, vendor partnerships, and legal/financial discussions',
@@ -102,7 +102,7 @@ export const dineshProfile: MemberProfile = {
     { platform: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
     { platform: 'x', url: 'https://x.com', label: 'X (Twitter)' },
     { platform: 'email', url: 'mailto:dinesh@yarshabyte.com', label: 'Email' },
-    { platform: 'website', url: 'https://yarshabyte.vercel.app', label: 'Website' }
+    { platform: 'website', url: 'https://yarshabyte.com', label: 'Website' }
   ],
   metaTitle: 'Dinesh Lamichanne — COO at YarshaByte',
   metaDescription:

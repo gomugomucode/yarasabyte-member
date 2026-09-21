@@ -3,7 +3,7 @@ import '@/styles/tokens.css';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://yarshabyte.vercel.app'),
+  metadataBase: new URL('https://yarshabyte.com'),
   title: {
     default: 'YarshaByte — Creative Technology Collective',
     template: '%s | YarshaByte',
@@ -13,15 +13,18 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', sizes: '512x512', type: 'image/png' },
       { url: '/brand/yarshabyte-mark.svg', type: 'image/svg+xml' },
     ],
     shortcut: '/favicon.ico',
-    apple: '/brand/apple-touch-icon.png',
+    apple: [
+      { url: '/brand/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yarshabyte.vercel.app',
+    url: 'https://yarshabyte.com',
     siteName: 'YarshaByte',
     title: 'YarshaByte — Creative Technology Collective',
     description:

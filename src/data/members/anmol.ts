@@ -84,14 +84,14 @@ export const anmolProfile: MemberProfile = {
       impact: 'Established YarshaByte’s distinct editorial aesthetic and drove strong client inbound interest.',
       tags: ['Brand Strategy', 'Visual Identity', 'Market Positioning'],
       image: '/work/studio-production.webp',
-      link: 'https://yarshabyte.vercel.app/',
+      link: 'https://yarshabyte.com/',
       featured: true
     }
   ],
   contact: {
     email: 'anmol@yarshabyte.com',
     yarshaEmail: 'anmol@yarshabyte.com',
-    website: 'https://yarshabyte.vercel.app',
+    website: 'https://yarshabyte.com',
     location: 'Butwal, Nepal',
     timezone: 'Asia/Kathmandu (UTC+05:45)',
     availability: 'Open for brand collaborations, growth consultations, and media inquiries',
