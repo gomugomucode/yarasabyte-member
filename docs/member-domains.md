@@ -36,7 +36,7 @@ All member websites share a **single codebase, single Next.js application, and s
 1. **Zero Duplicate Repositories / Deployments:** A single Next.js 15 project handles all domains.
 2. **Internal Rewrites (Not Redirects):** Visiting `https://yarshabyte.anupambaral.com.np/` internally rewrites to `/team/anupam`. The visitor's browser continues to show `yarshabyte.anupambaral.com.np`.
 3. **Loop-Proof:** Requests targeting `/team/[slug]` or containing static assets (`_next`, `.png`, `.ico`, `.css`, etc.) bypass rewrite logic.
-4. **Safe Fallback:** Unknown domains or main domains (`yarshabyte.vercel.app`) never expose another member's profile accidentally.
+4. **Safe Fallback:** Unknown domains or main domains (`yarshabyte.com`) never expose another member's profile accidentally.
 
 ---
 
@@ -148,11 +148,11 @@ To add a completely new team member to the collective:
   - If the member has a domain in `MEMBER_DOMAINS` (e.g. `anupam`), the canonical URL is:
     `https://yarshabyte.anupambaral.com.np`
   - If the member has no custom domain yet, the canonical URL falls back to:
-    `https://yarshabyte.vercel.app/team/[slug]`
+    `https://yarshabyte.com/team/[slug]`
 - Both `canonical` tag, `og:url`, and Twitter cards match this canonical URL.
 
 ### Schema.org JSON-LD:
 - The JSON-LD schema is rendered dynamically in `src/app/team/[slug]/page.tsx`:
   - `url`: Points to the member's personal website (`https://yarshabyte.anupambaral.com.np`).
-  - `worksFor.url`: Always points to the main company website (`https://yarshabyte.vercel.app`).
+  - `worksFor.url`: Always points to the main company website (`https://yarshabyte.com`).
   - `jobTitle`: Derived dynamically from the member's profile role (e.g. `"Chief Product Officer"`, `"Chief Marketing Officer"`).

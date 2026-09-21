@@ -13,10 +13,10 @@
 
 ## 📖 Overview
 
-This repository powers the personal portfolio websites and leadership directory for **[YarshaByte](https://yarshabyte.vercel.app)**, an interdisciplinary creative technology collective based in Butwal, Nepal.
+This repository powers the personal portfolio websites and leadership directory for **[YarshaByte](https://yarshabyte.com)**, an interdisciplinary creative technology collective based in Butwal, Nepal.
 
 Instead of managing separate repositories, builds, or server instances for each team member, this project uses **a single Next.js codebase and single deployment** to serve:
-1. **The main collective portal:** [https://yarshabyte.vercel.app](https://yarshabyte.vercel.app)
+1. **The main collective portal:** [https://yarshabyte.com](https://yarshabyte.com)
 2. **Dedicated team profile routes:** `/team/anupam`, `/team/aashish`, `/team/anmol`, `/team/beeplap`, `/team/dinesh`
 3. **Personal custom domains and subdomains:**
    - `yarshabyte.anupambaral.com.np` &rarr; Anupam Baral (CPO)
@@ -38,7 +38,7 @@ Instead of managing separate repositories, builds, or server instances for each 
                   ┌─────────────────────┴─────────────────────┐
                   │                                           │
           Host Recognized?                            Host Unrecognized?
-      (e.g. yarshabyte.anupambaral.com.np)       (e.g. yarshabyte.vercel.app)
+      (e.g. yarshabyte.anupambaral.com.np)       (e.g. yarshabyte.com)
                   │                                           │
           ┌───────┴───────┐                           ┌───────┴───────┐
           │               │                           │               │

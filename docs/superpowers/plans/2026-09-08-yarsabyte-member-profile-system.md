@@ -1,6 +1,6 @@
 # Implementation Plan: YarshaByte Member Profile Website System
 
-Build a premium, production-ready, data-driven personal profile website system for team members of **YarshaByte** ([https://yarshabyte.vercel.app/](https://yarshabyte.vercel.app/)), a creative technology company based in Butwal, Nepal.
+Build a premium, production-ready, data-driven personal profile website system for team members of **YarshaByte** ([https://yarshabyte.com/](https://yarshabyte.com/)), a creative technology company based in Butwal, Nepal.
 
 The system uses **ONE reusable member website template** (`MemberProfilePage`) driven entirely by typed profile data. Every member shares the identical editorial design system, typography, components, animations, responsive behavior, navigation, and footer.
 
