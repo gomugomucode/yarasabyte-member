@@ -76,17 +76,17 @@ export function Header({ memberName }: HeaderProps) {
         <div className={`container-editorial ${styles.navContainer}`}>
           {/* Brand & Member Context */}
           <div className={styles.brandGroup}>
-            <Link href="/" className={styles.brandLink} aria-label="YarsaByte Home">
+            <Link href="/" className={styles.brandLink} aria-label="YarshaByte Home">
               <div className={styles.logoWrapper}>
                 <Image
-                  src="/brand/yarsabyte-mark.svg"
-                  alt="YarsaByte"
+                  src="/brand/yarshabyte-mark.svg"
+                  alt="YarshaByte"
                   width={38}
                   height={38}
                   className={styles.logoImg}
                 />
               </div>
-              <span className={styles.brandWordmark}>YARSABYTE</span>
+              <span className={styles.brandWordmark}>YARSHABYTE</span>
             </Link>
 
             <span className={styles.dividerSlash} aria-hidden="true">/</span>
@@ -145,15 +145,15 @@ export function Header({ memberName }: HeaderProps) {
           <div className={styles.drawerBrand}>
             <div className={styles.drawerLogoWrapper}>
               <Image
-                src="/brand/yarsabyte-mark.svg"
-                alt="YarsaByte"
+                src="/brand/yarshabyte-mark.svg"
+                alt="YarshaByte"
                 width={28}
                 height={28}
                 className={styles.drawerLogoImg}
               />
             </div>
             <div className={styles.drawerBrandTextGroup}>
-              <span className={styles.drawerBrandWordmark}>YARSABYTE</span>
+              <span className={styles.drawerBrandWordmark}>YARSHABYTE</span>
               <span className={styles.drawerMemberBreadcrumb}>/ {memberName.toUpperCase()}</span>
             </div>
           </div>

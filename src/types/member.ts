@@ -54,7 +54,7 @@ export interface TeamTeammate {
 
 export interface MemberContact {
   email: string;
-  yarsaEmail?: string;
+  yarshaEmail?: string;
   website?: string;
   location: string;
   timezone?: string;
@@ -68,9 +68,9 @@ export interface MemberProfile {
   role: string; // e.g. "CPO — Chief Product Officer"
   shortRole?: string; // e.g. "CPO"
   headlineRole?: string; // e.g. "CHIEF PRODUCT OFFICER"
-  company?: string; // "YarsaByte"
+  company?: string; // "YarshaByte"
   additionalRoles?: string; // "App Developer · Video Editor"
-  subRole: string; // "App Developer · Video Editor @ YarsaByte"
+  subRole: string; // "App Developer · Video Editor @ YarshaByte"
   location: string; // "Butwal, Nepal"
   joinedYear?: string;
   avatar: string;

@@ -6,18 +6,18 @@ export const dineshProfile: MemberProfile = {
   role: 'COO — Chief Operating Officer',
   shortRole: 'COO',
   headlineRole: 'CHIEF OPERATING OFFICER',
-  company: 'YarsaByte',
-  subRole: 'COO @ YarsaByte',
+  company: 'YarshaByte',
+  subRole: 'COO @ YarshaByte',
   location: 'Butwal, Nepal',
   joinedYear: '2023',
   avatar: '/team/dinesh.webp',
   tagline: 'Streamlining operations, stewarding financial discipline, and orchestrating internal workflows.',
   positioningStatement:
-    'As COO of YarsaByte, I oversee company operations, legal governance, financial strategy, internal logistics, and team workflow, ensuring smooth execution across all company initiatives.',
+    'As COO of YarshaByte, I oversee company operations, legal governance, financial strategy, internal logistics, and team workflow, ensuring smooth execution across all company initiatives.',
   bioHeading: 'Powering operational clarity, financial discipline, and workflow excellence.',
   bioParagraphs: [
-    'Based in Butwal, Nepal, I serve as Chief Operating Officer at YarsaByte. My focus is building robust operational foundations, stewarding financial planning, and ensuring regulatory and legal compliance across all our engagements.',
-    'At YarsaByte, I manage our day-to-day business operations, cross-departmental team workflows, contracts, and internal logistics. I ensure that our creative and technical talent has the operational environment and logistical resources needed to perform at their highest level.',
+    'Based in Butwal, Nepal, I serve as Chief Operating Officer at YarshaByte. My focus is building robust operational foundations, stewarding financial planning, and ensuring regulatory and legal compliance across all our engagements.',
+    'At YarshaByte, I manage our day-to-day business operations, cross-departmental team workflows, contracts, and internal logistics. I ensure that our creative and technical talent has the operational environment and logistical resources needed to perform at their highest level.',
     'I believe operational excellence is the bedrock of creative ambition—transforming bold technological strategies into consistent, dependable, and profitable realities.'
   ],
   philosophyQuote: {
@@ -25,13 +25,13 @@ export const dineshProfile: MemberProfile = {
     author: 'Dinesh Lamichanne'
   },
   metadata: [
-    { label: 'AFFILIATION', value: 'YarsaByte Creative Technology' },
+    { label: 'AFFILIATION', value: 'YarshaByte Creative Technology' },
     { label: 'LOCATION', value: 'Butwal, Nepal' },
-    { label: 'ROLE', value: 'COO @ YarsaByte' },
+    { label: 'ROLE', value: 'COO @ YarshaByte' },
     { label: 'FOCUS', value: 'Operations · Finance · Legal' },
     { label: 'AVAILABILITY', value: 'Operational Partnerships & Vendor Relations' }
   ],
-  roleStatement: 'As COO, I ensure YarsaByte operates with seamless organizational workflow, legal rigor, and fiscal discipline.',
+  roleStatement: 'As COO, I ensure YarshaByte operates with seamless organizational workflow, legal rigor, and fiscal discipline.',
   roleDescription:
     'I supervise legal governance, corporate finance, day-to-day operations, internal logistics, and cross-functional team workflows.',
   responsibilities: [
@@ -90,8 +90,8 @@ export const dineshProfile: MemberProfile = {
     }
   ],
   contact: {
-    email: 'dinesh@yarsabyte.com',
-    yarsaEmail: 'dinesh@yarsabyte.com',
+    email: 'dinesh@yarshabyte.com',
+    yarshaEmail: 'dinesh@yarshabyte.com',
     website: 'https://yarshabyte.vercel.app',
     location: 'Butwal, Nepal',
     timezone: 'Asia/Kathmandu (UTC+05:45)',
@@ -101,10 +101,10 @@ export const dineshProfile: MemberProfile = {
   socials: [
     { platform: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
     { platform: 'x', url: 'https://x.com', label: 'X (Twitter)' },
-    { platform: 'email', url: 'mailto:dinesh@yarsabyte.com', label: 'Email' },
+    { platform: 'email', url: 'mailto:dinesh@yarshabyte.com', label: 'Email' },
     { platform: 'website', url: 'https://yarshabyte.vercel.app', label: 'Website' }
   ],
-  metaTitle: 'Dinesh Lamichanne — COO at YarsaByte',
+  metaTitle: 'Dinesh Lamichanne — COO at YarshaByte',
   metaDescription:
-    'Dinesh Lamichanne is Chief Operating Officer at YarsaByte, leading operational governance, legal frameworks, finance, and organizational execution.'
+    'Dinesh Lamichanne is Chief Operating Officer at YarshaByte, leading operational governance, legal frameworks, finance, and organizational execution.'
 };

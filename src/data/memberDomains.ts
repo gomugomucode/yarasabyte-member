@@ -14,15 +14,15 @@ export type MemberSlug = (typeof VALID_MEMBER_SLUGS)[number];
  * Do NOT invent domains for members whose real domains are not known yet.
  */
 export const MEMBER_DOMAINS: Readonly<Record<string, MemberSlug>> = Object.freeze({
-  'yarasabyte.anupambaral.com.np': 'anupam',
-  'yarasabyte.anmolchettri.com': 'anmol',
+  'yarshabyte.anupambaral.com.np': 'anupam',
+  'yarshabyte.anmolchettri.com': 'anmol',
   'yarshabyte.beeplap.com.np': 'beeplap',
   'yarshabyte.chapagainaashish.com.np': 'aashish',
   'yarshabyte.dineshgautam.com': 'dinesh',
 });
 
 /**
- * The canonical primary domain of the YarsaByte collective website.
+ * The canonical primary domain of the YarshaByte collective website.
  */
 export const MAIN_SITE_URL = 'https://yarshabyte.vercel.app';
 

@@ -19,7 +19,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Root path on a member's domain (e.g. yarasabyte.anupambaral.com.np/)
+  // Root path on a member's domain (e.g. yarshabyte.anupambaral.com.np/)
   // internally rewrites to their team profile page (/team/anupam)
   if (pathname === '/') {
     const url = request.nextUrl.clone();

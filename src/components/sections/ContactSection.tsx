@@ -50,7 +50,7 @@ export function ContactSection({ profile }: ContactSectionProps) {
               Have an idea worth building?
             </h2>
             <p className="editorial-lead">
-              Reach out directly to discuss product direction, application development, or creative video collaborations with YarsaByte.
+              Reach out directly to discuss product direction, application development, or creative video collaborations with YarshaByte.
             </p>
 
             <div className={styles.directChannelsList}>

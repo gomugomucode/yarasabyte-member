@@ -6,34 +6,34 @@ export const anupamProfile: MemberProfile = {
   role: 'CPO — Chief Product Officer',
   shortRole: 'CPO',
   headlineRole: 'CHIEF PRODUCT OFFICER',
-  company: 'YarsaByte',
+  company: 'YarshaByte',
   additionalRoles: 'App Developer · Video Editor',
-  subRole: 'App Developer · Video Editor @ YarsaByte',
+  subRole: 'App Developer · Video Editor @ YarshaByte',
   location: 'Butwal, Nepal',
   joinedYear: '2023',
   avatar: '/team/anupam.webp',
-  tagline: 'Shaping products, building applications and creating digital experiences at YarsaByte.',
+  tagline: 'Shaping products, building applications and creating digital experiences at YarshaByte.',
   positioningStatement:
-    'I work across product direction, technology and creative production at YarsaByte. As CPO, I focus on shaping products, defining product direction, understanding user needs and helping turn ideas into useful digital experiences. Alongside product leadership, I contribute to application development and video production.',
+    'I work across product direction, technology and creative production at YarshaByte. As CPO, I focus on shaping products, defining product direction, understanding user needs and helping turn ideas into useful digital experiences. Alongside product leadership, I contribute to application development and video production.',
   bioHeading: 'Product, technology and creative work — from idea to execution.',
   bioParagraphs: [
-    'I am Anupam Baral, CPO at YarsaByte. I work on product thinking, planning and direction while also contributing directly to application development and video production.',
+    'I am Anupam Baral, CPO at YarshaByte. I work on product thinking, planning and direction while also contributing directly to application development and video production.',
     'I enjoy working across the boundary between product, technology and creativity—bridging user needs with robust application engineering and compelling visual narratives.',
-    'At YarsaByte, our focus is making things that matter: building thoughtfully engineered digital experiences and partnering with regional and global clients to bring bold concepts into reality.'
+    'At YarshaByte, our focus is making things that matter: building thoughtfully engineered digital experiences and partnering with regional and global clients to bring bold concepts into reality.'
   ],
   metadata: [
     { label: 'BASED IN', value: 'Butwal, Nepal' },
-    { label: 'ROLE', value: 'CPO @ YarsaByte' },
+    { label: 'ROLE', value: 'CPO @ YarshaByte' },
     { label: 'ALSO', value: 'App Developer · Video Editor' },
     { label: 'FOCUS', value: 'Product · Technology · Creative' }
   ],
   roleStatement: 'As CPO, I help turn ideas into products that people can actually use.',
   roleDescription:
-    'I lead product thinking, roadmap execution, and experience design at YarsaByte while contributing directly to application development and creative video production.',
+    'I lead product thinking, roadmap execution, and experience design at YarshaByte while contributing directly to application development and creative video production.',
   responsibilities: [
     {
       title: 'PRIMARY RESPONSIBILITIES',
-      summary: 'Product direction, user experience, and roadmap execution for YarsaByte products.',
+      summary: 'Product direction, user experience, and roadmap execution for YarshaByte products.',
       items: [
         'Product direction',
         'User Experience',
@@ -82,14 +82,14 @@ export const anupamProfile: MemberProfile = {
       featured: true
     },
     {
-      id: 'yarsabyte-creative-production',
-      title: 'YarsaByte Studio Production',
-      client: 'YarsaByte Internal',
+      id: 'yarshabyte-creative-production',
+      title: 'YarshaByte Studio Production',
+      client: 'YarshaByte Internal',
       year: '2024',
       role: 'Video Editor & Creative Producer',
       contribution: 'Promotional video editing, release trailers, and interactive multimedia content.',
       description:
-        'Visual storytelling and multimedia presentations capturing YarsaByte’s design philosophy, client case studies, and digital capabilities.',
+        'Visual storytelling and multimedia presentations capturing YarshaByte’s design philosophy, client case studies, and digital capabilities.',
       tags: ['Video Editing', 'Motion Content', 'Visual Storytelling'],
       image: '/work/studio-production.webp',
       link: 'https://yarshabyte.vercel.app/',
@@ -98,8 +98,8 @@ export const anupamProfile: MemberProfile = {
   ],
   contact: {
     email: 'contact@anupambaral.com.np',
-    yarsaEmail: 'contact@anupambaral.com.np',
-    website: 'https://yarasabyte.anupambaral.com.np',
+    yarshaEmail: 'contact@anupambaral.com.np',
+    website: 'https://yarshabyte.anupambaral.com.np',
     location: 'Butwal, Nepal',
     timezone: 'Asia/Kathmandu (UTC+05:45)',
     availability: 'Open for product partnerships & creative technology collaborations',
@@ -113,7 +113,7 @@ export const anupamProfile: MemberProfile = {
     { platform: 'email', url: 'mailto:contact@anupambaral.com.np', label: 'Email' },
     { platform: 'website', url: 'https://anupambaral.com.np', label: 'Website' }
   ],
-  metaTitle: 'Anupam Baral — CPO at YarsaByte',
+  metaTitle: 'Anupam Baral — CPO at YarshaByte',
   metaDescription:
-    'Anupam Baral is the Chief Product Officer at YarsaByte, working across product direction, application development and video production.'
+    'Anupam Baral is the Chief Product Officer at YarshaByte, working across product direction, application development and video production.'
 };

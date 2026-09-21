@@ -96,7 +96,7 @@ export function ContactForm({ recipientSlug, recipientName }: ContactFormProps) 
     <div className={styles.formCard}>
       <h3 className={styles.formTitle} suppressHydrationWarning>Direct Message</h3>
       <p className={styles.formSubtitle}>
-        Send a note directly to {recipientName} at YarsaByte.
+        Send a note directly to {recipientName} at YarshaByte.
       </p>
 
       {status === 'success' ? (

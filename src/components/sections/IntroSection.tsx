@@ -51,7 +51,7 @@ export function IntroSection({ profile }: IntroSectionProps) {
                 </p>
                 {profile.philosophyQuote.author && (
                   <cite className={styles.quoteCite}>
-                    — {profile.philosophyQuote.author}, YarsaByte
+                    — {profile.philosophyQuote.author}, YarshaByte
                   </cite>
                 )}
               </blockquote>

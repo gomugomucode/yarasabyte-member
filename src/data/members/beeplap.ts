@@ -6,18 +6,18 @@ export const beeplapProfile: MemberProfile = {
   role: 'CTO — Chief Technology Officer',
   shortRole: 'CTO',
   headlineRole: 'CHIEF TECHNOLOGY OFFICER',
-  company: 'YarsaByte',
-  subRole: 'CTO @ YarsaByte',
+  company: 'YarshaByte',
+  subRole: 'CTO @ YarshaByte',
   location: 'Butwal, Nepal',
   joinedYear: '2023',
   avatar: '/team/beeplap.webp',
   tagline: 'Architecting robust systems, defining core technology stacks, and engineering resilient infrastructure.',
   positioningStatement:
-    'As CTO of YarsaByte, I lead our technology stack choices, system architecture, core engineering standards, and cloud infrastructure, ensuring our software platforms are secure, performant, and built to scale.',
+    'As CTO of YarshaByte, I lead our technology stack choices, system architecture, core engineering standards, and cloud infrastructure, ensuring our software platforms are secure, performant, and built to scale.',
   bioHeading: 'Architecting resilient technology foundations and core engineering excellence.',
   bioParagraphs: [
-    'Based in Butwal, Nepal, I serve as Chief Technology Officer at YarsaByte. My focus is architecting dependable, high-performance software systems and guiding our core engineering decisions from the database layer to edge compute.',
-    'At YarsaByte, I set our technology stack standards, champion sound architectural principles, and supervise our cloud infrastructure and deployment pipelines. I believe technical elegance lies in simplicity, predictability, and relentless engineering rigor.',
+    'Based in Butwal, Nepal, I serve as Chief Technology Officer at YarshaByte. My focus is architecting dependable, high-performance software systems and guiding our core engineering decisions from the database layer to edge compute.',
+    'At YarshaByte, I set our technology stack standards, champion sound architectural principles, and supervise our cloud infrastructure and deployment pipelines. I believe technical elegance lies in simplicity, predictability, and relentless engineering rigor.',
     'Together with our product and executive team, I ensure that every digital solution we deliver achieves optimal latency, uncompromising security, and seamless horizontal scalability.'
   ],
   philosophyQuote: {
@@ -25,9 +25,9 @@ export const beeplapProfile: MemberProfile = {
     author: 'Beeplap Gharti Magar'
   },
   metadata: [
-    { label: 'AFFILIATION', value: 'YarsaByte Creative Technology' },
+    { label: 'AFFILIATION', value: 'YarshaByte Creative Technology' },
     { label: 'LOCATION', value: 'Butwal, Nepal' },
-    { label: 'ROLE', value: 'CTO @ YarsaByte' },
+    { label: 'ROLE', value: 'CTO @ YarshaByte' },
     { label: 'FOCUS', value: 'Architecture · Core Eng · Infra' },
     { label: 'AVAILABILITY', value: 'Technical Architecture & Deep Tech Consultations' }
   ],
@@ -89,8 +89,8 @@ export const beeplapProfile: MemberProfile = {
     }
   ],
   contact: {
-    email: 'beeplap@yarsabyte.com',
-    yarsaEmail: 'beeplap@yarsabyte.com',
+    email: 'beeplap@yarshabyte.com',
+    yarshaEmail: 'beeplap@yarshabyte.com',
     website: 'https://beeplap.com.np',
     location: 'Butwal, Nepal',
     timezone: 'Asia/Kathmandu (UTC+05:45)',
@@ -100,10 +100,10 @@ export const beeplapProfile: MemberProfile = {
   socials: [
     { platform: 'github', url: 'https://github.com', label: 'GitHub' },
     { platform: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
-    { platform: 'email', url: 'mailto:beeplap@yarsabyte.com', label: 'Email' },
+    { platform: 'email', url: 'mailto:beeplap@yarshabyte.com', label: 'Email' },
     { platform: 'website', url: 'https://beeplap.com.np', label: 'Website' }
   ],
-  metaTitle: 'Beeplap Gharti Magar — CTO at YarsaByte',
+  metaTitle: 'Beeplap Gharti Magar — CTO at YarshaByte',
   metaDescription:
-    'Beeplap Gharti Magar is Chief Technology Officer at YarsaByte, directing distributed systems engineering, technical architecture, and cloud infrastructure.'
+    'Beeplap Gharti Magar is Chief Technology Officer at YarshaByte, directing distributed systems engineering, technical architecture, and cloud infrastructure.'
 };

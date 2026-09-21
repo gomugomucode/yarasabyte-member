@@ -18,14 +18,14 @@ export function Footer({ profile }: FooterProps) {
             <div className={styles.brandHeader}>
               <div className={styles.logoBox}>
                 <Image
-                  src="/brand/yarsabyte-mark.svg"
-                  alt="YarsaByte Logo"
+                  src="/brand/yarshabyte-mark.svg"
+                  alt="YarshaByte Logo"
                   width={46}
                   height={46}
                   className={styles.logoImg}
                 />
               </div>
-              <span className={styles.brandTitle}>YARSABYTE</span>
+              <span className={styles.brandTitle}>YARSHABYTE</span>
             </div>
 
             <div className={styles.memberMetaBlock}>
@@ -35,7 +35,7 @@ export function Footer({ profile }: FooterProps) {
                 {profile.additionalRoles ? ` · ${profile.additionalRoles}` : ''}
               </p>
               <p className={styles.memberLocation}>
-                {profile.company || 'YarsaByte'} — {profile.location}
+                {profile.company || 'YarshaByte'} — {profile.location}
               </p>
             </div>
           </div>
@@ -66,7 +66,7 @@ export function Footer({ profile }: FooterProps) {
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
           <div className={styles.copyright} suppressHydrationWarning>
-            <span>&copy; {new Date().getFullYear()} YarsaByte</span>
+            <span>&copy; {new Date().getFullYear()} YarshaByte</span>
             <span className={styles.dot}>•</span>
             <span>Member profile — {profile.name}</span>
           </div>

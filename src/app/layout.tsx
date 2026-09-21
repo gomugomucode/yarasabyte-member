@@ -5,15 +5,15 @@ import '@/styles/globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://yarshabyte.vercel.app'),
   title: {
-    default: 'YarsaByte — Creative Technology Collective',
-    template: '%s | YarsaByte',
+    default: 'YarshaByte — Creative Technology Collective',
+    template: '%s | YarshaByte',
   },
   description:
-    'YarsaByte is a creative technology company based in Butwal, Nepal, crafting resilient distributed software systems, refined digital experiences, and enterprise platforms.',
+    'YarshaByte is a creative technology company based in Butwal, Nepal, crafting resilient distributed software systems, refined digital experiences, and enterprise platforms.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/brand/yarsabyte-mark.svg', type: 'image/svg+xml' },
+      { url: '/brand/yarshabyte-mark.svg', type: 'image/svg+xml' },
     ],
     shortcut: '/favicon.ico',
     apple: '/brand/apple-touch-icon.png',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://yarshabyte.vercel.app',
-    siteName: 'YarsaByte',
-    title: 'YarsaByte — Creative Technology Collective',
+    siteName: 'YarshaByte',
+    title: 'YarshaByte — Creative Technology Collective',
     description:
       'Crafting resilient distributed systems, interactive platforms, and enduring digital products in Butwal, Nepal.',
     images: [
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
         url: '/brand/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'YarsaByte Logo',
+        alt: 'YarshaByte Logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'YarsaByte — Creative Technology Collective',
+    title: 'YarshaByte — Creative Technology Collective',
     description:
       'Crafting resilient distributed systems and digital experiences in Butwal, Nepal.',
     images: ['/brand/og-image.png'],

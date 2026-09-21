@@ -22,8 +22,8 @@ export default function NotFound() {
       >
         <div style={{ marginBottom: '1.5rem' }}>
           <Image
-            src="/brand/yarsabyte-mark.svg"
-            alt="YarsaByte Logo"
+            src="/brand/yarshabyte-mark.svg"
+            alt="YarshaByte Logo"
             width={52}
             height={52}
             style={{ borderRadius: '12px' }}
@@ -45,7 +45,7 @@ export default function NotFound() {
           className="editorial-lead"
           style={{ maxWidth: '520px', margin: '0 auto 2.5rem' }}
         >
-          The requested YarsaByte member profile does not exist or has been relocated. You can explore our active collective below:
+          The requested YarshaByte member profile does not exist or has been relocated. You can explore our active collective below:
         </p>
 
         {/* Directory of active members */}

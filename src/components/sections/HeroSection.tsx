@@ -39,7 +39,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
               {profile.name}
             </h1>
 
-            {/* Role Hierarchy: CPO / CHIEF PRODUCT OFFICER @ YARSABYTE */}
+            {/* Role Hierarchy: CPO / CHIEF PRODUCT OFFICER @ YARSHABYTE */}
             <div className={styles.roleHierarchy}>
               <div className={styles.rolePrimaryRow}>
                 {profile.shortRole && (
@@ -51,7 +51,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
                 <span className={styles.roleFull}>{profile.headlineRole || profile.role.replace(/^.*?—\s*/, '').toUpperCase()}</span>
               </div>
               <div className={styles.companyTag}>
-                @ {profile.company?.toUpperCase() || 'YARSABYTE'}
+                @ {profile.company?.toUpperCase() || 'YARSHABYTE'}
               </div>
               {profile.additionalRoles && (
                 <div className={styles.additionalRolesTag}>
@@ -62,7 +62,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
 
             {/* Concise Positioning Statement */}
             <p className={styles.positioningStatement}>
-              &ldquo;{profile.tagline || 'Shaping products, building applications and creating digital experiences at YarsaByte.'}&rdquo;
+              &ldquo;{profile.tagline || 'Shaping products, building applications and creating digital experiences at YarshaByte.'}&rdquo;
             </p>
 
             {/* CTAs */}
@@ -105,7 +105,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
               <div className={styles.portraitWrapper}>
                 <Image
                   src={profile.avatar}
-                  alt={`${profile.name} — ${profile.role} at YarsaByte`}
+                  alt={`${profile.name} — ${profile.role} at YarshaByte`}
                   width={700}
                   height={875}
                   priority
@@ -119,7 +119,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
               <div className={styles.floatingMetaCard}>
                 <div className={styles.metaRow}>
                   <span className={styles.metaKey}>ORGANIZATION</span>
-                  <span className={styles.metaVal}>{profile.company || 'YarsaByte'}</span>
+                  <span className={styles.metaVal}>{profile.company || 'YarshaByte'}</span>
                 </div>
                 <div className={styles.metaRow}>
                   <span className={styles.metaKey}>PRIMARY ROLE</span>

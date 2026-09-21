@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Deduplicated canonical URLs
   // Only canonical indexable URLs belong in the sitemap:
   // 1. The main website homepage: https://yarshabyte.vercel.app
-  // 2. Verified member domains (e.g. https://yarasabyte.anupambaral.com.np)
+  // 2. Verified member domains (e.g. https://yarshabyte.anupambaral.com.np)
   // 3. Members without custom domains at their canonical route (e.g. https://yarshabyte.vercel.app/team/aashish)
   const uniqueUrls = new Map<string, MetadataRoute.Sitemap[number]>();
 

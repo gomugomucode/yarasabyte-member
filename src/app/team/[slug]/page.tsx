@@ -24,19 +24,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!profile) {
     return {
-      title: 'Member Not Found | YarsaByte',
+      title: 'Member Not Found | YarshaByte',
     };
   }
 
   const roleDisplay = profile.shortRole
-    ? `${profile.shortRole} at ${profile.company || 'YarsaByte'}`
+    ? `${profile.shortRole} at ${profile.company || 'YarshaByte'}`
     : profile.role;
 
   const title = profile.metaTitle || `${profile.name} — ${roleDisplay}`;
   const description =
     profile.metaDescription ||
     profile.tagline ||
-    `${profile.name} is ${profile.role} at YarsaByte. ${profile.positioningStatement}`;
+    `${profile.name} is ${profile.role} at YarshaByte. ${profile.positioningStatement}`;
 
   const canonicalUrl = getMemberCanonicalUrl(profile.slug);
 
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       type: 'profile',
       url: canonicalUrl,
-      siteName: profile.company || 'YarsaByte',
+      siteName: profile.company || 'YarshaByte',
       images: [
         {
           url: profile.avatar,
@@ -87,7 +87,7 @@ export default async function MemberPage({ params }: PageProps) {
 
   const memberUrl = getMemberCanonicalUrl(profile.slug);
 
-  // Structured Data Schema.org: Person & YarsaByte Organization
+  // Structured Data Schema.org: Person & YarshaByte Organization
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -95,7 +95,7 @@ export default async function MemberPage({ params }: PageProps) {
     jobTitle,
     worksFor: {
       '@type': 'Organization',
-      name: profile.company || 'YarsaByte',
+      name: profile.company || 'YarshaByte',
       url: MAIN_SITE_URL,
       logo: `${MAIN_SITE_URL}/brand/apple-touch-icon.png`,
       address: {

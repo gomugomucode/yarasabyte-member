@@ -6,18 +6,18 @@ export const anmolProfile: MemberProfile = {
   role: 'CMO — Chief Marketing Officer',
   shortRole: 'CMO',
   headlineRole: 'CHIEF MARKETING OFFICER',
-  company: 'YarsaByte',
-  subRole: 'CMO @ YarsaByte',
+  company: 'YarshaByte',
+  subRole: 'CMO @ YarshaByte',
   location: 'Butwal, Nepal',
   joinedYear: '2023',
   avatar: '/team/anmol.webp',
   tagline: 'Amplifying brand resonance, scaling customer acquisition, and orchestrating go-to-market execution.',
   positioningStatement:
-    'As CMO of YarsaByte, I lead our brand identity, customer acquisition funnels, growth strategy, and go-to-market execution across regional and international markets.',
+    'As CMO of YarshaByte, I lead our brand identity, customer acquisition funnels, growth strategy, and go-to-market execution across regional and international markets.',
   bioHeading: 'Building magnetic brand narratives and scalable market growth.',
   bioParagraphs: [
-    'Based in Butwal, Nepal, I serve as Chief Marketing Officer at YarsaByte. My focus is crafting cohesive brand identity systems, designing high-converting customer acquisition funnels, and steering go-to-market campaigns for both our clients and in-house ventures.',
-    'At YarsaByte, I work at the intersection of brand strategy, creative technology, and digital distribution. I believe genuine marketing is not about noise; it is about distinctive positioning, meaningful value delivery, and scalable distribution channels.',
+    'Based in Butwal, Nepal, I serve as Chief Marketing Officer at YarshaByte. My focus is crafting cohesive brand identity systems, designing high-converting customer acquisition funnels, and steering go-to-market campaigns for both our clients and in-house ventures.',
+    'At YarshaByte, I work at the intersection of brand strategy, creative technology, and digital distribution. I believe genuine marketing is not about noise; it is about distinctive positioning, meaningful value delivery, and scalable distribution channels.',
     'From product launch strategy to lifecycle retention, I partner closely with product, engineering, and operations leads to ensure our digital products achieve rapid market adoption and sustainable growth.'
   ],
   philosophyQuote: {
@@ -25,15 +25,15 @@ export const anmolProfile: MemberProfile = {
     author: 'Anmol Chettri'
   },
   metadata: [
-    { label: 'AFFILIATION', value: 'YarsaByte Creative Technology' },
+    { label: 'AFFILIATION', value: 'YarshaByte Creative Technology' },
     { label: 'LOCATION', value: 'Butwal, Nepal' },
-    { label: 'ROLE', value: 'CMO @ YarsaByte' },
+    { label: 'ROLE', value: 'CMO @ YarshaByte' },
     { label: 'FOCUS', value: 'Brand · Acquisition · Growth' },
     { label: 'AVAILABILITY', value: 'GTM Strategy & Brand Partnerships' }
   ],
   roleStatement: 'As CMO, I turn digital innovation into market presence, brand resonance, and user growth.',
   roleDescription:
-    'I lead brand direction, customer acquisition engines, growth frameworks, and go-to-market execution across all YarsaByte initiatives.',
+    'I lead brand direction, customer acquisition engines, growth frameworks, and go-to-market execution across all YarshaByte initiatives.',
   responsibilities: [
     {
       title: 'PRIMARY RESPONSIBILITIES',
@@ -75,13 +75,13 @@ export const anmolProfile: MemberProfile = {
       featured: true
     },
     {
-      id: 'yarsabyte-creative-production',
-      title: 'YarsaByte Brand Identity & Global Showcase',
-      client: 'YarsaByte Internal',
+      id: 'yarshabyte-creative-production',
+      title: 'YarshaByte Brand Identity & Global Showcase',
+      client: 'YarshaByte Internal',
       year: '2024',
       role: 'Brand Director',
-      description: 'Directed the brand positioning and online presence showcasing YarsaByte as Nepal’s benchmark creative tech company.',
-      impact: 'Established YarsaByte’s distinct editorial aesthetic and drove strong client inbound interest.',
+      description: 'Directed the brand positioning and online presence showcasing YarshaByte as Nepal’s benchmark creative tech company.',
+      impact: 'Established YarshaByte’s distinct editorial aesthetic and drove strong client inbound interest.',
       tags: ['Brand Strategy', 'Visual Identity', 'Market Positioning'],
       image: '/work/studio-production.webp',
       link: 'https://yarshabyte.vercel.app/',
@@ -89,8 +89,8 @@ export const anmolProfile: MemberProfile = {
     }
   ],
   contact: {
-    email: 'anmol@yarsabyte.com',
-    yarsaEmail: 'anmol@yarsabyte.com',
+    email: 'anmol@yarshabyte.com',
+    yarshaEmail: 'anmol@yarshabyte.com',
     website: 'https://yarshabyte.vercel.app',
     location: 'Butwal, Nepal',
     timezone: 'Asia/Kathmandu (UTC+05:45)',
@@ -101,9 +101,9 @@ export const anmolProfile: MemberProfile = {
     { platform: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
     { platform: 'x', url: 'https://x.com', label: 'X (Twitter)' },
     { platform: 'instagram', url: 'https://instagram.com', label: 'Instagram' },
-    { platform: 'email', url: 'mailto:anmol@yarsabyte.com', label: 'Email' }
+    { platform: 'email', url: 'mailto:anmol@yarshabyte.com', label: 'Email' }
   ],
-  metaTitle: 'Anmol Chettri — CMO at YarsaByte',
+  metaTitle: 'Anmol Chettri — CMO at YarshaByte',
   metaDescription:
-    'Anmol Chettri is the Chief Marketing Officer at YarsaByte, leading brand identity, customer acquisition funnels, and go-to-market execution.'
+    'Anmol Chettri is the Chief Marketing Officer at YarshaByte, leading brand identity, customer acquisition funnels, and go-to-market execution.'
 };

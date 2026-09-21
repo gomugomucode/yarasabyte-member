@@ -17,10 +17,10 @@ export function TeamSection({ currentSlug, team }: TeamSectionProps) {
 
         <div className={styles.sectionHeader}>
           <h2 className="editorial-heading-lg" suppressHydrationWarning>
-            YarsaByte Leadership &amp; Core Team
+            YarshaByte Leadership &amp; Core Team
           </h2>
           <p className="editorial-lead">
-            The executive leadership and interdisciplinary team steering product, technology, brand, operations, and vision at YarsaByte.
+            The executive leadership and interdisciplinary team steering product, technology, brand, operations, and vision at YarshaByte.
           </p>
         </div>
 

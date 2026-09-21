@@ -12,7 +12,7 @@ export function RoleSection({ profile }: RoleSectionProps) {
   return (
     <section id="role" className="section-editorial section-editorial-border">
       <div className="container-editorial">
-        <SectionLabel number="02" title="MY ROLE AT YARSABYTE" />
+        <SectionLabel number="02" title="MY ROLE AT YARSHABYTE" />
 
         <div className={styles.sectionHeader}>
           <h2 className="editorial-heading-lg" suppressHydrationWarning>

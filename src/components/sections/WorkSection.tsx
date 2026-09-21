@@ -17,10 +17,10 @@ export function WorkSection({ profile }: WorkSectionProps) {
 
         <div className={styles.sectionHeader}>
           <h2 className="editorial-heading-lg" suppressHydrationWarning>
-            YarsaByte Work &amp; Contributions
+            YarshaByte Work &amp; Contributions
           </h2>
           <p className="editorial-lead">
-            Selected products, platforms, and creative media I have contributed to through YarsaByte.
+            Selected products, platforms, and creative media I have contributed to through YarshaByte.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export function WorkSection({ profile }: WorkSectionProps) {
 
               <div className={styles.cardContent}>
                 <div className={styles.cardMetaRow}>
-                  <span className={styles.clientTag}>{project.client || 'YarsaByte Project'}</span>
+                  <span className={styles.clientTag}>{project.client || 'YarshaByte Project'}</span>
                   <span className={styles.yearTag}>{project.year}</span>
                 </div>
 

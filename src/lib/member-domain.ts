@@ -44,7 +44,7 @@ export function normalizeHostname(host: string | null | undefined): string {
  * Resolves a hostname to a verified member slug.
  *
  * Supports:
- * 1. Production mapped domains (e.g. yarasabyte.anupambaral.com.np -> anupam)
+ * 1. Production mapped domains (e.g. yarshabyte.anupambaral.com.np -> anupam)
  * 2. Local development subdomains (e.g. anupam.localhost -> anupam)
  *
  * Returns undefined for:
@@ -80,8 +80,8 @@ export function getMemberSlugFromHost(host: string | null | undefined): MemberSl
  * Returns the canonical URL for a member profile for SEO, Open Graph, and Schema.org.
  *
  * Examples:
- * - anupam -> https://yarasabyte.anupambaral.com.np
- * - anmol -> https://yarasabyte.anmolchettri.com
+ * - anupam -> https://yarshabyte.anupambaral.com.np
+ * - anmol -> https://yarshabyte.anmolchettri.com
  * - aashish -> https://yarshabyte.vercel.app/team/aashish
  */
 export function getMemberCanonicalUrl(slug: string): string {
@@ -103,7 +103,7 @@ export interface MemberUrlOptions {
  *
  * Context-aware:
  * - In local dev (or on localhost), links to http://<slug>.localhost:3000
- * - In production, links to the member's custom domain (e.g. https://yarasabyte.anmolchettri.com)
+ * - In production, links to the member's custom domain (e.g. https://yarshabyte.anmolchettri.com)
  * - For members without a custom domain, links to the main team route (https://yarshabyte.vercel.app/team/<slug>)
  */
 export function getMemberUrl(slug: string, options?: MemberUrlOptions): string {

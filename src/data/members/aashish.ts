@@ -6,18 +6,18 @@ export const aashishProfile: MemberProfile = {
   role: 'CEO — Chief Executive Officer',
   shortRole: 'CEO',
   headlineRole: 'CHIEF EXECUTIVE OFFICER',
-  company: 'YarsaByte',
-  subRole: 'CEO @ YarsaByte',
+  company: 'YarshaByte',
+  subRole: 'CEO @ YarshaByte',
   location: 'Butwal, Nepal',
   joinedYear: '2023',
   avatar: '/team/aashish.webp',
-  tagline: 'Leading YarsaByte’s vision, global partnerships, and long-term growth.',
+  tagline: 'Leading YarshaByte’s vision, global partnerships, and long-term growth.',
   positioningStatement:
-    'As CEO of YarsaByte, I lead our strategic vision, fundraising initiatives, investor relations, and external partnerships, building Nepal’s benchmark creative technology company.',
+    'As CEO of YarshaByte, I lead our strategic vision, fundraising initiatives, investor relations, and external partnerships, building Nepal’s benchmark creative technology company.',
   bioHeading: 'Steering vision, global partnerships, and sustainable growth.',
   bioParagraphs: [
-    'Based in Butwal, Nepal, I lead YarsaByte as Chief Executive Officer. My focus is articulating our long-term vision, securing capital resources, and fostering relationships with international investors and strategic partners.',
-    'At YarsaByte, we combine world-class engineering and editorial design craft to build digital products that scale regionally and globally. I work to position our company at the forefront of creative technology in South Asia.',
+    'Based in Butwal, Nepal, I lead YarshaByte as Chief Executive Officer. My focus is articulating our long-term vision, securing capital resources, and fostering relationships with international investors and strategic partners.',
+    'At YarshaByte, we combine world-class engineering and editorial design craft to build digital products that scale regionally and globally. I work to position our company at the forefront of creative technology in South Asia.',
     'I believe transformative leadership is about establishing relentless clarity of purpose, empowering our team of exceptional specialists, and creating enduring value for our clients and stakeholders.'
   ],
   philosophyQuote: {
@@ -25,15 +25,15 @@ export const aashishProfile: MemberProfile = {
     author: 'Aashish Chapagain'
   },
   metadata: [
-    { label: 'AFFILIATION', value: 'YarsaByte Creative Technology' },
+    { label: 'AFFILIATION', value: 'YarshaByte Creative Technology' },
     { label: 'LOCATION', value: 'Butwal, Nepal' },
-    { label: 'ROLE', value: 'CEO @ YarsaByte' },
+    { label: 'ROLE', value: 'CEO @ YarshaByte' },
     { label: 'FOCUS', value: 'Vision · Fundraising · Strategy' },
     { label: 'AVAILABILITY', value: 'Strategic Partnerships & Investor Inquiries' }
   ],
-  roleStatement: 'As CEO, I lead YarsaByte’s overarching vision, investor relations, and external strategy.',
+  roleStatement: 'As CEO, I lead YarshaByte’s overarching vision, investor relations, and external strategy.',
   roleDescription:
-    'I guide company trajectory, secure capital investment, nurture investor partnerships, and forge external alliances that expand YarsaByte’s global footprint.',
+    'I guide company trajectory, secure capital investment, nurture investor partnerships, and forge external alliances that expand YarshaByte’s global footprint.',
   responsibilities: [
     {
       title: 'PRIMARY RESPONSIBILITIES',
@@ -89,8 +89,8 @@ export const aashishProfile: MemberProfile = {
     }
   ],
   contact: {
-    email: 'aashish@yarsabyte.com',
-    yarsaEmail: 'aashish@yarsabyte.com',
+    email: 'aashish@yarshabyte.com',
+    yarshaEmail: 'aashish@yarshabyte.com',
     website: 'https://yarshabyte.vercel.app',
     location: 'Butwal, Nepal',
     timezone: 'Asia/Kathmandu (UTC+05:45)',
@@ -100,10 +100,10 @@ export const aashishProfile: MemberProfile = {
   socials: [
     { platform: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
     { platform: 'x', url: 'https://x.com', label: 'X (Twitter)' },
-    { platform: 'email', url: 'mailto:aashish@yarsabyte.com', label: 'Email' },
+    { platform: 'email', url: 'mailto:aashish@yarshabyte.com', label: 'Email' },
     { platform: 'website', url: 'https://yarshabyte.vercel.app', label: 'Website' }
   ],
-  metaTitle: 'Aashish Chapagain — CEO at YarsaByte',
+  metaTitle: 'Aashish Chapagain — CEO at YarshaByte',
   metaDescription:
-    'Aashish Chapagain is Chief Executive Officer at YarsaByte, steering executive strategy, enterprise partnerships, and long-term venture direction.'
+    'Aashish Chapagain is Chief Executive Officer at YarshaByte, steering executive strategy, enterprise partnerships, and long-term venture direction.'
 };
