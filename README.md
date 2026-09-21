@@ -98,6 +98,8 @@ Local subdomains resolve natively without editing `/etc/hosts` or installing pro
 ```
 yarasabyte-member/
 ├── docs/                               # System documentation & guides
+│   ├── WHAT_IS_THIS_FOR.md             # Project purpose, business value & architecture
+│   ├── CHANGELOG.md                    # Detailed log of modifications & upgrades
 │   ├── member-domains.md               # Custom domain & DNS setup instructions
 │   └── superpowers/plans/              # Architecture design documents
 ├── public/                             # Optimized static assets
@@ -140,6 +142,16 @@ yarasabyte-member/
 ├── package.json
 └── tsconfig.json
 ```
+
+---
+
+## 📚 Documentation Directory
+
+For in-depth guides and architectural references, explore the dedicated documentation files:
+
+- **[`docs/WHAT_IS_THIS_FOR.md`](docs/WHAT_IS_THIS_FOR.md)** — **Start here!** Explains what this project is for, the business problem it solves, how the multi-tenant architecture works, and who uses it.
+- **[`docs/CHANGELOG.md`](docs/CHANGELOG.md)** — Comprehensive record of all recent changes, brand corrections, favicon extraction, and domain migrations.
+- **[`docs/member-domains.md`](docs/member-domains.md)** — Step-by-step instructions for configuring custom domains, DNS records (CNAME/A), and Vercel routing.
 
 ---
 
